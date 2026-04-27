@@ -107,103 +107,172 @@ const caseStudies = [
   },
   {
     num: '02',
-    title: 'Focus — ADHD Productivity App',
-    role: 'UX Designer · Concept & Prototype Lead',
+    title: 'FocusFlow — ADHD Task App',
+    role: 'Sole Product Designer (UX/UI) within a cross functional hackathon team',
     client: 'Hackathon Project · 🏆 Fan Favourite',
     year: '2022',
-    context: 'Mobile App · Accessibility · 24hr Hackathon',
+    context: 'Mobile App · Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
-    tags: ['Mobile App', 'Accessibility', 'ADHD', 'Figma', '🏆 Hackathon'],
-    overview: `A mobile app concept that consolidates three essential focus tools — a Pomodoro timer, brown noise, and a minimal task list — into one calm, clutter-free experience designed specifically for people with ADHD. Pitched from personal experience and hands-on research, it won Fan Favourite at a 2022 hackathon.`,
-    problem: `People with ADHD who want to manage their focus without medication often piece together a Pomodoro timer, a noise app, and a to-do list from three different places. The act of switching between apps mid-session is itself a source of distraction. On top of that, most productivity apps are designed for neurotypical users — feature-heavy, visually busy, and overwhelming. There was a clear gap for something that does less, better.`,
-    tools: ['Figma', 'Low-fi sketching', 'Mid-fi prototyping', 'User research', 'Accessibility heuristics'],
+    tags: ['Mobile App', 'Accessibility', 'ADHD Design', 'Figma', '🏆 Fan Favourite'],
+    overview: `A mobile app concept designed to help people with ADHD start and stay on tasks — without the overwhelm of traditional productivity tools. Built in 3 days at a hackathon, FocusFlow strips the experience back to one task at a time and one action at a time. It won Fan Favourite.`,
+    problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear way. Tools such as Todoist, Trello, and Notion rely on lists, priorities, and multiple views of information. For people with ADHD, this model often fails. The issue is rarely knowing what needs to be done. The issue is starting, choosing, and staying on a task without feeling overwhelmed. Existing tools unintentionally increase cognitive load instead of reducing it.`,
+    tools: ['Pen & Paper', 'Miro', 'Figma'],
     stages: [
       {
-        id: 'research',
-        label: '01 / Research',
-        title: '01 / Research — Understanding the Problem',
-        overview: ['Personal Context', 'Evidence-Based Strategies'],
+        id: 'empathize',
+        label: '01 / Empathize',
+        title: '01 / Empathize — Understanding ADHD Task Behaviour',
+        overview: ['Research Approach', 'Research Goals', 'Key Insights'],
         content: [
           {
-            heading: 'Personal Context',
-            body: `The problem was identified from lived experience with ADHD. App-switching during focus sessions — jumping between a Pomodoro timer, a noise app, and a to-do list — is itself a source of distraction that breaks concentration and often derails the whole session.`,
+            heading: 'Research Approach',
+            body: `Research was focused, practical, and informed by both user input and lived experience:`,
+            list: [
+              'Quick interviews with 3 adults diagnosed with ADHD',
+              'Team discussion shaping the app concept and feature set',
+              'My own lived experience navigating ADHD and task management',
+              'Rapid accessibility heuristic review with a focus on cognitive load',
+            ],
           },
           {
-            heading: 'Evidence-Based Strategies',
-            body: `I researched non-medication focus strategies proven to work for people with ADHD: the Pomodoro technique (structured work/break intervals), brown and white noise (reduces distractibility), and minimal task lists (reduces decision fatigue). These defined exactly what to include — and what to leave out.`,
+            heading: 'Research Goals',
+            list: [
+              'Understand how people with ADHD currently attempt to manage tasks',
+              'Identify why existing tools are abandoned',
+              'Identify emotional and behavioural patterns around task avoidance',
+            ],
+          },
+          {
+            heading: 'Key Insights',
+            body: `<strong>Task lists create overwhelm.</strong> Participants described immediate anxiety when opening apps like Todoist.<br><br><em>"Seeing everything at once makes me want to close the app."</em><br><br><strong>Starting is harder than doing.</strong> Once they begin, they can often continue. Initiation is the main barrier.<br><br><strong>Decision making is exhausting.</strong> Choosing what to do next frequently leads to procrastination.<br><br><strong>Time blindness is common.</strong> Participants regularly lost track of time while working.`,
           },
         ],
       },
       {
         id: 'define',
         label: '02 / Define',
-        title: '02 / Define — The Core Concept',
-        overview: ['Problem Statement', 'Design Direction'],
+        title: '02 / Define — Framing the Right Problem',
+        overview: ['Problem Statement', 'Design Principles'],
         content: [
           {
-            heading: 'Problem Statement',
-            body: `People with ADHD who want to manage focus without medication piece together tools from multiple apps. Most productivity apps are designed for neurotypical users — feature-heavy, visually busy, and overwhelming. There's a clear gap for something that does less, better.`,
+            heading: 'Core Problem Statement',
+            body: `How might we design a task experience that removes the need to plan and instead helps users simply begin?`,
           },
           {
-            heading: 'Design Direction',
-            body: `One app, three tools, zero clutter. A single calm space combining a Pomodoro timer, brown noise, and a minimal task list — without the cognitive overhead of app-switching or navigating complex settings. The concept was pitched to the hackathon team and got immediate buy-in.`,
+            heading: 'Design Principles Derived from Research',
+            list: [
+              'Show only one task at a time',
+              'Remove task lists and dashboards',
+              'Reduce choices per screen',
+              'Provide a clear, obvious starting action',
+              'Support time awareness visually',
+            ],
           },
         ],
       },
       {
         id: 'ideate',
         label: '03 / Ideate',
-        title: '03 / Ideate — Designing for Calm',
-        overview: ['Interface Sketches', 'Accessibility Considerations'],
+        title: '03 / Ideate — Low Fidelity Exploration',
+        overview: ['Pen and Paper Sketching', 'Core User Flow'],
         content: [
           {
-            heading: 'Interface Sketches',
-            body: `Low-fidelity sketches explored how to surface three features in one interface without adding cognitive load. Key questions: should tools be tabs or layers? How do you show a Pomodoro timer and task list simultaneously? Each iteration pushed toward fewer elements, more whitespace, and calmer interactions.`,
+            heading: 'Pen and Paper Sketching',
+            body: `We started with rapid pen and paper sketches to explore ideas without committing to interface too early.<br><br>We explored removing task lists entirely, a single focus screen, a dominant start action, visual time feedback, and minimal content and choices per screen.<br><br>Crazy 8 style sketching helped generate multiple layout directions quickly before selecting a clear path forward.`,
           },
           {
-            heading: 'Accessibility Considerations',
-            body: `Designing for ADHD meant applying accessibility principles throughout: high contrast, no unnecessary animations, clear visual hierarchy, and minimal decision points. Every interaction was designed to require as few taps as possible — keeping users in flow rather than breaking it.`,
+            heading: 'Core User Flow',
+            body: `We reduced the experience to only what was essential:<br><br><strong>Open app → See one task → Start → Complete → See next task</strong><br><br>No dashboards. No navigation complexity. No prioritisation features.`,
           },
         ],
       },
       {
-        id: 'design',
-        label: '04 / Design',
-        title: '04 / Design — Built in 24 Hours',
-        overview: ['Mid-Fidelity Prototype', 'Key Design Decisions'],
+        id: 'prototype',
+        label: '04 / Prototype',
+        title: '04 / Prototype — Mid Fidelity in Figma',
+        overview: ['Prototype Scope', 'Accessibility Heuristics'],
         content: [
           {
-            heading: 'Mid-Fidelity Prototype',
-            body: `A mid-fidelity Figma prototype was built in under 24 hours showing the full user journey — opening the app, starting a Pomodoro session, enabling brown noise, ticking off tasks. Calm visual design, generous spacing, and a muted palette were core to the feel.`,
+            heading: 'Prototype Scope',
+            body: `Due to the time constraint, we created a mid fidelity interactive prototype focused on demonstrating the intended flow for the pitch. Not every element was functional. Only the interactions required to communicate the concept were built. This allowed us to prioritise clarity of experience over visual polish.`,
           },
           {
-            heading: 'Key Design Decisions',
-            body: `The noise control is always accessible during an active session without navigating away. Tasks are minimal by design — no subtasks, tags, or due dates. The Pomodoro timer is prominent and large. Every choice reduced the surface area of distraction.`,
-          },
-        ],
-      },
-      {
-        id: 'outcomes',
-        label: '05 / Outcomes',
-        title: '05 / Outcomes — Results & Reflection',
-        overview: ['What Was Achieved', 'Tools Used', 'Reflection'],
-        content: [
-          {
-            heading: 'What Was Achieved',
+            heading: 'Accessibility Heuristics — Designing for Cognitive Load',
+            body: `Each screen was evaluated using cognitive accessibility principles:`,
             list: [
-              'Won "Fan Favourite" — voted by peers and judges across all entries at the 2022 hackathon',
-              'Delivered a complete mid-fidelity Figma prototype in under 24 hours',
-              'Concept validated immediately by colleagues with ADHD who recognised the problem and wanted the app',
-              'Demonstrated how designing for neurodiversity produces better experiences for everyone',
+              'One primary action per screen',
+              'Limited text and visual noise',
+              'Strong visual hierarchy',
+              'Large tap targets',
+              'No reliance on memory',
+              'Clear focus state during tasks',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'test',
+        label: '05 / Test & Outcomes',
+        title: '05 / Test & Outcomes',
+        overview: ['Usability Testing', 'Iterations', 'Role & Collaboration', 'Design Decisions', 'Next Steps', 'Reflections'],
+        content: [
+          {
+            heading: 'Usability Testing',
+            body: `We tested the mid fidelity prototype with 3 users.`,
+            list: [
+              'Users immediately understood what to do',
+              'No one asked where to go next',
+              'Participants responded positively to seeing only one task',
+              'Users described the experience as "calmer" than other apps',
             ],
           },
           {
-            heading: 'Tools Used',
-            tags: ['Figma', 'Low-fi sketching', 'Mid-fi prototyping', 'User research', 'Accessibility heuristics'],
+            heading: 'Iterations During the Hackathon',
+            body: `Based on feedback, we:`,
+            list: [
+              'Increased prominence of the primary action',
+              'Reduced explanatory text',
+              'Simplified screens further',
+              'Strengthened the visual emphasis on the active task',
+            ],
           },
           {
-            heading: 'Reflection',
-            body: `This hackathon showed that the best design brief can come from personal experience. Pitching something you've lived gave the concept immediate credibility — and peer validation from colleagues with ADHD confirmed the problem was real. Next steps would include user testing with a broader ADHD community.`,
+            heading: 'Role and Collaboration',
+            body: `I was the sole designer on the team, responsible for:`,
+            list: [
+              'Translating the idea into user flows and interface concepts',
+              'Leading low fidelity sketching',
+              'Building the mid fidelity prototype in Figma',
+              'Applying accessibility and cognitive load principles to the design',
+            ],
+          },
+          {
+            heading: 'Design Decisions and Trade Offs',
+            body: `<strong>Why remove task lists</strong> — Research showed that lists were the primary source of overwhelm.<br><br><strong>Why mid fidelity</strong> — The goal was to communicate behaviour and flow within 3 days, not polish visuals.<br><br><strong>Why limit functionality</strong> — We prioritised the story of the experience for the pitch rather than building every screen.<br><br><strong>Why focus on one flow</strong> — A single clear flow demonstrated the value of the idea more effectively than multiple features.`,
+          },
+          {
+            heading: 'What We Demonstrated in the Pitch',
+            body: `In the 8 to 10 minute pitch, the prototype demonstrated:`,
+            list: [
+              'How the app removes task list anxiety',
+              'How users are guided into starting a task',
+              'How the experience reduces cognitive load',
+              'How the flow supports ADHD behaviour rather than fighting it',
+            ],
+          },
+          {
+            heading: 'Next Steps If Developed Further',
+            list: [
+              'Longer term usability testing over multiple days',
+              'Smart task suggestion logic',
+              'Personalisation based on user behaviour',
+              'Visual design refinement',
+              'Expansion into a complete product ecosystem',
+            ],
+          },
+          {
+            heading: 'Reflections and Takeaways',
+            body: `Designing within a 3 day constraint required ruthless prioritisation of the core problem rather than features.<br><br>Bringing lived experience into research allowed patterns to be recognised quickly and translated into practical design decisions that resonated with users.<br><br>This project reinforced that productivity for ADHD is not about better organisation. It is about reducing the effort required to begin.`,
           },
         ],
       },
@@ -332,12 +401,21 @@ function buildCSDetail(cs) {
 
       ${stagesHTML}
 
-      <footer style="margin-bottom:55px">
-        <span class="footer-name">Joanne Nghiem</span>
-        <div class="footer-links">
-          <a href="mailto:n.nghiem049@gmail.com" class="footer-link">n.nghiem049@gmail.com</a>
-          <a href="https://www.linkedin.com/in/phoi-nghiem/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="assets/joanne-nghiem-resume.pdf" download class="footer-link">↓ Resume</a>
+      <footer>
+        <div class="footer-logo">
+          <img src="assets/logo.gif" alt="Joanne Nghiem">
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-col-heading">NAVIGATION</p>
+            <a onclick="showPage('home')" class="footer-link" style="cursor:pointer">Home</a>
+            <a onclick="showPage('about')" class="footer-link" style="cursor:pointer">About Me</a>
+            <a href="assets/joanne-nghiem-resume.pdf" download class="footer-link">Resume</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-heading">SOCIAL</p>
+            <a href="https://www.linkedin.com/in/phoi-nghiem/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
       </footer>
 
