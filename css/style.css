@@ -287,6 +287,52 @@ h2.section-title {
 
 .btn-filled:hover { background: var(--clay-dk); transform: translateY(-1px); }
 
+.cs-proto-btn-wrap {
+  margin: 1.25rem 0;
+}
+
+.cs-proto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--clay);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.cs-proto-btn:hover { background: var(--clay-dk); transform: translateY(-1px); }
+
+/* ── Placeholder blocks ── */
+.cs-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0;
+  padding: 1.5rem 2rem;
+  border: 1.5px dashed rgba(0,0,0,0.18);
+  border-radius: var(--radius-sm);
+  background: rgba(0,0,0,0.025);
+  min-height: 120px;
+  text-align: center;
+}
+
+.cs-placeholder span {
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+.cs-placeholder span::before {
+  content: '📷 ';
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;

@@ -108,43 +108,46 @@ const caseStudies = [
   {
     num: '02',
     title: 'FocusFlow — ADHD Task App',
-    role: 'Sole Product Designer (UX/UI) within a cross functional hackathon team',
+    role: 'Sole Product Designer (UX/UI) in a cross functional team',
     client: 'Hackathon Project · 🏆 Fan Favourite',
     year: '2022',
     context: 'Mobile App · Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
     tags: ['Mobile App', 'Accessibility', 'ADHD Design', 'Figma', '🏆 Fan Favourite'],
-    overview: `A mobile app concept designed to help people with ADHD start and stay on tasks — without the overwhelm of traditional productivity tools. Built in 3 days at a hackathon, FocusFlow strips the experience back to one task at a time and one action at a time. It won Fan Favourite.`,
+    heroPlaceholder: 'Hero image of the prototype screens on a phone mockup',
+    overview: `A mobile app concept designed to help people with ADHD start and stay on tasks without the overwhelm of traditional productivity tools. Built in 3 days at a hackathon, FocusFlow reframed productivity around guided initiation instead of planning.<br><br>The MVP was a chatbot assistant that converses with the user and leads them into a single task, one step at a time.<br><br>Early concepts were explored through a lo-fi interactive prototype rather than sketches to prioritise testing behaviour and flow over static layouts.`,
+    overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View Mid Fidelity Prototype (Figma)</a>`,
+    problemPart1: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear way. Tools such as Todoist, Trello, and Notion rely on lists, priorities, and multiple views of information.`,
+    problemPlaceholder: 'Small comparison image of typical task list UI vs your single screen UI',
+    problemPart2: `For people with ADHD, this model often fails.<br><br>The issue is rarely knowing what needs to be done. The issue is starting, choosing, and staying on a task without feeling overwhelmed.<br><br>These tools unintentionally increase cognitive load instead of reducing it.`,
     problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear way. Tools such as Todoist, Trello, and Notion rely on lists, priorities, and multiple views of information. For people with ADHD, this model often fails. The issue is rarely knowing what needs to be done. The issue is starting, choosing, and staying on a task without feeling overwhelmed. Existing tools unintentionally increase cognitive load instead of reducing it.`,
-    tools: ['Pen & Paper', 'Miro', 'Figma'],
+    tools: ['Miro', 'Figma', 'Lo-fi Interactive Prototype', 'Mid Fidelity Prototype'],
     stages: [
       {
         id: 'empathize',
         label: '01 / Empathize',
         title: '01 / Empathize — Understanding ADHD Task Behaviour',
-        overview: ['Research Approach', 'Research Goals', 'Key Insights'],
+        overview: ['Research Approach', 'Key Insights'],
         content: [
           {
             heading: 'Research Approach',
-            body: `Research was focused, practical, and informed by both user input and lived experience:`,
+            placeholder: 'Photo or screenshot of Miro board with research notes / workshop outputs',
             list: [
               'Quick interviews with 3 adults diagnosed with ADHD',
-              'Team discussion shaping the app concept and feature set',
-              'My own lived experience navigating ADHD and task management',
+              'Team workshop to shape the concept and features',
+              'My lived experience navigating ADHD and task management',
               'Rapid accessibility heuristic review with a focus on cognitive load',
             ],
           },
           {
-            heading: 'Research Goals',
-            list: [
-              'Understand how people with ADHD currently attempt to manage tasks',
-              'Identify why existing tools are abandoned',
-              'Identify emotional and behavioural patterns around task avoidance',
-            ],
-          },
-          {
             heading: 'Key Insights',
-            body: `<strong>Task lists create overwhelm.</strong> Participants described immediate anxiety when opening apps like Todoist.<br><br><em>"Seeing everything at once makes me want to close the app."</em><br><br><strong>Starting is harder than doing.</strong> Once they begin, they can often continue. Initiation is the main barrier.<br><br><strong>Decision making is exhausting.</strong> Choosing what to do next frequently leads to procrastination.<br><br><strong>Time blindness is common.</strong> Participants regularly lost track of time while working.`,
+            body: `<em>"Seeing everything at once makes me want to close the app."</em>`,
+            list: [
+              'Task lists create immediate overwhelm and anxiety',
+              'Starting is harder than doing. Initiation is the main barrier',
+              'Decision making is exhausting and leads to procrastination',
+              'Time blindness causes users to lose track once they begin',
+            ],
           },
         ],
       },
@@ -155,49 +158,76 @@ const caseStudies = [
         overview: ['Problem Statement', 'Design Principles'],
         content: [
           {
-            heading: 'Core Problem Statement',
+            heading: 'Problem Statement',
             body: `How might we design a task experience that removes the need to plan and instead helps users simply begin?`,
           },
           {
-            heading: 'Design Principles Derived from Research',
+            heading: 'Design Principles',
+            placeholder: 'Screenshot of principles written visually or on sticky notes',
             list: [
               'Show only one task at a time',
               'Remove task lists and dashboards',
               'Reduce choices per screen',
-              'Provide a clear, obvious starting action',
+              'Provide a single obvious starting action',
               'Support time awareness visually',
+              'Guide the user instead of expecting self direction',
             ],
+            afterList: `<p style="margin-top:1rem">This is where the idea of a chatbot assistant as the primary interface emerged.</p>`,
           },
         ],
       },
       {
         id: 'ideate',
         label: '03 / Ideate',
-        title: '03 / Ideate — Low Fidelity Exploration',
-        overview: ['Pen and Paper Sketching', 'Core User Flow'],
+        title: '03 / Ideate — Why the Chatbot Became the MVP',
+        overview: ['Chatbot as Core Concept'],
         content: [
           {
-            heading: 'Pen and Paper Sketching',
-            body: `We started with rapid pen and paper sketches to explore ideas without committing to interface too early.<br><br>We explored removing task lists entirely, a single focus screen, a dominant start action, visual time feedback, and minimal content and choices per screen.<br><br>Crazy 8 style sketching helped generate multiple layout directions quickly before selecting a clear path forward.`,
+            heading: 'Chatbot as Core Concept',
+            placeholder: 'Early lo-fi screens of chat concept',
+            body: `The breakthrough idea was: what if the app did the deciding through conversation?<br><br>The chatbot became the core interaction model, not a feature.`,
+          },
+        ],
+      },
+      {
+        id: 'lofi',
+        label: '04 / Lo-fi',
+        title: '04 / Lo-fi Exploration — Interactive, Not Sketches',
+        overview: ['Lo-fi Prototype', 'Core User Flow'],
+        content: [
+          {
+            heading: 'Lo-fi Prototype',
+            body: `Rather than spending time on static sketches, I moved directly into a very low fidelity interactive prototype to explore ideas quickly and validate the flow.<br><br>This allowed me to test structure, hierarchy, and interaction in minutes instead of hours, and ensured early thinking was grounded in how the experience would actually behave for users.<br><br>Using this rapid prototype approach, I explored:`,
+            list: [
+              'Removing task lists entirely',
+              'A single focus screen with one dominant action',
+              'Visual time feedback without numbers or timers',
+              'Minimal content and choices per screen',
+              'A linear flow with no navigation complexity',
+            ],
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/AJwgU0Dii3S2hObJLKEuZ6/focusflow?fullscreen=1&t=2ZPnMAFiLb0Kj3vI-1" target="_blank" rel="noopener">→ View lo-fi prototype</a></div>`,
+            placeholderAfter: 'GIF or sequence of lo-fi screens showing the flow',
           },
           {
             heading: 'Core User Flow',
-            body: `We reduced the experience to only what was essential:<br><br><strong>Open app → See one task → Start → Complete → See next task</strong><br><br>No dashboards. No navigation complexity. No prioritisation features.`,
+            body: `We reduced the experience to only what was essential:<br><br><strong>Open app → Chat assistant → Suggested task → Start → Complete → Chat suggests next step</strong><br><br>No dashboards. No menus. No prioritisation UI.`,
           },
         ],
       },
       {
         id: 'prototype',
-        label: '04 / Prototype',
-        title: '04 / Prototype — Mid Fidelity in Figma',
+        label: '05 / Prototype',
+        title: '05 / Mid Fidelity Prototype in Figma',
         overview: ['Prototype Scope', 'Accessibility Heuristics'],
         content: [
           {
             heading: 'Prototype Scope',
+            placeholder: '4 to 6 mid-fi screens laid out horizontally',
             body: `Due to the time constraint, we created a mid fidelity interactive prototype focused on demonstrating the intended flow for the pitch. Not every element was functional. Only the interactions required to communicate the concept were built. This allowed us to prioritise clarity of experience over visual polish.`,
           },
           {
             heading: 'Accessibility Heuristics — Designing for Cognitive Load',
+            placeholder: 'One screen annotated with callouts explaining cognitive load decisions',
             body: `Each screen was evaluated using cognitive accessibility principles:`,
             list: [
               'One primary action per screen',
@@ -206,24 +236,26 @@ const caseStudies = [
               'Large tap targets',
               'No reliance on memory',
               'Clear focus state during tasks',
+              'Calm colour palette of light green and white',
             ],
           },
         ],
       },
       {
         id: 'test',
-        label: '05 / Test & Outcomes',
-        title: '05 / Test & Outcomes',
-        overview: ['Usability Testing', 'Iterations', 'Role & Collaboration', 'Design Decisions', 'Next Steps', 'Reflections'],
+        label: '06 / Test',
+        title: '06 / Testing During the Hackathon',
+        overview: ['Observations', 'Iterations'],
         content: [
           {
-            heading: 'Usability Testing',
+            heading: 'Observations',
+            placeholder: 'Photo of you testing with participants or people using the prototype',
             body: `We tested the mid fidelity prototype with 3 users.`,
             list: [
               'Users immediately understood what to do',
               'No one asked where to go next',
-              'Participants responded positively to seeing only one task',
-              'Users described the experience as "calmer" than other apps',
+              'Participants described the experience as "calmer" than other apps',
+              'The chat interaction felt supportive rather than instructional',
             ],
           },
           {
@@ -236,22 +268,49 @@ const caseStudies = [
               'Strengthened the visual emphasis on the active task',
             ],
           },
+        ],
+      },
+      {
+        id: 'role',
+        label: '07 / Role',
+        title: '07 / My Role and Contribution',
+        overview: ['Role and Collaboration'],
+        content: [
           {
             heading: 'Role and Collaboration',
+            placeholder: 'Screenshot of your Figma file showing flows and screens',
             body: `I was the sole designer on the team, responsible for:`,
             list: [
               'Translating the idea into user flows and interface concepts',
-              'Leading low fidelity sketching',
+              'Creating and iterating on the lo-fi interactive prototype',
               'Building the mid fidelity prototype in Figma',
               'Applying accessibility and cognitive load principles to the design',
             ],
           },
+        ],
+      },
+      {
+        id: 'decisions',
+        label: '08 / Decisions',
+        title: '08 / Design Decisions and Trade Offs',
+        overview: ['Design Decisions'],
+        content: [
           {
             heading: 'Design Decisions and Trade Offs',
+            placeholder: 'Simple decision table or visual showing Problem to Decision to Outcome',
             body: `<strong>Why remove task lists</strong> — Research showed that lists were the primary source of overwhelm.<br><br><strong>Why mid fidelity</strong> — The goal was to communicate behaviour and flow within 3 days, not polish visuals.<br><br><strong>Why limit functionality</strong> — We prioritised the story of the experience for the pitch rather than building every screen.<br><br><strong>Why focus on one flow</strong> — A single clear flow demonstrated the value of the idea more effectively than multiple features.`,
           },
+        ],
+      },
+      {
+        id: 'pitch',
+        label: '09 / Pitch',
+        title: '09 / What We Demonstrated in the Pitch',
+        overview: ['The Pitch', 'Fan Favourite'],
+        content: [
           {
-            heading: 'What We Demonstrated in the Pitch',
+            heading: 'The Pitch',
+            placeholder: 'Photo of you presenting OR the slide used in the pitch',
             body: `In the 8 to 10 minute pitch, the prototype demonstrated:`,
             list: [
               'How the app removes task list anxiety',
@@ -261,7 +320,21 @@ const caseStudies = [
             ],
           },
           {
+            heading: 'Fan Favourite',
+            placeholder: 'Photo of award / event / team',
+            body: `The project won Fan Favourite — voted by peers and judges across all hackathon entries.`,
+          },
+        ],
+      },
+      {
+        id: 'next',
+        label: '10 / Next Steps',
+        title: '10 / Next Steps and Reflections',
+        overview: ['Next Steps', 'Reflections'],
+        content: [
+          {
             heading: 'Next Steps If Developed Further',
+            placeholder: 'Simple future roadmap visual',
             list: [
               'Longer term usability testing over multiple days',
               'Smart task suggestion logic',
@@ -272,6 +345,7 @@ const caseStudies = [
           },
           {
             heading: 'Reflections and Takeaways',
+            placeholder: 'Final hero mockup or polished screen to end the case study',
             body: `Designing within a 3 day constraint required ruthless prioritisation of the core problem rather than features.<br><br>Bringing lived experience into research allowed patterns to be recognised quickly and translated into practical design decisions that resonated with users.<br><br>This project reinforced that productivity for ADHD is not about better organisation. It is about reducing the effort required to begin.`,
           },
         ],
@@ -322,8 +396,11 @@ function buildCSDetail(cs) {
       return `
         <div class="cs-content-block"${id ? ` id="${id}"` : ''}>
           ${block.heading ? `<h3 class="cs-content-heading">${block.heading}</h3>` : ''}
+          ${block.placeholder ? `<div class="cs-placeholder"><span>${block.placeholder}</span></div>` : ''}
           ${block.body ? `<p>${block.body}</p>` : ''}
           ${block.list ? `<ul class="cs-v2-list">${block.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
+          ${block.afterList ? block.afterList : ''}
+          ${block.placeholderAfter ? `<div class="cs-placeholder"><span>${block.placeholderAfter}</span></div>` : ''}
           ${block.tags ? `<div class="cs-v2-tags">${block.tags.map(t => `<span class="t-tag">${t}</span>`).join('')}</div>` : ''}
         </div>`;
     }).join('');
@@ -366,7 +443,9 @@ function buildCSDetail(cs) {
           <div class="cs-overview-intro">
             <div class="section-label">${cs.context}</div>
             <h1 class="cs-v2-title">${cs.title}</h1>
+            ${cs.heroPlaceholder ? `<div class="cs-placeholder"><span>${cs.heroPlaceholder}</span></div>` : ''}
             <p class="cs-v2-sub">${cs.overview}</p>
+            ${cs.overviewLink ? `<div class="cs-proto-btn-wrap">${cs.overviewLink}</div>` : ''}
           </div>
         </div>
         <div class="cs-overview-body">
@@ -393,7 +472,7 @@ function buildCSDetail(cs) {
           <div class="cs-stage-main">
             <div class="cs-content-block">
               <h3 class="cs-content-heading">The Problem</h3>
-              <p>${cs.problem}</p>
+              ${cs.problemPart1 ? `<p>${cs.problemPart1}</p>${cs.problemPlaceholder ? `<div class="cs-placeholder"><span>${cs.problemPlaceholder}</span></div>` : ''}<p>${cs.problemPart2}</p>` : `<p>${cs.problem}</p>`}
             </div>
           </div>
         </div>
