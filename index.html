@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joanne Nghiem — UX Designer</title>
   <meta name="description" content="UX Designer with 4 years of experience across government and enterprise, specialising in human-centred design, accessibility, and design systems.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -31,52 +32,54 @@
 <div id="page-home" class="page active">
 
   <div class="hero">
-    <div class="hero-kicker anim d1">UX Designer · Sydney, NSW</div>
-    <h1 class="hero-headline anim d2">
-      Designing digital<br>experiences that<br><em>feel human</em>
-    </h1>
+    <div class="hero-kicker anim d1">Welcome! I'm Joanne <span class="kicker-spark">✦</span></div>
+    <div class="hero-cycle-wrap anim d2">
+      <h1 class="hero-statement">I am a <em>UX designer</em></h1>
+      <h1 class="hero-statement">I turn complexity into <em>clarity</em></h1>
+      <h1 class="hero-statement">I design for people, <em>not screens</em></h1>
+      <h1 class="hero-statement">I have a meticulous <em>eye for detail</em></h1>
+    </div>
     <div class="hero-bottom anim d3">
-      <p class="hero-desc">4 years crafting accessible, user-centred products across government and enterprise — translating complexity into journeys people actually enjoy.</p>
-      <div class="hero-actions">
-        <button class="btn-filled" onclick="showPage('work')">View case studies →</button>
-        <button class="btn-outline" onclick="showPage('about')">About me</button>
-      </div>
+      <p class="hero-desc">4 years crafting accessible, user-centred products across government and enterprise, translating complexity into journeys people actually enjoy.</p>
     </div>
   </div>
 
-  <!-- Marquee -->
-  <div class="marquee-strip">
-    <div class="marquee-inner">
-      <span>Human-centred design</span><span class="accent">…</span>
-      <span>Figma</span><span class="accent">…</span>
-      <span>WCAG 2.1 / 2.2</span><span class="accent">…</span>
-      <span>User research</span><span class="accent">…</span>
-      <span>Design systems</span><span class="accent">…</span>
-      <span>Accessible interfaces</span><span class="accent">…</span>
-      <span>Stakeholder collaboration</span><span class="accent">…</span>
-      <span>React · HTML · CSS</span><span class="accent">…</span>
-      <!-- duplicate for seamless loop -->
-      <span>Human-centred design</span><span class="accent">…</span>
-      <span>Figma</span><span class="accent">…</span>
-      <span>WCAG 2.1 / 2.2</span><span class="accent">…</span>
-      <span>User research</span><span class="accent">…</span>
-      <span>Design systems</span><span class="accent">…</span>
-      <span>Accessible interfaces</span><span class="accent">…</span>
-      <span>Stakeholder collaboration</span><span class="accent">…</span>
-      <span>React · HTML · CSS</span><span class="accent">…</span>
-    </div>
-  </div>
-
-  <!-- Selected work -->
+  <!-- Case studies -->
   <div class="home-cs-rows">
     <div class="home-cs-header">
-      <div class="section-label">Selected work</div>
-      <h2 class="section-title" style="margin-bottom:0.25rem">Case studies</h2>
+      <div class="cs-pill-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        Case Studies
+      </div>
+      <h2 class="section-title" style="margin-bottom:0">What I've designed recently</h2>
     </div>
 
-    <!-- Row 1 -->
-    <div class="hcs-row" onclick="showCS(0)">
-      <div class="hcs-visual thumb-a">
+    <!-- Card 1: Opal -->
+    <div class="hcs-card" onclick="showCS(0)">
+      <div class="hcs-card-body">
+        <div class="hcs-card-label">Concept Project · Mobile App</div>
+        <h3 class="hcs-card-title">Opal — Reimagining Public Transport Ticketing</h3>
+        <p class="hcs-card-desc">A research-led redesign of Sydney's Opal app — benchmarking transit experiences from London, Tokyo, and Singapore to design a smarter, faster way to get around.</p>
+        <div class="hcs-card-tags">
+          <span class="hcs-pill-tag">UX Research</span>
+          <span class="hcs-pill-tag">App Redesign</span>
+          <span class="hcs-pill-tag">iOS &amp; Android</span>
+        </div>
+        <div class="hcs-card-metrics">
+          <div class="hcs-metric">
+            <div class="hcs-metric-val">1 Tap</div>
+            <div class="hcs-metric-label">Top-up flow</div>
+          </div>
+          <div class="hcs-metric">
+            <div class="hcs-metric-val">4</div>
+            <div class="hcs-metric-label">Cities benchmarked</div>
+          </div>
+        </div>
+        <div class="hcs-card-actions">
+          <button class="hcs-btn-primary">View case study</button>
+        </div>
+      </div>
+      <div class="hcs-card-visual thumb-a">
         <svg width="340" height="260" viewBox="0 0 340 260" fill="none" aria-hidden="true">
           <rect x="30" y="20" width="80" height="140" rx="10" fill="white" opacity=".18"/>
           <rect x="36" y="38" width="68" height="10" rx="5" fill="white" opacity=".6"/>
@@ -97,22 +100,11 @@
           <circle cx="271" cy="150" r="5" fill="white" opacity=".3"/>
         </svg>
       </div>
-      <div class="hcs-body">
-        <div class="hcs-label">Concept Project · Mobile App</div>
-        <h3 class="hcs-title">Opal — Reimagining Public Transport Ticketing</h3>
-        <p class="hcs-desc">A research-led redesign of the Opal travel app — benchmarking transit experiences from London, Tokyo, and Singapore to design a smarter, faster way to get around Sydney.</p>
-        <div class="hcs-tags">
-          <span class="hcs-tag">UX Research</span>
-          <span class="hcs-tag">App Redesign</span>
-          <span class="hcs-tag">Figma</span>
-        </div>
-        <button class="btn-filled" style="margin-top:1.5rem">Read case study →</button>
-      </div>
     </div>
 
-    <!-- Row 2 -->
-    <div class="hcs-row hcs-row-flip" onclick="showCS(1)">
-      <div class="hcs-visual thumb-b">
+    <!-- Card 2: Focus -->
+    <div class="hcs-card" onclick="showCS(1)">
+      <div class="hcs-card-visual thumb-b">
         <svg width="300" height="260" viewBox="0 0 300 260" fill="none" aria-hidden="true">
           <rect x="100" y="15" width="100" height="180" rx="12" fill="white" opacity=".2"/>
           <rect x="112" y="35" width="76" height="10" rx="5" fill="white" opacity=".6"/>
@@ -126,50 +118,28 @@
           <rect x="210" y="50" width="70" height="120" rx="8" fill="white" opacity=".1"/>
         </svg>
       </div>
-      <div class="hcs-body">
-        <div class="hcs-label">Hackathon · 🏆 Fan Favourite</div>
-        <h3 class="hcs-title">Focus — ADHD Productivity App</h3>
-        <p class="hcs-desc">One app, three tools, zero clutter. A mobile concept designed from lived experience with ADHD — combining a Pomodoro timer, brown noise, and a minimal task list into one calm space.</p>
-        <div class="hcs-tags">
-          <span class="hcs-tag">Mobile App</span>
-          <span class="hcs-tag">Accessibility</span>
-          <span class="hcs-tag">Figma</span>
+      <div class="hcs-card-body">
+        <div class="hcs-card-label">Hackathon · 🏆 Fan Favourite</div>
+        <h3 class="hcs-card-title">Focus — ADHD Productivity App</h3>
+        <p class="hcs-card-desc">One app, three tools, zero clutter. A mobile concept designed from lived experience — combining a Pomodoro timer, brown noise, and a minimal task list into one calm space.</p>
+        <div class="hcs-card-tags">
+          <span class="hcs-pill-tag">Mobile App</span>
+          <span class="hcs-pill-tag">Accessibility</span>
+          <span class="hcs-pill-tag">ADHD Design</span>
         </div>
-        <button class="btn-filled" style="margin-top:1.5rem">Read case study →</button>
-      </div>
-    </div>
-
-    <!-- Row 3 -->
-    <div class="hcs-row" onclick="showCS(2)">
-      <div class="hcs-visual thumb-c">
-        <svg width="340" height="260" viewBox="0 0 340 260" fill="none" aria-hidden="true">
-          <rect x="20" y="20" width="300" height="200" rx="8" fill="white" opacity=".15"/>
-          <rect x="20" y="20" width="300" height="28" rx="8" fill="white" opacity=".1"/>
-          <circle cx="38" cy="34" r="5" fill="white" opacity=".4"/>
-          <circle cx="54" cy="34" r="5" fill="white" opacity=".3"/>
-          <circle cx="70" cy="34" r="5" fill="white" opacity=".2"/>
-          <rect x="20" y="48" width="72" height="172" fill="white" opacity=".08"/>
-          <rect x="28" y="62" width="54" height="6" rx="3" fill="white" opacity=".35"/>
-          <rect x="28" y="76" width="42" height="6" rx="3" fill="white" opacity=".25"/>
-          <rect x="28" y="90" width="48" height="6" rx="3" fill="white" opacity=".25"/>
-          <rect x="28" y="104" width="38" height="6" rx="3" fill="white" opacity=".2"/>
-          <rect x="104" y="58" width="200" height="12" rx="4" fill="white" opacity=".5"/>
-          <rect x="104" y="78" width="180" height="8" rx="4" fill="white" opacity=".3"/>
-          <rect x="104" y="94" width="160" height="8" rx="4" fill="white" opacity=".25"/>
-          <rect x="104" y="116" width="200" height="60" rx="6" fill="white" opacity=".15"/>
-          <rect x="104" y="184" width="90" height="22" rx="4" fill="white" opacity=".35"/>
-        </svg>
-      </div>
-      <div class="hcs-body">
-        <div class="hcs-label">Concept Project · Enterprise Web</div>
-        <h3 class="hcs-title">ServiceNow — Enterprise Portal Redesign</h3>
-        <p class="hcs-desc">Redesigning an enterprise IT portal to cut request time, surface ticket status clearly, and meet WCAG 2.1 AA accessibility standards — from audit through to an annotated Figma prototype.</p>
-        <div class="hcs-tags">
-          <span class="hcs-tag">Web UX</span>
-          <span class="hcs-tag">Design Systems</span>
-          <span class="hcs-tag">WCAG 2.1 AA</span>
+        <div class="hcs-card-metrics">
+          <div class="hcs-metric">
+            <div class="hcs-metric-val">🏆</div>
+            <div class="hcs-metric-label">Fan Favourite</div>
+          </div>
+          <div class="hcs-metric">
+            <div class="hcs-metric-val">24 hrs</div>
+            <div class="hcs-metric-label">Built in</div>
+          </div>
         </div>
-        <button class="btn-filled" style="margin-top:1.5rem">Read case study →</button>
+        <div class="hcs-card-actions">
+          <button class="hcs-btn-primary">View case study</button>
+        </div>
       </div>
     </div>
   </div><!-- /home-cs-rows -->
@@ -286,46 +256,6 @@
         </div>
       </div>
 
-      <!-- Case study 03 -->
-      <div class="cs-full-card" onclick="showCS(2)">
-        <div class="cs-full-thumb thumb-c">
-          <svg width="300" height="220" viewBox="0 0 300 220" fill="none" aria-hidden="true">
-            <rect x="20" y="20" width="260" height="180" rx="12" stroke="white" stroke-width="1.5" fill="none"/>
-            <rect x="40" y="46" width="90" height="10" rx="5" fill="white" opacity=".5"/>
-            <rect x="180" y="46" width="80" height="40" rx="8" fill="white" opacity=".18"/>
-            <rect x="40" y="72" width="120" height="40" rx="8" fill="white" opacity=".25"/>
-            <rect x="180" y="100" width="80" height="40" rx="8" fill="white" opacity=".18"/>
-            <rect x="40" y="128" width="80" height="30" rx="8" fill="white" opacity=".25"/>
-          </svg>
-        </div>
-        <div class="cs-full-body">
-          <div class="cs-num">03</div>
-          <div class="cs-tags" style="margin-bottom:0.75rem">
-            <span class="cs-tag">Web UX</span>
-            <span class="cs-tag">Design Systems</span>
-            <span class="cs-tag">WCAG 2.1 AA</span>
-            <span class="cs-tag">Enterprise</span>
-          </div>
-          <div class="cs-full-name">ServiceNow — Enterprise Portal Redesign</div>
-          <span class="cs-role-tag">UX Designer · Concept Project</span>
-          <p class="cs-full-desc">A concept redesign of an enterprise IT service portal — simplifying the request flow from 7 steps to 3, introducing a live status tracker, and applying WCAG 2.1 AA accessibility standards throughout, delivered as an annotated Figma prototype.</p>
-          <div class="cs-meta">
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Type</div>
-              <div class="cs-meta-val">Concept Project</div>
-            </div>
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Year</div>
-              <div class="cs-meta-val">2024</div>
-            </div>
-            <div class="cs-meta-item">
-              <div class="cs-meta-label">Role</div>
-              <div class="cs-meta-val">UX Design</div>
-            </div>
-          </div>
-          <span class="cs-arrow">Read case study →</span>
-        </div>
-      </div>
 
     </div><!-- /cs-page-grid -->
 
