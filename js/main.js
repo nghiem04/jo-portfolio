@@ -152,7 +152,7 @@ const caseStudies = [
     overview: `A chatbot-first task experience designed to help people with ADHD start tasks without overwhelm. Built, tested, and iterated in 3 days at a hackathon, FocusFlow reframed productivity around guided initiation instead of planning.<br><br>The MVP placed a conversational assistant at the centre of the experience, guiding users into a single task one step at a time, removing the need to plan, prioritise, or navigate a list.<br><br>Concepts were validated through a lo-fi interactive prototype before being carried into a mid-fidelity Figma build, keeping the focus on behaviour and flow throughout.`,
     overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View Mid Fidelity Prototype (Figma)</a>`,
     problemPart1: `Most productivity tools are built around the assumption that users can plan, prioritise, and execute tasks in a structured, linear way. Tools like Todoist, Trello, and Notion rely on lists, multiple views, and user-driven prioritisation to organise work.`,
-    problemPlaceholder: 'Comparison image: task list UI (Todoist or similar) alongside FocusFlow single-focus screen',
+    problemPlaceholder: '<img src="assets/focusflow/ff_2.png" alt="Comparison of a traditional task list app versus FocusFlow single-focus screen" style="width:100%;border-radius:8px;display:block;">',
     problemPart2: `For people with ADHD, this model frequently breaks down.<br><br>The challenge is rarely knowing what needs to be done. It is starting, choosing between options, and staying on a task without the interface itself becoming a source of overwhelm.<br><br>Existing tools are not designed for this. They surface everything at once, require active decision making at every step, and unintentionally increase cognitive load at the exact moment it needs to be reduced.`,
     problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear way. For people with ADHD, this model frequently breaks down. The challenge is not knowing what to do. It is starting, choosing, and staying focused without the interface adding to the load. Existing tools surface everything at once and require active decision making at every step, increasing cognitive demand at the moment it needs to be reduced.`,
     tools: ['Figma', 'Miro', 'Lo-fi Interactive Prototype', 'Mid Fidelity Prototype'],
@@ -501,7 +501,7 @@ function buildCSDetail(cs) {
           <div class="cs-stage-main">
             <div class="cs-content-block">
               <h3 class="cs-content-heading">The Problem</h3>
-              ${cs.problemPart1 ? `<p>${cs.problemPart1}</p>${cs.problemPlaceholder ? `<div class="cs-placeholder"><span>${cs.problemPlaceholder}</span></div>` : ''}<p>${cs.problemPart2}</p>` : `<p>${cs.problem}</p>`}
+              ${cs.problemPart1 ? `<p>${cs.problemPart1}</p>${cs.problemPlaceholder ? `<div class="cs-problem-image">${cs.problemPlaceholder}</div>` : ''}<p>${cs.problemPart2}</p>` : `<p>${cs.problem}</p>`}
             </div>
           </div>
         </div>
