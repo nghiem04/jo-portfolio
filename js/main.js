@@ -106,7 +106,7 @@ const caseStudies = [
         id: 'outcomes',
         label: '05 / Outcomes',
         title: '05 / Outcomes — What This Demonstrates',
-        overview: ['Skills Demonstrated', 'Reflection', 'Visual Artefacts'],
+        overview: ['Skills Demonstrated', 'Reflection'],
         content: [
           {
             heading: 'Skills Demonstrated',
@@ -125,19 +125,7 @@ const caseStudies = [
           {
             heading: 'Reflection',
             body: `The most significant decision in this project was made before any design work began: structuring the research around the commuting day rather than around the Opal app. That choice determined what the project was able to find. Interviews framed around an application produce feedback about the application. Interviews framed around how people actually move through their day produce a behavioural map that reveals the application's structural limitations in a way that interface evaluation alone cannot.<br><br>The saved routes and real-time alerts feature is the clearest example of the research-to-design trace this project established. That feature did not come from a competitive analysis, a product roadmap, or a designer's assumption about what would be useful. It came from participants describing the stress of the morning commute, the tools they had adopted out of necessity, and the workarounds they had built for themselves because the Opal app did not address the moments they needed it most. Carrying that finding from synthesis into a named design principle and then into a first-class prototype feature is what research grounded in context rather than in product evaluation makes possible.<br><br>The primary constraint of the project was the absence of usability testing with the mid-fidelity prototype. The logical next step would be moderated task-based testing with participants drawn from the same demographic as the research cohort, measuring whether the redesigned flows reduced task completion time and whether the saved route and alert features reduced the application-switching behaviour that synthesis had identified as the central problem. Without that testing, the prototype demonstrates a well-reasoned design direction. It does not yet confirm that the direction works in practice.`,
-          },
-          {
-            heading: 'Visual Artefacts',
-            body: `The following artefacts should be shown as images or embedded Figma files within this case study:`,
-            list: [
-              'Interview affinity map from Miro',
-              'Persona and end-to-end journey map',
-              'Annotated Opal app audit screenshots',
-              'Low-fidelity home screen and navigation sketches',
-              'Mid-fidelity prototype screens: home, top-up flow, trip history, journey planner',
-              'Figma prototype link with interactive flows',
-            ],
-          },
+          }
         ],
       },
     ],
