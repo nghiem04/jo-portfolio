@@ -5,9 +5,9 @@ const caseStudies = [
     title: 'Opal — Designing Around How People Actually Travel',
     role: 'UX Designer · Research, Synthesis, Interaction Design',
     team: '5 UX Designers',
-    client: 'Concept Project',
+    client: 'Independent UX Project',
     year: '2022',
-    context: 'Mobile App · UX Research · Interaction Design',
+    context: 'UX Research · Interaction Design',
     thumbClass: 'thumb-a',
     heroImage: 'assets/opal/opal_1.png',
     heroImageAlt: 'Opal app redesign mockup',
@@ -25,13 +25,14 @@ const caseStudies = [
           {
             heading: 'User Interviews',
             body: `Interviews were structured around the full commuting day rather than the Opal app specifically. This framing was a deliberate methodological choice. Asking participants to evaluate an application produces feedback about the application. Asking participants to walk through their morning, describe which tools they consulted before leaving home, explain how they managed uncertainty in transit, and reflect on what caused friction produces a behavioural map that places the application in its actual context of use.<br><br>The team of five each interviewed three participants, producing 15 sessions in total. Participants ranged from 17 to 45 years of age, covering students and full-time workers across varied commuting distances, frequencies, and levels of dependence on public transit. Each session ran for approximately one hour.<br><br>The structure moved chronologically through the commuting day from the decision to leave home through to arrival at a destination. Within that sequence, every interaction with the Opal app appeared naturally alongside every other tool the participant reached for at the same moment. This approach surfaced three patterns that a product-focused interview structure would not have revealed.<br><br>The first was that the window before departure was consistently the highest-stress point in the commuting day. Participants needed to confirm their route was operating normally before committing to a departure time. The Opal app's trip information was too slow and unreliable for this purpose under time pressure. Several participants had adopted TripView as their default for pre-departure checks, not because they preferred it, but because the Opal app did not meet the need at the moment it mattered most.<br><br>The second was that the majority of participants were not planning new routes each day. They were repeating a small number of established journeys on a fixed schedule. The app offered no mechanism for recognising this behaviour, presenting the same undifferentiated experience regardless of how many times the participant had made the same trip.<br><br>The third emerged when participants were asked directly what would improve the morning experience. Responses converged without being prompted: save a regular route, receive an alert if something on that route changes, and access that information without having to search each time.`,
-            placeholder: 'Interview affinity map from Miro',
+            placeholder: '<img src="assets/opal/opal_2.jpg" alt="Interview affinity map from Miro" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'Synthesis in Miro',
             body: `All five designers synthesised findings collaboratively in Miro, working through four methods in sequence. The goal was not to catalogue everything participants had said but to identify the patterns that held across the full dataset and could not be attributed to any individual participant's circumstances.<br><br><strong>Affinity mapping</strong> was applied first, clustering raw observations from all 15 interviews into groups based on behavioural similarity. Working across a shared board and moving notes without regard for which participant they came from surfaced cross-cutting themes that no single interview had made fully visible on its own.<br><br><strong>Persona creation</strong> translated the behavioural patterns from the affinity map into representative user types. These were constructed from the commuting contexts, routines, decision points, and pain patterns that clustering had shown were consistent across the research population, not from demographic data.<br><br><strong>End-to-end journey mapping</strong> traced the full commuting workflow from planning at home through to arrival, documenting at each stage which tools were active, what decisions were being made, and what the participant's emotional state was. Mapping the journey this way made the fragmentation pattern structurally legible: the Opal app appeared at specific, limited moments in a workflow that moved continuously between applications. The switching behaviour was not incidental to how participants used the app. It was built into how commuters had adapted to what each tool could and could not do.<br><br><strong>Emotional mapping</strong> was applied over the journey map, identifying where participant confidence dropped and where frustration and anxiety peaked. The highest-friction moments consistently concentrated around two points: the pre-departure window before the first service of the day, and any moment during the journey where a disruption required replanning under time pressure.<br><br>Two insights emerged from synthesis that had not been visible in any individual interview. The first was that fragmentation was the structural problem. Participants were not using the Opal app incorrectly. They were using it alongside multiple other applications because no single tool covered the commuting workflow they actually needed to complete. The second was that habitual commuting behaviour was invisible to the app. Most participants were repeating the same route daily, and the application had no awareness of that pattern and no way to act on it.`,
-            placeholder: 'Miro board showing persona and end-to-end journey map',
-            placeholderAfter: 'Miro insight cluster showing repeated route behaviour across participants',
+            placeholder: '<img src="assets/opal/opal_3.jpg" alt="Miro board showing persona and end-to-end journey map" style="width:100%;border-radius:8px;display:block;"><img src="assets/opal/opal_persona.png" alt="Opal user persona" style="width:100%;border-radius:8px;display:block;margin-top:1rem;">',
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://miro.com/app/board/uXjVHb5sCgU=/?share_link_id=506555134836" target="_blank" rel="noopener">→ View Miro board</a></div>`,
+            placeholderAfter: '<img src="assets/opal/opal_4.jpg" alt="Miro insight cluster showing repeated route behaviour across participants" style="width:100%;border-radius:8px;display:block;">',  
           },
           {
             heading: 'International Benchmarking',
@@ -40,7 +41,7 @@ const caseStudies = [
           {
             heading: 'Opal App Audit',
             body: `The existing Opal app was audited across four primary flows: checking balance, topping up, reviewing trip history, and managing cards. Each flow was walked through step by step, documenting total step count, decision points required to complete the task, information that needed to be recalled from previous screens, and moments where the interface's behaviour diverged from what research had shown users expected.<br><br>The balance check flow required navigation into account settings to access information that research had identified as the most frequently needed for pre-departure decisions. Placing the highest-priority piece of account information behind account navigation represented a structural mismatch between the app's information architecture and the priority hierarchy that commuters actually operated with.<br><br>The top-up flow involved more steps than the underlying transaction required. Confirmation and navigation stages that added no meaningful clarity or security contributed friction at a point research had identified as high-frequency and time-sensitive for many participants.<br><br>Trip history presented journeys as a flat chronological list with no fare breakdown or per-journey cost visibility. Participants who needed to understand how their balance had been spent could not extract that information without working through individual journey records manually.<br><br>The audit confirmed the pattern research had already established: the app was built to handle transactions, and it did so functionally. It had not been designed around the decisions and workflows that surround those transactions in practice. Information that research identified as high-priority was present but not surfaced. Flows that the audit identified as carrying excessive steps were also the ones participants described as avoided or abandoned when time was limited.`,
-            placeholder: 'Annotated screenshots from the Opal app audit',
+            placeholder: '<img src="assets/opal/opal_5.jpg" alt="Annotated screenshots from the Opal app audit" style="width:100%;border-radius:8px;display:block;">',
           },
         ],
       },
@@ -147,7 +148,7 @@ const caseStudies = [
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
     year: '2022',
-    context: 'Mobile App · Cognitive Accessibility · 3-Day Hackathon',
+    context: 'Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
     heroImage: 'assets/focusflow/ff_1.png',
     heroImageAlt: 'FocusFlow app redesign mockup',
@@ -169,8 +170,8 @@ const caseStudies = [
         content: [
           {
             heading: 'Research Approach',
-            placeholder: 'Photo or screenshot of Miro board with research notes / workshop outputs',
             body: `Research was conducted on the first day of the hackathon. Three adults diagnosed with ADHD were interviewed individually, with sessions structured around how they currently managed tasks, which tools they used, when those tools failed them, and what they had tried and abandoned. The aim was to understand task behaviour as a lived experience rather than to evaluate any specific application.<br><br>I also drew on my own experience of navigating ADHD and task management. This shaped the interview framing and accelerated pattern recognition during synthesis, surfacing structural problems in the category before tool-level comparisons were made.<br><br>A team workshop consolidated findings from the interviews and identified which problems were inherent to how productivity tools are structured rather than specific to the applications participants had tried. A rapid cognitive accessibility heuristic review assessed information density, decision count per screen, and working memory load across the category.`,
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://miro.com/app/board/uXjVHb6c4w0=/?share_link_id=989572133225" target="_blank" rel="noopener">→ View Miro board</a></div>`,
           },
           {
             heading: 'Key Insights',
@@ -196,7 +197,7 @@ const caseStudies = [
           },
           {
             heading: 'Design Principles',
-            placeholder: 'Screenshot of principles written visually or on sticky notes',
+            placeholder: '<img src="assets/focusflow/ff_4.png" alt="Design principles mapped from research insights" style="width:100%;border-radius:8px;display:block;">',
             body: `Six principles were established from the research findings. Each is traceable to a specific finding from the interviews or synthesis:`,
             list: [
               'Show only one task at a time: addressing the overwhelm caused by full list views, which every participant identified as a barrier to beginning',
@@ -322,11 +323,11 @@ function buildCSDetail(cs) {
       return `
         <div class="cs-content-block"${id ? ` id="${id}"` : ''}>
           ${block.heading ? `<h3 class="cs-content-heading">${block.heading}</h3>` : ''}
-          ${block.placeholder ? (block.placeholder.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholder}</div>` : `<div class="cs-placeholder"><span>${block.placeholder}</span></div>`) : ''}
+          ${block.placeholder ? (block.placeholder.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholder}</div>` : block.placeholder.trimStart().startsWith('<table') ? `<div class="cs-table-wrap">${block.placeholder}</div>` : `<div class="cs-placeholder"><span>${block.placeholder}</span></div>`) : ''}
           ${block.body ? `<p>${block.body}</p>` : ''}
           ${block.list ? `<ul class="cs-v2-list">${block.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
           ${block.afterList ? block.afterList : ''}
-          ${block.placeholderAfter ? `<div class="cs-placeholder"><span>${block.placeholderAfter}</span></div>` : ''}
+          ${block.placeholderAfter ? (block.placeholderAfter.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholderAfter}</div>` : `<div class="cs-placeholder"><span>${block.placeholderAfter}</span></div>`) : ''}
           ${block.tags ? `<div class="cs-v2-tags">${block.tags.map(t => `<span class="t-tag">${t}</span>`).join('')}</div>` : ''}
         </div>`;
     }).join('');

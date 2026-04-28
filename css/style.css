@@ -339,26 +339,43 @@ h2.section-title {
   overflow: hidden;
 }
 
+.cs-table-wrap {
+  margin: 1.5rem 0;
+  border: 1px solid #dde1ef;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
 .cs-decision-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin: 0;
 }
 .cs-decision-table th,
 .cs-decision-table td {
   text-align: left;
-  padding: 0.65rem 0.9rem;
-  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid #dde1ef;
   vertical-align: top;
+  line-height: 1.55;
 }
 .cs-decision-table th {
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--fg-muted);
-  border-bottom: 2px solid var(--border);
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  background: var(--paper);
+  border-bottom: 1px solid #c8ccde;
+}
+.cs-decision-table tbody tr td:first-child {
+  font-weight: 500;
+  color: var(--ink-2);
+  width: 28%;
+}
+.cs-decision-table tbody tr:hover td {
+  background: var(--paper);
 }
 .cs-decision-table tbody tr:last-child td {
   border-bottom: none;
