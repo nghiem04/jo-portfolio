@@ -89,7 +89,7 @@ const caseStudies = [
         id: 'design',
         label: '04 / Design',
         title: '04 / Design — Mid-Fidelity Prototype',
-        overview: ['Prototype Scope', 'Key Screens'],
+        overview: ['Prototype Scope', 'How this fits into the Opal app', 'Key screens within the flow'],
         content: [
           {
             heading: 'Prototype Scope',
@@ -98,6 +98,12 @@ const caseStudies = [
             placeholderAfter: '<img src="assets/opal/opal_9.png" alt="Saved route home screen and real-time alert notification screens" style="width:100%;border-radius:8px;display:block;">',
           },
           {
+            heading: 'How this fits into the Opal app',
+            body: `This redesign was designed to sit inside the existing Opal app, not alongside it. The entry point is the home screen, where a user opens the app before or during their commute. From there, the primary paths are one-tap top-up, the saved route with real-time alerts, and the integrated journey planner. Each of these replaces a step that previously sent the user out of Opal entirely, either to a multi-step internal flow or to a third-party app.<br><br>After completing any of these actions, the user returns to the home screen. The flow does not terminate at a confirmation page or leave the user stranded in a sub-menu. Every interaction is designed to bring the user back to the same orienting point they started from, reflecting how transit tools are actually used: briefly, repeatedly, and under time pressure.`,
+          },
+          {
+            heading: 'Key screens within the flow',
+            body: `The screens below sit within the broader Opal journey described above.`,
             placeholder: '<img src="assets/opal/opal_10.png" alt="Key screen mockups: home screen, top-up flow, trip history, journey planner" style="width:100%;border-radius:8px;display:block;"><img src="assets/opal/opal_11.png" alt="Key screen mockups continued" style="width:100%;border-radius:8px;display:block;margin-top:1rem;">',
           },
         ],
