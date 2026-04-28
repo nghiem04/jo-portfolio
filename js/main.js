@@ -143,18 +143,18 @@ const caseStudies = [
     num: '02',
     title: 'FocusFlow — ADHD Task App',
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
-    client: 'Hackathon Project · 🏆 Fan Favourite',
+    client: 'Hackathon Project · Fan Favourite',
     year: '2022',
     context: 'Mobile App · Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
     tags: ['Cognitive Accessibility', 'Behaviour Design', 'Rapid Prototyping'],
 
-    overview: `A chatbot-first task experience designed to help people with ADHD start tasks without overwhelm. Built, tested, and iterated in 3 days at a hackathon, FocusFlow reframed productivity around guided initiation instead of planning.<br><br>The MVP placed a conversational assistant at the centre of the experience, guiding users into a single task one step at a time, removing the need to plan, prioritise, or navigate a list.<br><br>Concepts were validated through a lo-fi interactive prototype before being carried into a mid-fidelity Figma build, keeping the focus on behaviour and flow throughout.`,
+    overview: `FocusFlow was built during a three-day hackathon to address a problem that standard productivity tools consistently fail to solve: helping people with ADHD start tasks, rather than manage them.<br><br>Working as the sole designer in a cross-functional team of engineers, I led research, synthesis, and end-to-end interface design across the sprint. The concept was grounded in three interviews with adults diagnosed with ADHD and validated through a lo-fi interactive prototype before being carried into a mid-fidelity Figma build.<br><br>The central design decision was to remove the task list entirely and replace it with a conversational assistant that guides users into a single task, one step at a time. This was not a feature addition to an existing model. It was a structural reframing of what a productivity tool is for, derived directly from what research revealed about where the existing model fails.`,
     overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View Mid Fidelity Prototype (Figma)</a>`,
-    problemPart1: `Most productivity tools are built around the assumption that users can plan, prioritise, and execute tasks in a structured, linear way. Tools like Todoist, Trello, and Notion rely on lists, multiple views, and user-driven prioritisation to organise work.`,
+    problemPart1: `Most productivity tools are built around the assumption that users can plan, prioritise, and execute tasks in a structured, linear way. Tools like Todoist, Trello, and Notion treat task management as an organisational problem: they provide lists, views, and categorisation systems designed to help users sort and sequence their work.`,
     problemPlaceholder: '<img src="assets/focusflow/ff_2.png" alt="Comparison of a traditional task list app versus FocusFlow single-focus screen" style="width:100%;border-radius:8px;display:block;">',
-    problemPart2: `For people with ADHD, this model frequently breaks down.<br><br>The challenge is rarely knowing what needs to be done. It is starting, choosing between options, and staying on a task without the interface itself becoming a source of overwhelm.<br><br>Existing tools are not designed for this. They surface everything at once, require active decision making at every step, and unintentionally increase cognitive load at the exact moment it needs to be reduced.`,
-    problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear way. For people with ADHD, this model frequently breaks down. The challenge is not knowing what to do. It is starting, choosing, and staying focused without the interface adding to the load. Existing tools surface everything at once and require active decision making at every step, increasing cognitive demand at the moment it needs to be reduced.`,
+    problemPart2: `For people with ADHD, this model does not account for how task initiation works in practice.<br><br>The barrier is rarely knowing what needs to be done. The barrier is starting. Opening an app that immediately presents a full list of pending tasks, each requiring a decision about which to tackle and in what order, adds cognitive demand at precisely the moment it needs to be reduced. The interface asks users to self-direct at the point when self-direction is most difficult.<br><br>This is not a feature gap in existing tools. It is a structural mismatch between how those tools are designed and how cognition operates under the conditions in which users are most likely to reach for them.`,
+    problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear, self-directed way. For people with ADHD, this model does not describe how task initiation works. The challenge is not knowing what needs to be done. It is starting. Existing tools add cognitive demand at precisely the moment it needs to be reduced, by requiring users to survey a list, make decisions about priority, and self-direct before they have begun.`,
     tools: ['Figma', 'Miro', 'Lo-fi Interactive Prototype', 'Mid Fidelity Prototype'],
     stages: [
       {
@@ -166,21 +166,16 @@ const caseStudies = [
           {
             heading: 'Research Approach',
             placeholder: 'Photo or screenshot of Miro board with research notes / workshop outputs',
-            list: [
-              'Quick interviews with 3 adults diagnosed with ADHD',
-              'Team workshop to shape the concept and features',
-              'My lived experience navigating ADHD and task management',
-              'Rapid accessibility heuristic review with a focus on cognitive load',
-            ],
+            body: `Research was conducted during the first day of the hackathon. Three adults diagnosed with ADHD were interviewed individually, with sessions structured around how they currently managed tasks, which tools they used, when those tools failed them, and what they had tried or abandoned. The aim was to understand task behaviour as a lived experience rather than to evaluate any specific application.<br><br>Alongside the interviews, I contributed my own lived experience of navigating ADHD and task management. This shaped the framing of the interview questions and helped accelerate pattern recognition during synthesis, surfacing structural problems in the category before individual tool comparisons were made.<br><br>A team workshop synthesised findings from the interviews and grounded the concept direction, identifying which problems were inherent to how productivity tools are structured and which were incidental to the particular applications participants had used. A rapid cognitive accessibility heuristic review was applied in parallel, assessing information density, decision count per screen, and working memory load across the relevant tool category.`,
           },
           {
             heading: 'Key Insights',
-            body: `<em>"Seeing everything at once makes me want to close the app."</em>`,
+            body: `<em>"Seeing everything at once makes me want to close the app."</em><br><br>This response, offered by one participant when describing their experience of opening a task management app, was consistent in substance across all three interviews. Synthesis produced four findings that shaped every subsequent design decision:`,
             list: [
-              'Task lists create immediate overwhelm and anxiety',
-              'Starting is harder than doing. Initiation is the main barrier',
-              'Decision making is exhausting and leads to procrastination',
-              'Time blindness causes users to lose track once they begin',
+              'Task lists create immediate overwhelm. The act of opening a productivity app and seeing the full scope of outstanding work was described as demotivating rather than clarifying',
+              'Initiation is the primary barrier, not organisation. Participants did not struggle to know what needed doing. They struggled to start, and the interface offered no support for that specific moment',
+              'Decision fatigue compounds the problem. Every choice the interface asks the user to make before beginning a task adds to the cognitive cost of beginning. Existing tools require users to prioritise, categorise, and sequence before they can act',
+              'Time blindness disrupts completion. Once in a task, participants described losing track of elapsed time, causing them to either stop too early or continue well past the point of productive focus',
             ],
           },
         ],
@@ -193,20 +188,21 @@ const caseStudies = [
         content: [
           {
             heading: 'Problem Statement',
-            body: `How might we design a task experience that removes the need to plan and instead helps users simply begin?`,
+            body: `Synthesis converged on a single reframing: the problem was not that productivity tools lacked features. The problem was that they were built around a model of behaviour that does not describe how people with ADHD approach task work.<br><br>Standard productivity tools ask users to arrive at the app with executive function already engaged: to survey a list, make a decision about priority, and then begin. For people with ADHD, that sequence is precisely where the process breaks down. The cognitive cost of deciding what to do first is often enough to prevent doing anything at all.<br><br>The design challenge was not to build a better list. It was to design an experience that removed the need to self-direct entirely, and instead guided the user into a single task without requiring them to plan.<br><br><strong>How might we design a task experience that removes the burden of initiation and guides users into beginning, without requiring them to plan first?</strong>`,
           },
           {
             heading: 'Design Principles',
             placeholder: 'Screenshot of principles written visually or on sticky notes',
+            body: `Six principles were established from the research findings to guide all design decisions. Each is directly traceable to a specific insight from the interviews or synthesis:`,
             list: [
-              'Show only one task at a time',
-              'Remove task lists and dashboards',
-              'Reduce choices per screen',
-              'Provide a single obvious starting action',
-              'Support time awareness visually',
-              'Guide the user instead of expecting self direction',
+              'Show only one task at a time: addressing the overwhelm caused by full list views, which every participant described as a barrier to beginning',
+              'Remove task lists and dashboards: removing the interface pattern identified as the primary source of initiation failure',
+              'Reduce the number of choices per screen: addressing the decision fatigue finding, which showed that every additional choice increased the likelihood of disengagement',
+              'Provide a single, unambiguous primary action: removing the need for the user to interpret what to do next, which was consistently where participants stalled',
+              'Support time awareness visually: addressing time blindness without introducing numerical timers, which were reported as anxiety-inducing rather than helpful',
+              'Guide the user rather than expecting self-direction: the central principle, reframing the interface from a tool that stores tasks to one that actively moves the user through them',
             ],
-            afterList: `<p style="margin-top:1rem">This is where the idea of a chatbot assistant as the primary interface emerged.</p>`,
+            afterList: `<p style="margin-top:1rem">These principles did not point toward a refined version of an existing productivity interface. They pointed toward a fundamentally different interaction model. The question became what structural form could embody all six at once.</p>`,
           },
         ],
       },
@@ -218,8 +214,8 @@ const caseStudies = [
         content: [
           {
             heading: 'Chatbot as Core Concept',
-            placeholder: 'Early lo-fi screens of chat concept',
-            body: `The breakthrough idea was: what if the app did the deciding through conversation?<br><br>The chatbot became the core interaction model, not a feature.`,
+            placeholder: '<img src="assets/focusflow/ff_3.png" alt="Early lo-fi screens of the chatbot concept" style="width:100%;border-radius:8px;display:block;">',
+            body: `The six design principles defined what the experience needed to do behaviourally. Ideation focused on identifying which interaction model could structurally deliver all six without requiring the user to navigate, prioritise, or self-organise at any point.<br><br>A conventional list-with-focus mode was considered and rejected: it still required the user to make a selection before beginning, which reintroduced the initiation barrier at precisely the point it most needed to be removed. A card-swipe model was explored as a way of surfacing one item at a time, but it lacked the capacity to guide the user actively through a task rather than simply presenting it.<br><br>The conversational interface resolved the structural problem. A chat assistant does not present options and wait for selection. It offers the next step directly, removing the decision entirely. The user is not asked what they want to do. They are guided into doing it.<br><br>This was not a decision to add a chatbot feature to a productivity tool. It was a decision to use conversation as the primary interaction model because conversation, by its structure, eliminates the patterns that research had identified as the source of the problem. The assistant replaces the list. The response replaces the selection. The guided next step replaces open-ended navigation.`,
           },
         ],
       },
@@ -231,20 +227,20 @@ const caseStudies = [
         content: [
           {
             heading: 'Lo-fi Prototype',
-            body: `Rather than spending time on static sketches, I moved directly into a very low fidelity interactive prototype to explore ideas quickly and validate the flow.<br><br>This allowed me to test structure, hierarchy, and interaction in minutes instead of hours, and ensured early thinking was grounded in how the experience would actually behave for users.<br><br>Using this rapid prototype approach, I explored:`,
+            body: `Given the three-day constraint, static wireframes carried a specific risk: they describe visual structure but cannot reveal whether a proposed interaction model actually reduces cognitive load in practice. The only way to validate the core hypothesis was to make the experience navigable, however roughly, and observe whether users could move through it without hesitation.<br><br>I moved directly into a lo-fi interactive prototype, using it as a structural thinking tool rather than a documentation artefact. The goal was to test whether the conversational flow resolved the initiation barrier in practice and to identify any points where the interface was still introducing unnecessary decision moments.<br><br>The prototype explored five structural questions in sequence:`,
             list: [
-              'Removing task lists entirely',
-              'A single focus screen with one dominant action',
-              'Visual time feedback without numbers or timers',
-              'Minimal content and choices per screen',
-              'A linear flow with no navigation complexity',
+              'Whether removing the task list entirely created confusion or relief at the point of opening the app',
+              'Whether a single dominant action on the focus screen was legible without additional instruction',
+              'Whether visual progress feedback could communicate elapsed time without introducing numbers or countdowns',
+              'Whether limiting content to the minimum necessary per screen changed the quality of engagement',
+              'Whether a fully linear flow, with no navigation or backtracking, felt constraining or clarifying',
             ],
-            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/AJwgU0Dii3S2hObJLKEuZ6/focusflow?fullscreen=1&t=2ZPnMAFiLb0Kj3vI-1" target="_blank" rel="noopener">→ View lo-fi prototype</a></div>`,
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/LmoT0D4wYqwGcRTLWhvRzE/lo-fi-mockup?fullscreen=1&t=pjFWlr2VZ0TU34hL-1" target="_blank" rel="noopener">→ View lo-fi prototype</a></div>`,
             placeholderAfter: 'GIF or sequence of lo-fi screens showing the flow',
           },
           {
             heading: 'Core User Flow',
-            body: `We reduced the experience to only what was essential:<br><br><strong>Open app → Chat assistant → Suggested task → Start → Complete → Chat suggests next step</strong><br><br>No dashboards. No menus. No prioritisation UI.`,
+            body: `The lo-fi prototype validated the interaction structure before any visual design decisions were made. The complete flow reduced to a single, repeating sequence with no branches and no decision points requiring the user to self-direct:<br><br><strong>Open app → Chat assistant offers a task → User confirms → Single focus screen → Task complete → Assistant offers next step</strong><br><br>No list view. No navigation. No open-ended choices at any stage of the flow.`,
           },
         ],
       },
@@ -257,20 +253,20 @@ const caseStudies = [
           {
             heading: 'Prototype Scope',
             placeholder: '4 to 6 mid-fi screens laid out horizontally',
-            body: `Due to the time constraint, we created a mid fidelity interactive prototype focused on demonstrating the intended flow for the pitch. Not every element was functional. Only the interactions required to communicate the concept were built. This allowed us to prioritise clarity of experience over visual polish.`,
+            body: `With the interaction structure validated through the lo-fi prototype, the mid-fidelity build in Figma focused on two things: making the interface visually legible enough to evaluate during testing, and demonstrating the complete intended flow for the pitch.<br><br>Not every screen was built. Only the interactions required to communicate the core concept were made functional. This was a deliberate scoping decision: within a three-day constraint, effort spent on screens outside the primary flow would have come at the cost of the clarity and coherence of the screens within it. The prototype was scoped to demonstrate behaviour, not to simulate a production-ready product.`,
           },
           {
             heading: 'Accessibility Heuristics — Designing for Cognitive Load',
             placeholder: 'One screen annotated with callouts explaining cognitive load decisions',
-            body: `Each screen was evaluated using cognitive accessibility principles:`,
+            body: `Each screen was reviewed against cognitive accessibility criteria before it was considered complete. These were not applied as a checklist after the fact. They operated as active design constraints throughout the build, each directly traceable to a specific finding from the research phase:`,
             list: [
-              'One primary action per screen',
-              'Limited text and visual noise',
-              'Strong visual hierarchy',
-              'Large tap targets',
-              'No reliance on memory',
-              'Clear focus state during tasks',
-              'Calm colour palette of light green and white',
+              'One primary action per screen: no screen asks the user to make more than one decision at a time, directly addressing the decision fatigue pattern identified in research',
+              'Limited text and visual noise: information density was kept below what the task strictly required, reducing ambient cognitive load at every stage',
+              'Strong visual hierarchy: the primary action was always the most visually dominant element, removing ambiguity about what to do next',
+              'Large tap targets: reducing the fine motor precision required to interact, lowering physical friction for users in low-focus states',
+              'No reliance on memory: the current task and next action were always visible simultaneously, removing the need to recall previous steps',
+              'Clear active task state: the screen communicates unambiguously when the user is in a task and when they have completed it',
+              'Calm colour palette of light green and white: selected to avoid the stimulation associated with high-contrast or saturated interfaces, which participants described as increasing rather than reducing anxiety',
             ],
           },
         ],
@@ -283,104 +279,67 @@ const caseStudies = [
         content: [
           {
             heading: 'Observations',
-            placeholder: 'Photo of you testing with participants or people using the prototype',
-            body: `We tested the mid fidelity prototype with 3 users.`,
+            body: `The mid-fidelity prototype was tested with three users during the final day of the hackathon. Testing was moderated and task-based, with participants asked to open the app, respond to the chat assistant, begin a task, and complete the flow. Sessions were observed for hesitation, confusion, and the presence or absence of unprompted navigation attempts, all of which had been identified during the lo-fi phase as indicators of whether the interaction model was reducing or adding cognitive load.<br><br>Four consistent observations emerged across all three sessions:`,
             list: [
-              'Users immediately understood what to do',
-              'No one asked where to go next',
-              'Participants described the experience as "calmer" than other apps',
-              'The chat interaction felt supportive rather than instructional',
+              'Users understood what to do at each step without instruction. No participant attempted to navigate away from the presented screen or searched for a list view',
+              'No participant asked what to do next. The conversational structure resolved the question of next action before it could arise as a decision point',
+              'All three participants described the experience as calmer than other productivity tools they had used. Two participants used the word "simple" unprompted',
+              'The chat interaction was described as supportive rather than instructional. Participants engaged with the assistant as a guide rather than as an interface element to be dismissed',
             ],
           },
           {
             heading: 'Iterations During the Hackathon',
-            body: `Based on feedback, we:`,
-            list: [
-              'Increased prominence of the primary action',
-              'Reduced explanatory text',
-              'Simplified screens further',
-              'Strengthened the visual emphasis on the active task',
-            ],
-          },
-        ],
-      },
-      {
-        id: 'role',
-        label: '07 / Role',
-        title: '07 / My Role and Contribution',
-        overview: ['Role and Collaboration'],
-        content: [
-          {
-            heading: 'Role and Collaboration',
-            placeholder: 'Screenshot of your Figma file showing flows and screens',
-            body: `I was the sole designer on the team, responsible for:`,
-            list: [
-              'Translating the idea into user flows and interface concepts',
-              'Creating and iterating on the lo-fi interactive prototype',
-              'Building the mid fidelity prototype in Figma',
-              'Applying accessibility and cognitive load principles to the design',
-            ],
+            body: `Testing produced three specific observations that were addressed before the pitch. Each iteration was traceable to a moment observed during a session rather than to subjective design preference.<br><br><strong>Primary action visibility:</strong> Two participants paused briefly before tapping the main action button on the focus screen, suggesting the visual prominence was insufficient. Button size and contrast were increased to resolve the hesitation.<br><br><strong>Explanatory text:</strong> Two participants read introductory copy on the chat screen before interacting, slowing the transition into the task. Text that did not contribute directly to the core interaction was removed to reduce this delay.<br><br><strong>Active task emphasis:</strong> One participant briefly looked away from the task name during the focus screen, suggesting the visual weight was not holding attention as intended. The hierarchy of the focus state was strengthened to anchor the participant's focus more reliably.`,
           },
         ],
       },
       {
         id: 'decisions',
-        label: '08 / Decisions',
-        title: '08 / Design Decisions and Trade Offs',
+        label: '07 / Decisions',
+        title: '07 / Design Decisions and Trade Offs',
         overview: ['Design Decisions'],
         content: [
           {
             heading: 'Design Decisions and Trade Offs',
-            placeholder: 'Simple decision table or visual showing Problem to Decision to Outcome',
-            body: `<strong>Why remove task lists</strong> — Research showed that lists were the primary source of overwhelm.<br><br><strong>Why mid fidelity</strong> — The goal was to communicate behaviour and flow within 3 days, not polish visuals.<br><br><strong>Why limit functionality</strong> — We prioritised the story of the experience for the pitch rather than building every screen.<br><br><strong>Why focus on one flow</strong> — A single clear flow demonstrated the value of the idea more effectively than multiple features.`,
+            placeholder: `<table class="cs-decision-table"><thead><tr><th>Problem</th><th>Decision</th><th>Outcome</th></tr></thead><tbody><tr><td>Task lists cause overwhelm</td><td>Removed lists entirely</td><td>Reduced cognitive load immediately</td></tr><tr><td>Limited time</td><td>Built mid fidelity, not high fidelity</td><td>Focused on behaviour and flow</td></tr><tr><td>Too many potential features</td><td>Designed one core flow</td><td>Clearer story for the pitch</td></tr></tbody></table>`,
+            body: `<strong>Removing task lists entirely</strong> was the most consequential structural decision in the project. Every research session had identified the list view as the primary point of failure for users with ADHD, not because lists are poorly designed but because they require the user to self-direct before a task has begun. Removing the list was not a simplification of an existing pattern. It was a reframing of what the tool was for.<br><br><strong>Building to mid-fidelity rather than high-fidelity</strong> was a function of constraint, but also of intent. Within three days, high visual polish would have come at the cost of functional coverage across the primary flow. Mid-fidelity allowed the interaction model to be communicated completely and tested meaningfully, which was the only outcome that mattered within the sprint timeline.<br><br><strong>Limiting the build to a single core flow</strong> was a scoping decision grounded in the same logic as the product principle itself: one task at a time, one decision at a time, no parallel paths. A prototype that demonstrates one thing clearly is more useful as a communication artefact than one that covers multiple flows at partial fidelity.`,
           },
         ],
       },
       {
-        id: 'pitch',
-        label: '09 / Pitch',
-        title: '09 / What We Demonstrated in the Pitch',
-        overview: ['The Pitch', 'Fan Favourite'],
+        id: 'outcomes',
+        label: '08 / Outcomes',
+        title: '08 / Outcomes — What This Demonstrates',
+        overview: ['Skills Demonstrated', 'Reflection', 'Visual Artefacts'],
         content: [
           {
-            heading: 'The Pitch',
-            placeholder: 'Photo of you presenting OR the slide used in the pitch',
-            body: `In the 8 to 10 minute pitch, the prototype demonstrated:`,
+            heading: 'Skills Demonstrated',
+            body: `This project demonstrates end-to-end UX capability within a constrained sprint context, applying the same research-to-design rigour that a longer project requires but compressed into three days:`,
             list: [
-              'How the app removes task list anxiety',
-              'How users are guided into starting a task',
-              'How the experience reduces cognitive load',
-              'How the flow supports ADHD behaviour rather than fighting it',
+              'Structuring user interviews around behaviour and context rather than product evaluation, producing generative insight rather than evaluative feedback',
+              'Integrating lived experience as a research input in a way that accelerated pattern recognition without replacing the empirical data from interviews',
+              'Synthesising qualitative findings across multiple sources into a clearly framed problem statement with direct design implications',
+              'Translating research insights into design principles that each carry a traceable connection to a specific finding, rather than operating as general guidelines',
+              'Making a structural interaction model decision grounded in cognitive accessibility requirements surfaced by research, not in convention or trend',
+              'Prioritising interactive prototyping over static documentation in order to test structural hypotheses at the earliest possible stage',
+              'Conducting moderated prototype testing and translating session observations into specific, traceable design iterations before a high-stakes pitch',
+              'Applying cognitive accessibility heuristics as active design constraints throughout the build rather than as a retrospective review layer',
             ],
           },
           {
-            heading: 'Fan Favourite',
-            placeholder: 'Photo of award / event / team',
-            body: `The project won Fan Favourite — voted by peers and judges across all hackathon entries.`,
+            heading: 'Reflection',
+            body: `The most significant decision in this project was the choice to remove the task list rather than improve it. That decision was not reached through ideation. It was reached through synthesis. The interviews made clear that the list was not an imperfect solution to the problem. It was, for users with ADHD, part of the problem itself. Designing around that finding required accepting that the standard model for this category of tool was not the right starting point.<br><br>The conversational model that replaced it was a structural choice. Conversation, as an interaction pattern, does not present options and wait. It guides. That property was exactly what the research had identified as missing from the tools participants had tried and abandoned. The alignment between the finding and the solution was not coincidental. It was the product of synthesis taken seriously.<br><br>The primary limitation of the project was the absence of longitudinal testing. Three moderated sessions during a hackathon can validate whether users understand the interface and find it less cognitively demanding than alternatives. They cannot validate whether the approach sustains behaviour change over days or weeks, which is the more meaningful measure for a tool designed to support ADHD task management. That testing remains the logical next step for the concept.`,
           },
-        ],
-      },
-      {
-        id: 'next',
-        label: '10 / Next Steps',
-        title: '10 / Next Steps and Reflections',
-        overview: ['Next Steps', 'Reflections'],
-        content: [
           {
-            heading: 'Next Steps If Developed Further',
-            placeholder: 'Simple future roadmap visual',
+            heading: 'Visual Artefacts',
+            body: `The following artefacts should be shown as images or embedded Figma files within this case study:`,
             list: [
-              'Longer term usability testing over multiple days',
-              'Smart task suggestion logic',
-              'Personalisation based on user behaviour',
-              'Visual design refinement',
-              'Expansion into a complete product ecosystem',
+              'Miro board from the team synthesis workshop and research notes',
+              'Lo-fi interactive prototype screens showing the conversational flow',
+              'Mid-fidelity prototype screens: chat assistant, single focus screen, task complete state',
+              'Annotated screen showing cognitive accessibility decisions with callouts',
+              'Figma prototype link with interactive mid-fidelity flow',
             ],
-          },
-          {
-            heading: 'Reflections and Takeaways',
-            placeholder: 'Final hero mockup or polished screen to end the case study',
-            body: `Designing within a 3 day constraint required ruthless prioritisation of the core problem rather than features.<br><br>Bringing lived experience into research allowed patterns to be recognised quickly and translated into practical design decisions that resonated with users.<br><br>This project reinforced that productivity for ADHD is not about better organisation. It is about reducing the effort required to begin.`,
           },
         ],
       },
@@ -430,7 +389,7 @@ function buildCSDetail(cs) {
       return `
         <div class="cs-content-block"${id ? ` id="${id}"` : ''}>
           ${block.heading ? `<h3 class="cs-content-heading">${block.heading}</h3>` : ''}
-          ${block.placeholder ? `<div class="cs-placeholder"><span>${block.placeholder}</span></div>` : ''}
+          ${block.placeholder ? (block.placeholder.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholder}</div>` : `<div class="cs-placeholder"><span>${block.placeholder}</span></div>`) : ''}
           ${block.body ? `<p>${block.body}</p>` : ''}
           ${block.list ? `<ul class="cs-v2-list">${block.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
           ${block.afterList ? block.afterList : ''}
@@ -466,7 +425,7 @@ function buildCSDetail(cs) {
       <section class="cs-v2-section" id="cs-s0" data-section="0">
         <div class="cs-overview-hero">
           <div class="cs-overview-visual ${cs.thumbClass}">
-            <img src="assets/focusflow/ff_1.png" alt="FocusFlow app redesign mockup" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+            <img src="assets/opal/opal_1.png" alt="Opal app redesign mockup" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
           </div>
           <div class="cs-overview-intro">
             <div class="section-label">${cs.context}</div>

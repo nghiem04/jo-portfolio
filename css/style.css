@@ -339,6 +339,31 @@ h2.section-title {
   overflow: hidden;
 }
 
+.cs-decision-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.cs-decision-table th,
+.cs-decision-table td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.cs-decision-table th {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+  border-bottom: 2px solid var(--border);
+}
+.cs-decision-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
