@@ -22,7 +22,7 @@ const caseStudies = [
         content: [
           {
             heading: 'User Interviews',
-            body: `The team of five each interviewed three participants, producing 15 interviews in total. Participants ranged in age from 17 to 35, spanning students and full-time workers across different commuting patterns and levels of transit reliance. Each session ran for approximately one hour.<br><br>Interviews were structured around the full commuting day rather than the app in isolation. Topics included how participants started their day, how they planned trips, which applications they used and at what points, when and why they checked their Opal balance, how they topped up, and what caused frustration. This framing surfaced workflow patterns and contextual details that would have been missed by asking about the app directly.<br><br>A major recurring pain point was the morning commute rush. Multiple participants described feeling time pressured before work or university and struggling to quickly check whether their usual route was running on time. Under time pressure, the Opal app's inbuilt trip information was not fast or reliable enough for real-time decision making. Several participants had adopted TripView as their go-to for this purpose — not by preference, but because the Opal app did not meet the need.<br><br>When asked what would make mornings easier, participants consistently described the same set of needs: the ability to save their most used route, proactive alerts for delays or disruptions on that route, and faster access to this information without having to search each time.`,
+            body: `The team of five each interviewed three participants, producing 15 interviews in total. Participants ranged in age from 17 to 45, spanning students and full-time workers across different commuting patterns and levels of transit reliance. Each session ran for approximately one hour.<br><br>Interviews were structured around the full commuting day rather than the app in isolation. Topics included how participants started their day, how they planned trips, which applications they used and at what points, when and why they checked their Opal balance, how they topped up, and what caused frustration. This framing surfaced workflow patterns and contextual details that would have been missed by asking about the app directly.<br><br>A major recurring pain point was the morning commute rush. Multiple participants described feeling time pressured before work or university and struggling to quickly check whether their usual route was running on time. Under time pressure, the Opal app's inbuilt trip information was not fast or reliable enough for real-time decision making. Several participants had adopted TripView as their go-to for this purpose — not by preference, but because the Opal app did not meet the need.<br><br>When asked what would make mornings easier, participants consistently described the same set of needs: the ability to save their most used route, proactive alerts for delays or disruptions on that route, and faster access to this information without having to search each time.`,
             placeholder: 'Interview affinity map from Miro',
           },
           {
@@ -148,6 +148,7 @@ const caseStudies = [
     context: 'Mobile App · Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
     tags: ['Cognitive Accessibility', 'Behaviour Design', 'Rapid Prototyping'],
+
     overview: `A chatbot-first task experience designed to help people with ADHD start tasks without overwhelm. Built, tested, and iterated in 3 days at a hackathon, FocusFlow reframed productivity around guided initiation instead of planning.<br><br>The MVP placed a conversational assistant at the centre of the experience, guiding users into a single task one step at a time, removing the need to plan, prioritise, or navigate a list.<br><br>Concepts were validated through a lo-fi interactive prototype before being carried into a mid-fidelity Figma build, keeping the focus on behaviour and flow throughout.`,
     overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View Mid Fidelity Prototype (Figma)</a>`,
     problemPart1: `Most productivity tools are built around the assumption that users can plan, prioritise, and execute tasks in a structured, linear way. Tools like Todoist, Trello, and Notion rely on lists, multiple views, and user-driven prioritisation to organise work.`,
@@ -465,13 +466,7 @@ function buildCSDetail(cs) {
       <section class="cs-v2-section" id="cs-s0" data-section="0">
         <div class="cs-overview-hero">
           <div class="cs-overview-visual ${cs.thumbClass}">
-            <svg width="300" height="260" viewBox="0 0 300 260" fill="none">
-              <rect x="25" y="25" width="250" height="210" rx="14" stroke="white" stroke-width="1.5" fill="none" opacity=".7"/>
-              <rect x="48" y="55" width="160" height="14" rx="7" fill="white" opacity=".6"/>
-              <rect x="48" y="80" width="110" height="8" rx="4" fill="white" opacity=".35"/>
-              <rect x="48" y="104" width="204" height="60" rx="8" fill="white" opacity=".18"/>
-              <rect x="48" y="178" width="100" height="30" rx="15" fill="white" opacity=".38"/>
-            </svg>
+            <img src="assets/focusflow/ff_1.png" alt="FocusFlow app redesign mockup" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
           </div>
           <div class="cs-overview-intro">
             <div class="section-label">${cs.context}</div>
