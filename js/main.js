@@ -13,7 +13,7 @@ const caseStudies = [
     heroImageAlt: 'Opal app redesign mockup',
     tags: ['UX Research', 'Interaction Design', 'Figma'],
     overview: `The central finding was that Opal had been designed for ticketing administration, not commuting. Participants were not using it as their primary transit tool. It was one step in a fragmented three-app workflow: TripView for real-time status, Google Maps for routing, and Opal only when a top-up was required. None of those switches were preferences. Each was an adaptation to a specific gap the app did not fill.<br><br>I led research, synthesis, interaction design, and prototyping on this project. The approach was structured around how Sydney commuters actually moved through their day, not around what they thought of the app. That framing surfaced a structural problem that a feature audit alone would not have found. The redesign addressed the fragmentation directly.`,
-    overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
+    overviewLink: `<a class="cs-proto-btn" href="https://www.figma.com/make/pKtWgdPJyzKpnD8a5ZZtn3/opal_mid_fi?t=2IdijnlOUEr40Rhc-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
     problem: `The Opal app covered the functional basics: checking balance, topping up, reviewing trip history. What it did not account for was how those tasks sat inside an actual commuting day.<br><br>In interviews, participants described the same pattern: open Opal to check balance, switch to TripView for real-time status, check Google Maps for the route, return to Opal to top up. Repeated every morning. Every commuting need beyond payment required leaving the app entirely. The question was not which features were missing. It was whether a standalone ticketing tool was the right model at all.`,
     tools: ['Figma', 'Miro', 'User interviews', 'Competitive benchmarking', 'UX audit', 'Lo-fi sketching', 'Mid-fi prototyping'],
     stages: [
@@ -92,7 +92,7 @@ const caseStudies = [
           {
             heading: 'High fidelity prototype within Opal',
             body: `Mid-fidelity validated structure. High fidelity answered whether these features could credibly exist inside the real Opal app, built to the same constraints the product team works within.<br><br>Opal is a government product with an established visual system and navigation conventions. I worked inside those constraints: colour tokens, iconography, and interaction patterns all reference the existing Opal design language. The goal was not to redesign Opal's visual identity. It was to demonstrate that these features belong inside it and could ship without requiring a full rebuild.`,
-            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a></div>`,
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/pKtWgdPJyzKpnD8a5ZZtn3/opal_mid_fi?t=2IdijnlOUEr40Rhc-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a></div>`,
           },
         ],
       },
@@ -195,7 +195,7 @@ const caseStudies = [
           },
           {
             heading: 'Mid-fidelity Build',
-            placeholder: '4 to 6 mid-fi screens laid out horizontally',
+            placeholder: '<img src="assets/focusflow/ff_midfi.png" alt="Mid-fidelity screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
             body: `With structure validated, the mid-fidelity build had one job: make the flow legible enough to test and demonstrate. Only the interactions required to communicate the core concept were built. Effort outside the primary flow came at its cost.<br><br>Every screen was built against cognitive accessibility criteria drawn directly from research. One primary action per screen addressed decision fatigue. Limited text and visual noise reduced ambient cognitive load. Large tap targets addressed low-focus states. The current task and next step were always simultaneously visible, eliminating the memory load participants identified as a reason to abandon other tools. A calm palette of light green and white addressed the stimulation participants described as a trigger for closing the app.`,
           },
           {
