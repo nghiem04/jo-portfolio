@@ -116,7 +116,7 @@ const caseStudies = [
   },
   {
     num: '02',
-    title: 'FocusFlow — ADHD Task App',
+    title: 'FocusFlow — Maximising Task Initiation by Removing the Decision',
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
     year: '2022',
