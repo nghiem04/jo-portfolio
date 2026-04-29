@@ -191,7 +191,7 @@ const caseStudies = [
           {
             heading: 'Lo-fi Prototype',
             body: `Static wireframes could not test the core hypothesis. The only way to know whether removing the task list created relief or confusion was to make the experience navigable. I moved directly into a lo-fi interactive prototype to test five structural questions: does removing the list create confusion or relief; is a single dominant action legible without instruction; can visual progress communicate elapsed time without numbers; does minimal content per screen change engagement; does a fully linear flow feel constraining or clarifying.<br><br>The validated flow reduced to a single repeating sequence with no branches: <strong>Open app → Chat assistant offers a task → User confirms → Single focus screen → Complete → Assistant offers next step.</strong> No list. No navigation. No self-direction required.`,
-            placeholderAfter: 'Lo-fi screens showing the conversational flow',
+            placeholderAfter: '<img src="assets/focusflow/ff_lofi.png" alt="Lo-fi screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'Mid-fidelity Build',
