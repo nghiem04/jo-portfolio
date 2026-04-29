@@ -6,7 +6,7 @@ const caseStudies = [
     role: 'UX Designer · Research, Synthesis, Interaction Design',
     team: 'UX Design Team',
     client: 'Independent UX Project',
-    year: '2024',
+    year: '2022',
     context: 'UX Research · Interaction Design',
     thumbClass: 'thumb-a',
     heroImage: 'assets/opal/opal_1.png',
