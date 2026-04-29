@@ -146,21 +146,21 @@ const caseStudies = [
 
     overview: `FocusFlow was built in three days to address a problem most productivity tools are not designed for: helping people with ADHD start tasks, not organise them.<br><br>As the sole designer in a cross-functional team of engineers, I led research, synthesis, and end-to-end interface design within the sprint. The constraint forced discipline. Every decision had to be grounded in a finding or cut.<br><br>The central decision was structural: remove the task list entirely and replace it with a conversational assistant that guides users into a single task at a time. Research showed the list was not an imperfect solution. It was the source of the problem. The redesign, developed from lo-fi validation through to a high-fidelity prototype, addressed that directly.`,
     overviewLink: `<a class="cs-proto-btn" href="#" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
-    problemPart1: `Most productivity tools are built on one assumption: users can plan, prioritise, and execute in a structured, linear way. Todoist, Trello, Notion all treat task management as an organisational problem, providing lists and views to sort and sequence work.`,
+    problemPart1: `Most productivity tools are built on one assumption: users can plan, prioritise, and execute in a structured, linear way. The screen below contrasts a standard task list view with FocusFlow's single-focus screen.`,
     problemPlaceholder: '<img src="assets/focusflow/ff_2.png" alt="Comparison of a traditional task list app versus FocusFlow single-focus screen" style="width:100%;border-radius:8px;display:block;">',
-    problemPart2: `For people with ADHD, that model does not describe how task initiation works.<br><br>The barrier is not knowing what needs doing. The barrier is starting. An interface that opens to a full list of pending tasks, each requiring a decision about priority and sequence, adds cognitive demand at exactly the moment it needs to be removed. It asks for self-direction at the point when self-direction is hardest.<br><br>This is not a feature gap. It is a structural mismatch between how these tools are designed and how this audience actually reaches for them.`,
+    problemPart2: `In interviews, participants described opening these tools and disengaging before starting anything. The barrier was not knowing what to do. It was the decision required before beginning. An interface that opens to a full task list adds cognitive load at exactly the moment it needs to be removed.`,
     problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear, self-directed way. For people with ADHD, this model does not describe how task initiation works. The challenge is not knowing what needs to be done. It is starting. Existing tools add cognitive demand at precisely the moment it needs to be reduced, by requiring users to survey a list, make decisions about priority, and self-direct before they have begun.`,
     tools: ['Figma', 'Miro', 'Lo-fi Interactive Prototype', 'Mid Fidelity Prototype'],
     stages: [
       {
         id: 'research',
         label: '01 / Research',
-        title: '01 / Research — Understanding ADHD Task Behaviour',
+        title: '01 / Research — Understanding Task Initiation Behaviour',
         overview: ['Research Approach', 'Key Insights'],
         content: [
           {
             heading: 'Research Approach',
-            body: `Day one was research. Three adults diagnosed with ADHD were interviewed individually, with sessions structured around how they managed tasks day to day: which tools they used, when those tools failed them, and what they had tried and abandoned. The goal was to understand task behaviour as a lived experience, not to evaluate specific applications.<br><br>I drew on my own experience with ADHD throughout. This shaped the interview framing and shortened the time to pattern recognition. I already had a working theory about where productivity tools break down for this audience. The interviews confirmed that the failures were consistent across people, not individual, and that no tool was addressing the initiation moment specifically.<br><br>One participant described opening Todoist and feeling overwhelmed before she had done anything. Another described spending time building a system of tags, labels, and priority flags across three different apps, and still not starting the task he needed to do. A third said she abandoned her task app every time she opened it to a backlog. The tools were not failing at organisation. They were failing at the moment before organisation could begin.<br><br>A team workshop after interviews consolidated the patterns. A rapid cognitive accessibility review assessed information density, decision count per screen, and working memory load across the tools participants had mentioned.`,
+            body: `Across all interviews, the same pattern emerged: participants opened their task app and disengaged before starting anything. Sessions were structured around task behaviour, not product evaluation: which tools participants used, where they failed, and what had been abandoned.<br><br>I designed and ran all three interviews and facilitated the team synthesis workshop. A rapid cognitive accessibility review assessed decision count per screen and working memory load across the tools participants mentioned.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://miro.com/app/board/uXjVHb6c4w0=/?share_link_id=989572133225" target="_blank" rel="noopener">→ View Miro board</a></div>`,
           },
           {
@@ -170,7 +170,7 @@ const caseStudies = [
               'Task lists trigger avoidance, not action. Seeing the full backlog at opening was consistently described as demotivating, not clarifying',
               'Initiation is the primary barrier, not organisation. Every participant knew what needed doing. No tool supported the moment of actually starting',
               'Decision fatigue compounds the problem. Every required choice before a task begins increases the cost of beginning',
-              'Time blindness disrupts completion. Participants described losing track of elapsed time inside a task, stopping too early or running well past productive focus',
+              'Participants described difficulty tracking elapsed time inside tasks, stopping too early or running past productive focus',
             ],
           },
         ],
@@ -179,25 +179,11 @@ const caseStudies = [
         id: 'define',
         label: '02 / Define',
         title: '02 / Define — Framing the Right Problem',
-        overview: ['Problem Statement', 'Design Principles'],
+        overview: ['Problem Statement'],
         content: [
           {
             heading: 'Problem Statement',
-            body: `Synthesis converged on a reframing. The problem was not missing features. Productivity tools were built around a behavioural model that does not describe how people with ADHD approach task work. They assume users arrive ready to self-direct: survey the list, decide priority, then begin. For people with ADHD, that sequence is where the process breaks down. The cost of deciding what to do first is often enough to prevent doing anything at all.<br><br>The challenge was not to build a better list. It was to remove the need to self-direct, guiding the user into a single task without requiring them to plan first.<br><br><strong>How might we design a task experience that removes the burden of initiation and guides users into beginning, without requiring them to plan?</strong>`,
-          },
-          {
-            heading: 'Design Principles',
-            placeholder: '<img src="assets/focusflow/ff_4.png" alt="Design principles mapped from research insights" style="width:100%;border-radius:8px;display:block;">',
-            body: `Six principles, each tracing directly to a research finding:`,
-            list: [
-              'Show only one task at a time: addresses the overwhelm that full list views produce at the moment of opening',
-              'Remove task lists entirely: eliminates the interface pattern identified as the primary source of initiation failure',
-              'Reduce choices per screen: addresses decision fatigue; every additional choice before beginning increases the likelihood of disengagement',
-              'Provide a single unambiguous primary action: removes the need to interpret what to do next, the point at which participants consistently stalled',
-              'Support time awareness visually: addresses time blindness without numerical timers, which participants described as increasing anxiety',
-              'Guide rather than expect self-direction: the central principle, reframing the tool from task storage to active task facilitation',
-            ],
-            afterList: `<p style="margin-top:1rem">These principles did not point toward a refined version of an existing productivity interface. They pointed toward a structurally different interaction model.</p>`,
+            body: `Synthesis identified the issue: productivity tools assume users arrive ready to self-direct. In interviews, that sequence was consistently where the process broke down. The cost of deciding what to do first was often enough to prevent doing anything at all.<br><br>The challenge was not to build a better list. It was to remove the need to self-direct.<br><br><strong>How might we design a task experience that removes the burden of initiation and guides users into beginning, without requiring them to plan?</strong>`,
           },
         ],
       },
@@ -210,7 +196,7 @@ const caseStudies = [
           {
             heading: 'Chatbot as Core Concept',
             placeholder: '<img src="assets/focusflow/ff_3.png" alt="Early lo-fi screens of the chatbot concept" style="width:100%;border-radius:8px;display:block;">',
-            body: `With 24 hours before the pitch, the question was which interaction model could deliver all six principles without requiring the user to navigate, prioritise, or self-organise at any point.<br><br>A <strong>list-with-focus mode</strong> was rejected immediately. The list still existed. The user still had to select a task before beginning. Research identified that selection as the failure point. Styling around it did not remove it.<br><br>A <strong>card-swipe model</strong> surfaced one task at a time but did not close the initiation gap. After the swipe, the user was still standing in front of a task, deciding whether to start.<br><br>The <strong>conversational interface</strong> was the only model that eliminated the gap structurally. A chat assistant does not present options and wait. It offers the next step. By the time the user sees the screen, the decision has already been made. They are not choosing. They are responding. That distinction is precisely what research had shown was missing.<br><br>This was not a decision to add a chatbot feature to a productivity app. It was a decision to replace the list with conversation because conversation, by its structure, removes the patterns that break down initiation. The assistant replaces the list. The response replaces the selection. The guided step replaces open-ended navigation.`,
+            body: `The lo-fi screens above show three interaction models considered. The question was which could structurally deliver the research requirements without asking the user to navigate, prioritise, or self-organise.<br><br>A <strong>list-with-focus mode</strong> was rejected immediately. The list still existed. The user still had to select a task before beginning. Research identified that selection as the failure point. Styling around it did not remove it.<br><br>A <strong>card-swipe model</strong> surfaced one task at a time but did not close the initiation gap. After the swipe, the user was still standing in front of a task, deciding whether to start.<br><br>The <strong>conversational interface</strong> was the only model that eliminated the gap. A chat assistant does not present options and wait. It offers the next step. By the time the user sees the screen, the decision has already been made. They are not choosing. They are responding.`,
           },
         ],
       },
@@ -231,8 +217,13 @@ const caseStudies = [
             body: `With structure validated, the mid-fidelity build had one job: make the flow legible enough to test and demonstrate. Only the interactions required to communicate the core concept were built. Effort outside the primary flow came at its cost.<br><br>Every screen was built against cognitive accessibility criteria drawn directly from research. One primary action per screen addressed decision fatigue. Limited text and visual noise reduced ambient cognitive load. Large tap targets addressed low-focus states. The current task and next step were always simultaneously visible, eliminating the memory load participants identified as a reason to abandon other tools. A calm palette of light green and white addressed the stimulation participants described as a trigger for closing the app.`,
           },
           {
-            heading: 'Testing and Iterations',
-            body: `Three moderated sessions on day three, task-based: open the app, respond to the assistant, begin a task, complete the flow. Observations focused on hesitation, confusion, and unprompted navigation attempts.<br><br>No participant looked for a list or tried to navigate away. No one asked what to do next; the conversational structure answered the question before it arose. All three described the experience as calmer than other tools, and two used the word "simple" without prompting.<br><br>Three iterations followed. Button size and contrast were increased after two participants paused before the primary action. Introductory text was removed after it added delay before engagement. Focus state hierarchy was strengthened after one participant's attention drifted from the active task name.`,
+            heading: 'What changed after testing',
+            body: `Three moderated sessions on day three tested the core flow task-based. No participant looked for a list or tried to navigate away. All three described the experience as calmer than other tools they used. Two used the word "simple" without prompting.<br><br>Changes made after testing:`,
+            list: [
+              'Button size and contrast increased: two participants paused before the primary action',
+              'Introductory text removed: it delayed engagement without adding clarity',
+              'Focus state hierarchy strengthened: one participant\'s attention drifted from the active task name',
+            ],
           },
         ],
       },
@@ -244,7 +235,7 @@ const caseStudies = [
         content: [
           {
             heading: 'High fidelity prototype after interaction validation',
-            body: `Interaction validation confirmed the structure worked. High fidelity answered a different question: could this concept exist as a real product, designed to the quality standard needed to ship.<br><br>Following validation, a high-fidelity version was built to demonstrate that the conversational model held up at production level. This meant a considered visual system: type hierarchy that communicated state without adding cognitive noise, a colour system chosen for calm over stimulation, and interface components that behaved consistently and felt intentional rather than provisional. The same cognitive accessibility principles that shaped the mid-fidelity build were applied at higher resolution, where the details either reinforce the experience or undermine it.<br><br>The original assets were lost during an account merge. What remains is the mid-fidelity prototype and the full decision record. The high-fidelity work is documented here because its purpose is part of the project: high fidelity was not cosmetic. It was the stage that proved the concept was buildable, not just testable, and that the interface principles held up under production constraints.`,
+            body: `Once the interaction model was validated, I built the high-fidelity version to a standard suitable for production: type hierarchy that communicates state without adding noise, a calm colour system, and consistent component behaviour. The accessibility criteria that shaped the mid-fidelity build were applied at higher resolution.<br><br>The original assets were lost during an account merge. The mid-fidelity prototype and decision record remain.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="#" target="_blank" rel="noopener">\u2192 View high fidelity prototype (Figma)</a></div>`,
           },
         ],
@@ -257,8 +248,8 @@ const caseStudies = [
         content: [
           {
             heading: 'Key Design Decisions',
-            placeholder: `<table class="cs-decision-table"><thead><tr><th>Problem</th><th>Decision</th><th>Outcome</th></tr></thead><tbody><tr><td>Task lists cause overwhelm</td><td>Removed lists entirely</td><td>Reduced cognitive load at the point of opening</td></tr><tr><td>Limited time</td><td>Built lo-fi to mid-fidelity first</td><td>Interaction model validated and demonstrated within sprint</td></tr><tr><td>Too many potential features</td><td>Designed one core flow</td><td>Clearer demonstration of the concept's value</td></tr></tbody></table>`,
-            body: `<strong>Removing the task list</strong> was the most consequential decision. Research identified the list as the primary initiation failure point, not because lists are poorly designed, but because they require self-direction before a task can begin. Removing it was not simplification. It was a reframing of what the product was for.<br><br><strong>Limiting the prototype to a single flow</strong> applied the same principle as the product: one task, one decision at a time. Demonstrating one thing clearly was more valuable than covering multiple flows at partial fidelity.`,
+            placeholder: `<table class="cs-decision-table"><thead><tr><th>Problem</th><th>Decision</th><th>Outcome</th></tr></thead><tbody><tr><td>Opening a task list triggered disengagement before starting</td><td>Replaced the list with a conversational assistant</td><td>Decision made before the user sees a screen; initiation barrier removed</td></tr><tr><td>Limited time</td><td>Built lo-fi to mid-fidelity first</td><td>Interaction model validated and demonstrated within sprint</td></tr><tr><td>Too many potential features</td><td>Designed one core flow</td><td>Clearer demonstration of the concept's value</td></tr></tbody></table>`,
+            body: `<strong>Removing the task list</strong> was the most consequential decision. Research identified the list as the primary initiation failure point: it requires self-direction before any task can begin. The conversational assistant removes that requirement by design.<br><br><strong>Limiting the prototype to a single flow</strong> applied the same principle: one task, one decision at a time. Demonstrating one thing clearly was more valuable than covering multiple flows at partial fidelity.`,
           },
           {
             heading: 'What This Project Proved',
@@ -266,7 +257,7 @@ const caseStudies = [
           },
           {
             heading: 'Reflection',
-            body: `The most consequential decision was removing the task list, not refining it. Synthesis showed that participants did not describe the list as flawed. They described it as the source of the problem: a trigger for avoidance and cognitive overload before anything had started. That shifted the question from how to improve the list to whether a list should exist at all.<br><br>The conversational model was a direct structural response. Conversation moves forward with the user. It removes the requirement to choose and sequence before acting. This was not a creative decision. It was the product of letting findings challenge what the category is supposed to look like.<br><br>The judges raised a question that matters beyond this project: because the experience resembled guided support, would users interpret the assistant as psychological guidance rather than task facilitation. This is the right question for a product in this space. Products that guide people through cognitively difficult moments carry a responsibility to be explicit about scope. If developed further, this would require clinical input, clearly defined product boundaries, and language designed to distinguish task support from therapeutic authority. The feedback did not identify a design flaw. It identified the category of responsibility this type of product carries.<br><br>The primary limitation was the absence of longitudinal testing. Three sessions validated that the interface was understood and experienced as less cognitively demanding. They did not determine whether it would support sustained behaviour change. For a product designed to help people start tasks consistently, that is the more important test.<br><br>The task list is not an imperfect solution for people with ADHD. It is the wrong structural model. A list assumes self-direction. For an audience where the cost of choosing is often the reason nothing gets done, that assumption is not a starting point for a product. It is the obstacle.`,
+            body: `Three sessions validated that the interface was understood and felt less demanding. They did not test whether the behaviour would hold over time or support sustained task completion.<br><br>Longitudinal use data is the primary gap. If taken further, the product would also need clearly defined scope distinguishing task facilitation from guided support. Judges raised that question, and it is the right one for any product operating in this space.`,
           },
         ],
       },
