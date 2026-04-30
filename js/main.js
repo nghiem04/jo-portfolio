@@ -120,7 +120,7 @@ const caseStudies = [
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
     year: '2022',
-    context: 'Cognitive Accessibility · 3-Day Hackathon',
+    context: 'Cognitive Accessibility · Rapid Prototyping Sprint',
     thumbClass: 'thumb-b',
     heroImage: 'assets/focus/ff_1.png',
     heroImageAlt: 'Focus app redesign mockup',
