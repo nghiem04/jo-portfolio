@@ -116,20 +116,20 @@ const caseStudies = [
   },
   {
     num: '02',
-    title: 'FocusFlow — Maximising Task Initiation by Removing the Decision',
+    title: 'Focus — Maximising Task Initiation by Removing the Decision',
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
     year: '2022',
     context: 'Cognitive Accessibility · 3-Day Hackathon',
     thumbClass: 'thumb-b',
-    heroImage: 'assets/focusflow/ff_1.png',
-    heroImageAlt: 'FocusFlow app redesign mockup',
+    heroImage: 'assets/focus/ff_1.png',
+    heroImageAlt: 'Focus app redesign mockup',
     tags: ['Cognitive Accessibility', 'Behaviour Design', 'Rapid Prototyping'],
 
-    overview: `FocusFlow was built in three days to address a problem most productivity tools are not designed for: helping people with ADHD start tasks, not organise them.<br><br>As the sole designer in a cross-functional team of engineers, I led research, synthesis, and end-to-end interface design within the sprint. The constraint forced discipline. Every decision had to be grounded in a finding or cut.<br><br>The central decision was structural: remove the task list entirely and replace it with a conversational assistant that guides users into a single task at a time. Research showed the list was not an imperfect solution. It was the source of the problem. The redesign, developed from lo-fi validation through to a high-fidelity prototype, addressed that directly.`,
+    overview: `Focus was built in three days to address a problem most productivity tools are not designed for: helping people with ADHD start tasks, not organise them.<br><br>As the sole designer in a cross-functional team of engineers, I led research, synthesis, and end-to-end interface design within the sprint. The constraint forced discipline. Every decision had to be grounded in a finding or cut.<br><br>The central decision was structural: remove the task list entirely and replace it with a conversational assistant that guides users into a single task at a time. Research showed the list was not an imperfect solution. It was the source of the problem. The redesign, developed from lo-fi validation through to a high-fidelity prototype, addressed that directly.`,
     overviewLink: `<a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
-    problemPart1: `Most productivity tools are built on one assumption: users can plan, prioritise, and execute in a structured, linear way. The screen below contrasts a standard task list view with FocusFlow's single-focus screen.`,
-    problemPlaceholder: '<img src="assets/focusflow/ff_2.png" alt="Comparison of a traditional task list app versus FocusFlow single-focus screen" style="width:100%;border-radius:8px;display:block;">',
+    problemPart1: `Most productivity tools are built on one assumption: users can plan, prioritise, and execute in a structured, linear way. The screen below contrasts a standard task list view with focus's single-focus screen.`,
+    problemPlaceholder: '<img src="assets/focus/ff_2.png" alt="Comparison of a traditional task list app versus Focus single-focus screen" style="width:100%;border-radius:8px;display:block;">',
     problemPart2: `In interviews, participants described opening these tools and disengaging before starting anything. The barrier was not knowing what to do. It was the decision required before beginning. An interface that opens to a full task list adds cognitive load at exactly the moment it needs to be removed.`,
     problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear, self-directed way. For people with ADHD, this model does not describe how task initiation works. The challenge is not knowing what needs to be done. It is starting. Existing tools add cognitive demand at precisely the moment it needs to be reduced, by requiring users to survey a list, make decisions about priority, and self-direct before they have begun.`,
     tools: ['Figma', 'Miro', 'Lo-fi Interactive Prototype', 'Mid Fidelity Prototype'],
@@ -177,7 +177,7 @@ const caseStudies = [
         content: [
           {
             heading: 'Chatbot as Core Concept',
-            placeholder: '<img src="assets/focusflow/ff_3.png" alt="Early lo-fi screens of the chatbot concept" style="width:100%;border-radius:8px;display:block;">',
+            placeholder: '<img src="assets/focus/ff_3.png" alt="Early lo-fi screens of the chatbot concept" style="width:100%;border-radius:8px;display:block;">',
             body: `Three interaction models were evaluated against a single criterion: does the user ever have to choose a task?<br><br>The image above shows early explorations of each model. One by one, they failed the same test.<br><br>A <strong>list-with-focus mode</strong> still opened on a list. The user still had to select a task before the assistant could surface one. Research had identified that selection as the exact point where initiation broke down. The assistant could not fix a problem that the model required users to solve before reaching it.<br><br>A <strong>card-swipe model</strong> surfaced one task at a time, which removed visual overwhelm. It did not remove the decision. After the swipe, the user was still standing in front of a task, determining whether to start. The initiation gap was still open.<br><br>The <strong>conversational model</strong> was the only one that closed it structurally. A conversational assistant does not surface options and wait for a choice. It initiates. It offers the next step. The user's first interaction is a response, not a selection. By the time the user is engaged, the decision has already been made. That is not a UX detail. It is the entire hypothesis.`,
           },
         ],
@@ -191,11 +191,11 @@ const caseStudies = [
           {
             heading: 'Lo-fi Prototype',
             body: `The interaction model could not be validated in static form. Whether replacing task selection with assistant-initiated turns actually removed the experience of deciding had to be tested in a navigable state. I built a lo-fi interactive prototype against five interaction design criteria: does removing task selection create relief or reorientation; does a single assistant-initiated action communicate without instruction; can a progress indicator carry elapsed time without requiring the user to monitor it; does limiting each conversational state to one response option reduce cognitive load rather than increase it; does a fully linear, non-branching sequence feel like structure or constraint.<br><br>Every criterion traced directly to a research finding. None were exploratory.<br><br>The validated model reduced to a single repeating sequence: <strong>Open app → Assistant offers a task → User confirms → Focus state begins → Task complete → Assistant offers next step.</strong> The user makes no choices. They respond. The assistant leads the entire sequence.`,
-            placeholderAfter: '<img src="assets/focusflow/ff_lofi.png" alt="Lo-fi screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
+            placeholderAfter: '<img src="assets/focus/ff_lofi.png" alt="Lo-fi screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'Mid-fidelity Build',
-            placeholder: '<img src="assets/focusflow/ff_midfi.png" alt="Mid-fidelity screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
+            placeholder: '<img src="assets/focus/ff_midfi.png" alt="Mid-fidelity screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
             body: `With the interaction model validated, the mid-fidelity build had one job: make the conversation legible as a product experience. Not cleaner states. Not a more resolved palette. The question was whether a user could understand the turn-taking model without instruction.<br><br>Every decision served that. One response option per conversational state so it was always clear what the assistant was asking. Minimal content per state so the response required no evaluation before giving it. Large tap targets so confirmation required no precision in a low-focus moment. The active task and the next step simultaneously visible, so working memory had nothing to carry between turns. A calm palette of light green and white, because participants had described visual stimulation as a trigger for closing the tools they already used.<br><br>Nothing was added that did not directly support the conversation.`,
           },
           {
