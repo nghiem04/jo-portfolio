@@ -205,7 +205,7 @@ const caseStudies = [
         id: 'design',
         label: '04 / Design',
         title: '04 / Design — Lo-fi to Mid-fidelity',
-        overview: ['Lo-fi Prototype', 'Mid-fidelity Build', 'Testing and Iterations'],
+        overview: ['Lo-fi Prototype', 'Mid-fidelity Build', 'Testing and Iterations', 'High fidelity prototype after interaction validation'],
         content: [
           {
             heading: 'Lo-fi Prototype',
@@ -226,14 +226,6 @@ const caseStudies = [
               'Focus state hierarchy strengthened: one participant\'s attention drifted from the active task name',
             ],
           },
-        ],
-      },
-      {
-        id: 'hifi',
-        label: '05 / High Fidelity',
-        title: '05 / High Fidelity — From Concept to Scalable Product',
-        overview: ['High fidelity prototype after interaction validation'],
-        content: [
           {
             heading: 'High fidelity prototype after interaction validation',
             body: `High fidelity was the final test of the hypothesis. The goal was to prove that this conversational model could exist as a resilient, shippable product rather than just a prototype.<br><br><strong>Design for Precision</strong><br>Type hierarchy communicates conversational state, not decoration. Clear typographic rules ensure the user always knows where they are in the flow — reducing cognitive effort at the moment it matters most.<br><br><strong>Systems Thinking and Accessibility</strong><br>The colour system meets the same cognitive accessibility criteria that governed earlier phases: high contrast, calm palette, no sensory overwhelm. <strong>Inconsistency in a turn-based interaction creates hesitation.</strong> Every component was designed to eliminate it.<br><br><strong>The Result</strong><br>The high-fidelity build demonstrates that conversational task initiation is a viable architectural pattern for a real-world product. It moves the concept from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
@@ -243,8 +235,8 @@ const caseStudies = [
       },
       {
         id: 'outcomes',
-        label: '06 / Outcomes',
-        title: '06 / Outcomes — What Changes for the User',
+        label: '05 / Outcomes',
+        title: '05 / Outcomes — What Changes for the User',
         overview: ['What Changes', 'Key Design Decisions', 'Next Steps'],
         content: [
           {
