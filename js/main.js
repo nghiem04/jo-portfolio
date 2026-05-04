@@ -209,13 +209,13 @@ const caseStudies = [
         content: [
           {
             heading: 'Lo-fi Prototype',
-            body: `The interaction model could not be validated in static form. Whether replacing task selection with assistant-initiated turns actually removed the experience of deciding had to be tested in a navigable state. I built a lo-fi interactive prototype against five interaction design criteria: does removing task selection create relief or reorientation; does a single assistant-initiated action communicate without instruction; can a progress indicator carry elapsed time without requiring the user to monitor it; does limiting each conversational state to one response option reduce cognitive load rather than increase it; does a fully linear, non-branching sequence feel like structure or constraint.<br><br>Every criterion traced directly to a research finding. None were exploratory.<br><br>The validated model reduced to a single repeating sequence: <strong>Open app → Assistant offers a task → User confirms → Focus state begins → Task complete → Assistant offers next step.</strong> The user makes no choices. They respond. The assistant leads the entire sequence.`,
+            body: `The interaction model could not be validated in static form. Whether replacing task selection with assistant-initiated turns actually removed the experience of deciding had to be tested in a navigable state.<br><br>The prototype was built against five criteria — each tracing directly to a research finding, none exploratory:<br><br>— Does removing task selection create relief or reorientation?<br>— Does a single assistant-initiated action communicate without instruction?<br>— Can a progress indicator carry elapsed time without requiring the user to monitor it?<br>— Does limiting each conversational state to one response option reduce cognitive load?<br>— Does a fully linear, non-branching sequence feel like structure or constraint?<br><br>The validated model reduced to a single repeating sequence: <strong>Open app → Assistant offers a task → User confirms → Focus state begins → Task complete → Assistant offers next step.</strong> The user makes no choices. They respond. The assistant leads the entire sequence.`,
             placeholderAfter: '<img src="assets/focus/ff_lofi.png" alt="Lo-fi screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'Mid-fidelity Build',
             placeholder: '<img src="assets/focus/ff_midfi.png" alt="Mid-fidelity screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
-            body: `With the interaction model validated, the mid-fidelity build had one job: make the conversation legible as a product experience. Not cleaner states. Not a more resolved palette. The question was whether a user could understand the turn-taking model without instruction.<br><br>Every decision served that. One response option per conversational state so it was always clear what the assistant was asking. Minimal content per state so the response required no evaluation before giving it. Large tap targets so confirmation required no precision in a low-focus moment. The active task and the next step simultaneously visible, so working memory had nothing to carry between turns. A calm palette of light green and white, because participants had described visual stimulation as a trigger for closing the tools they already used.<br><br>Nothing was added that did not directly support the conversation.`,
+            body: `With the interaction model validated, the mid-fidelity build had one job: make the conversation legible as a product experience. Not cleaner states. Not a more resolved palette. The question was whether a user could understand the turn-taking model without instruction.<br><br>Every decision served that:<br><br>— One response option per state — always clear what the assistant was asking<br>— Minimal content per state — the response required no evaluation before giving it<br>— Large tap targets — confirmation required no precision in a low-focus moment<br>— Active task and next step simultaneously visible — working memory had nothing to carry between turns<br>— Calm palette of light green and white — participants had described visual stimulation as a trigger for closing the tools they already used<br><br>Nothing was added that did not directly support the conversation.`,
           },
           {
             heading: 'What changed after testing',
@@ -236,7 +236,7 @@ const caseStudies = [
         content: [
           {
             heading: 'High fidelity prototype after interaction validation',
-            body: `High fidelity was the final test of the hypothesis. The goal was to prove that this conversational model could exist as a resilient, shippable product rather than just a prototype. I moved into high-fidelity to define the systemic rules that would allow the interface to scale.<br><br><strong>Design for Precision</strong><br>Type hierarchy was used to communicate the current conversational state rather than for decoration. By establishing clear typographic rules, I ensured the user always knew exactly where they were in the flow. This reduced the cognitive effort needed to process information, which directly supports task initiation.<br><br><strong>Systems Thinking and Accessibility</strong><br>The colour system was refined to meet the same strict cognitive accessibility criteria that governed the earlier phases. I focused on maintaining high contrast and a calm palette to prevent sensory overwhelm. Every component was designed with consistent behaviour. Inconsistency in a turn-based interaction creates hesitation, and my goal was to eliminate all points of friction that might lead to task avoidance.<br><br><strong>The Result</strong><br>The high-fidelity build demonstrates that conversational task initiation is a viable architectural pattern for a real-world product. It moves the concept from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
+            body: `High fidelity was the final test of the hypothesis. The goal was to prove that this conversational model could exist as a resilient, shippable product rather than just a prototype.<br><br><strong>Design for Precision</strong><br>Type hierarchy communicates conversational state, not decoration. Clear typographic rules ensure the user always knows where they are in the flow — reducing cognitive effort at the moment it matters most.<br><br><strong>Systems Thinking and Accessibility</strong><br>The colour system meets the same cognitive accessibility criteria that governed earlier phases: high contrast, calm palette, no sensory overwhelm. <strong>Inconsistency in a turn-based interaction creates hesitation.</strong> Every component was designed to eliminate it.<br><br><strong>The Result</strong><br>The high-fidelity build demonstrates that conversational task initiation is a viable architectural pattern for a real-world product. It moves the concept from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">\u2192 View high fidelity prototype (Figma)</a></div>`,
           },
         ],
@@ -244,21 +244,28 @@ const caseStudies = [
       {
         id: 'outcomes',
         label: '06 / Outcomes',
-        title: '06 / Outcomes — What This Demonstrates',
-        overview: ['Design Decisions', 'What This Project Proved', 'Reflection'],
+        title: '06 / Outcomes — What Changes for the User',
+        overview: ['What Changes', 'Key Design Decisions', 'Next Steps'],
         content: [
           {
+            heading: 'What Changes',
+            body: `The redesign addresses the failure state every existing productivity tool creates for ADHD users.`,
+            list: [
+              'The user never sees a task list — the assistant surfaces one task at a time, on opening',
+              'The user never decides what to start — the assistant initiates; the user only responds',
+              'The user never tracks time themselves — a passive progress indicator carries elapsed time without requiring attention',
+              'The user never navigates between states — the flow is fully linear, returning to the same conversational surface',
+              'The decision to begin has already been made before the user is aware of making it',
+            ],
+          },
+          {
             heading: 'Key Design Decisions',
-            placeholder: `<table class="cs-decision-table"><thead><tr><th>Problem</th><th>Decision</th><th>Outcome</th></tr></thead><tbody><tr><td>Opening a task list triggered disengagement before starting</td><td>Replaced the list with a conversational assistant</td><td>Decision made before the user sees a screen; initiation barrier removed</td></tr><tr><td>Limited time</td><td>Built lo-fi to mid-fidelity first</td><td>Interaction model validated and demonstrated within sprint</td></tr><tr><td>Too many potential features</td><td>Designed one core flow</td><td>Clearer demonstration of the concept's value</td></tr></tbody></table>`,
+            placeholder: `<table class="cs-decision-table"><thead><tr><th>Problem</th><th>Decision</th><th>Outcome</th></tr></thead><tbody><tr><td>Opening a task list triggered disengagement before starting</td><td>Replaced the list with a conversational assistant</td><td>Decision made before the user sees a screen; initiation barrier removed</td></tr><tr><td>Limited time</td><td>Built lo-fi to mid-fidelity first</td><td>Interaction model validated and demonstrated within sprint</td></tr><tr><td>Too many potential features</td><td>Designed one core flow</td><td>Clearer demonstration of the concept\'s value</td></tr></tbody></table>`,
             body: `<strong>Replacing the task list</strong> was the most consequential decision in the project. Research identified list-opening as the structural failure point: it requires the user to self-direct before any task can begin. The conversational assistant removes that requirement entirely. The user's first interaction is a response. The decision has already been made.<br><br><strong>Limiting the work to a single flow</strong> applied the same discipline: one task, one conversational state, one response at a time. One thing demonstrated clearly was more valuable than several things demonstrated partially.`,
           },
           {
-            heading: 'What This Project Proved',
-            body: `Focused research and honest synthesis are enough to make a structural design decision in three days. Every decision in this project traces to a specific finding. None came from convention or assumption about what a productivity app should look like.<br><br>The constraint produced discipline. No features outside the primary flow. No visual detail before the interaction was validated. The lo-fi prototype tested the core hypothesis in hours. The mid-fidelity build confirmed and demonstrated it in one more day. One thing done well rather than several things done partially.`,
-          },
-          {
-            heading: 'Reflection',
-            body: `Three sessions validated that the interface was understood and felt less demanding. They did not test whether the behaviour would hold over time or support sustained task completion.<br><br>Longitudinal use data is the primary gap. If taken further, the product would also need clearly defined scope distinguishing task facilitation from guided support. Judges raised that question, and it is the right one for any product operating in this space.`,
+            heading: 'Next Steps',
+            body: `Three sessions validated that the interface was understood and felt less demanding. They did not test whether the behaviour would hold over time or support sustained task completion.<br><br>Longitudinal use data is the primary gap. If taken further, the product would need clearly defined scope distinguishing task facilitation from guided support.`,
           },
         ],
       },
