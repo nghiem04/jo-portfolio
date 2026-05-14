@@ -2,7 +2,7 @@
 const caseStudies = [
   {
     num: '01',
-    title: 'Opal — Designing Around How People Actually Travel',
+    title: 'Opal: Designing Around How People Actually Travel',
     role: 'UX Designer · Research, Synthesis, Interaction Design',
     team: 'UX Design Team',
     client: 'Independent UX Project',
@@ -12,49 +12,49 @@ const caseStudies = [
     heroImage: 'assets/opal/opal_1.png',
     heroImageAlt: 'Opal app redesign mockup',
     tags: ['UX Research', 'Interaction Design', 'Figma'],
-    overview: `Opal had been designed for ticketing administration, not commuting. Research with 15 participants surfaced a structural fragmentation pattern: every commuter was running a three-app workflow — TripView for real-time status, Google Maps for routing, Opal only to top up. None of those switches were preferences; each was an adaptation to a gap the app did not fill. A second structural problem compounded this: the app had no awareness of routine. Most participants made the same journey every day, but the app presented the same blank state every session. The redesign consolidated the workflow into a single surface, rebuilt around how Sydney commuters actually begin their day.`,
+    overview: `Opal had been designed for ticketing administration, not commuting. Research with 15 participants surfaced a structural fragmentation pattern: every commuter was running a three-app workflow: TripView for real-time status, Google Maps for routing, Opal only to top up. None of those switches were preferences; each was an adaptation to a gap the app did not fill. A second structural problem compounded this: the app had no awareness of routine. Most participants made the same journey every day, but the app presented the same blank state every session. The redesign consolidated the workflow into a single surface, rebuilt around how Sydney commuters actually begin their day.`,
     overviewLink: `<a class="cs-proto-btn" href="https://www.figma.com/make/pKtWgdPJyzKpnD8a5ZZtn3/opal_mid_fi?t=2IdijnlOUEr40Rhc-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
     problem: `Participants described the same workflow every morning: open Opal to check balance, switch to TripView for real-time status, check Google Maps for the route, return to Opal to top up. Every commuting need beyond payment required leaving the app entirely. The question was not which features were missing. It was whether a standalone ticketing tool was the right model at all.`,
-    atAGlance: `<table class="cs-decision-table"><thead><tr><th>At a Glance</th><th></th></tr></thead><tbody><tr><td>Role</td><td>UX Designer · Research, Synthesis, Interaction Design</td></tr><tr><td>Users interviewed</td><td>15 participants</td></tr><tr><td>Core insight</td><td>Opal was designed for ticketing, not commuting — structural three-app fragmentation and zero habit awareness</td></tr><tr><td>Key design move</td><td>Card-first home; persistent balance display; one-tap top-up; saved routes with real-time alerts; integrated journey planner</td></tr><tr><td>Outcome</td><td>High-fidelity prototype demonstrating workflow consolidation within Opal's existing design system</td></tr></tbody></table>`,
+    atAGlance: `<table class="cs-decision-table"><thead><tr><th>At a Glance</th><th></th></tr></thead><tbody><tr><td>Role</td><td>UX Designer · Research, Synthesis, Interaction Design</td></tr><tr><td>Users interviewed</td><td>15 participants · 8 rail commuters, 4 bus, 3 multi-modal · Ages 17–45</td></tr><tr><td>Core insight</td><td>Opal was designed for ticketing, not commuting. Structural three-app fragmentation and zero habit awareness.</td></tr><tr><td>Key design move</td><td>Card-first home; persistent balance display; one-tap top-up; saved routes with real-time alerts; integrated journey planner</td></tr><tr><td>Outcome</td><td>High-fidelity prototype demonstrating workflow consolidation within Opal's existing design system</td></tr></tbody></table>`,
     tools: ['Figma', 'Miro', 'User interviews', 'Competitive benchmarking', 'UX audit', 'Lo-fi sketching', 'Mid-fi prototyping'],
     stages: [
       {
         id: 'research',
         label: '01 / Research',
-        title: '01 / Research — What Commuters Actually Do',
+        title: '01 / Research: What Commuters Actually Do',
         overview: ['Interview Findings', 'International Benchmarking', 'Opal App Audit'],
         content: [
           {
             heading: 'Interview Findings',
-            body: `Interviews were structured around the full commuting day, not the Opal app. When participants described their morning from waking to arriving at work, a consistent pre-departure pattern emerged that no product-focused interview would have surfaced.<br><br>The highest-friction moment was the window before departure. Participants had built habits around TripView because Opal did not surface route status at decision speed. Most were repeating the same one or two journeys daily; the app had no awareness of this pattern. Unprompted, participants converged on the same request: save a regular route, get an alert if something changes, access it immediately on opening. That convergence became the central feature decision.<br><br>Synthesis identified fragmentation as a structural condition, not a side effect. Opal appeared at specific, limited moments in a workflow that moved continuously across applications. The switching was built into how commuters had adapted to what each tool could and could not do.`,
+            body: `15 participants recruited across commute type: 8 rail, 4 bus, 3 multi-modal. Ages 17–45, all regular Opal users.<br><br>Interviews were structured around the full commuting day, not the Opal app. When participants described their morning from waking to arriving at work, a consistent pre-departure pattern emerged that no product-focused interview would have surfaced.<br><br>The highest-friction moment was the window before departure. Participants had built habits around TripView because Opal did not surface route status at decision speed. Most were repeating the same one or two journeys daily; the app had no awareness of this pattern. Unprompted, participants converged on the same request: save a regular route, get an alert if something changes, access it immediately on opening. That convergence became the central feature decision.<br><br>Synthesis identified fragmentation as a structural condition, not a side effect. Opal appeared at specific, limited moments in a workflow that moved continuously across applications. The switching was built into how commuters had adapted to what each tool could and could not do.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://miro.com/app/board/uXjVHb5sCgU=/?share_link_id=506555134836" target="_blank" rel="noopener">→ View full research synthesis (Miro)</a></div>`,
           },
           {
             heading: 'International Benchmarking',
-            body: `Three international transit apps were reviewed against the specific failure points research had surfaced — not as a general feature comparison.<br><br><strong>Oyster (London, TfL)</strong> — <strong>balance and top-up coexist without degrading either.</strong> Balance persisted across the app, accessible at the moment commuters needed it.<br><br><strong>Suica (Tokyo, JR East)</strong> — <strong>the clearest model for high-frequency transactional flows.</strong> Minimum input. A simple interface does not require a simple system behind it.<br><br><strong>Myki (Melbourne)</strong> — most directly comparable. Made visible both where Opal lagged and where constraints were shared, which mattered for scoping what the redesign could realistically address.`,
+            body: `Three international transit apps were reviewed against the specific failure points research had surfaced, not as a general feature comparison.<br><br><strong>Oyster (London, TfL)</strong>: <strong>balance and top-up coexist without degrading either.</strong> Balance persisted across the app, accessible at the moment commuters needed it.<br><br><strong>Suica (Tokyo, JR East)</strong>: <strong>the clearest model for high-frequency transactional flows.</strong> Minimum input. A simple interface does not require a simple system behind it.<br><br><strong>Myki (Melbourne)</strong>: most directly comparable. Made visible both where Opal lagged and where constraints were shared, which mattered for scoping what the redesign could realistically address.`,
           },
           {
             heading: 'Opal App Audit',
-            body: `<strong>Finding:</strong> Balance was buried in account settings — the most-needed pre-departure information was the hardest to reach.<br><strong>Decision:</strong> Persistent balance display on the home screen.<br><br><strong>Finding:</strong> Top-up required more steps than the task warranted. Two participants abandoned the in-app flow mid-morning for station machines.<br><strong>Decision:</strong> One-tap top-up accessible from home, removing the friction that caused avoidance behaviour.<br><br><strong>Finding:</strong> Trip history was a flat chronological list. Participants manually calculated costs to understand their spending.<br><strong>Decision:</strong> Per-journey fare breakdowns within trip history.`,
+            body: `<strong>Finding:</strong> Balance was buried in account settings. The most-needed pre-departure information was the hardest to reach.<br><strong>Decision:</strong> Persistent balance display on the home screen.<br><br><strong>Finding:</strong> Top-up required more steps than the task warranted. Two participants abandoned the in-app flow mid-morning for station machines.<br><strong>Decision:</strong> One-tap top-up accessible from home, removing the friction that caused avoidance behaviour.<br><br><strong>Finding:</strong> Trip history was a flat chronological list. Participants manually calculated costs to understand their spending.<br><strong>Decision:</strong> Per-journey fare breakdowns within trip history.`,
           },
         ],
       },
       {
         id: 'define',
         label: '02 / Define',
-        title: '02 / Define — Framing the Opportunity',
+        title: '02 / Define: Framing the Opportunity',
         overview: ['Key Insight'],
         content: [
           {
             heading: 'Key Insight',
-            body: `<strong>Opal had not been designed badly. It had been designed for the wrong model of commuting.</strong><br><br>Participants used it as the payment step in a multi-app workflow. The switching was not coincidental — it was built into how commuters had adapted to what each tool could and could not do.<br><br>A second structural finding: <strong>the app was invisible to habit.</strong> Most participants made the same trip every day. The app presented the same blank state every session — no recognition of routine, no shortcut to a familiar journey, no proactive disruption alert on a route travelled hundreds of times.`,
+            body: `<strong>Opal had not been designed badly. It had been designed for the wrong model of commuting.</strong><br><br>Participants used it as the payment step in a multi-app workflow. The switching was not coincidental; it was built into how commuters had adapted to what each tool could and could not do.<br><br>A second structural finding: <strong>the app was invisible to habit.</strong> Most participants made the same trip every day. The app presented the same blank state every session: no recognition of routine, no shortcut to a familiar journey, no proactive disruption alert on a route travelled hundreds of times.`,
           },
         ],
       },
       {
         id: 'ideate',
         label: '03 / Ideate',
-        title: '03 / Ideate — Structuring a Better Experience',
+        title: '03 / Ideate: Structuring a Better Experience',
         overview: ['Navigation Exploration', 'Key Structural Decisions'],
         content: [
           {
@@ -65,25 +65,32 @@ const caseStudies = [
           },
           {
             heading: 'Key Structural Decisions',
-            body: `Three structural decisions defined the redesign. Each traces directly to a research or audit finding.<br><br><strong>Finding:</strong> Participants framed Opal as a card they managed, not an account they administered.<br><strong>Decision:</strong> Card-first home screen, aligned with an existing mental model and reducing interpretive navigation work.<br><br><strong>Finding:</strong> Top-up friction caused avoidance behaviour — participants abandoned the in-app flow for station machines under time pressure.<br><strong>Decision:</strong> Persistent one-tap top-up from home, addressing both step count and avoidance.<br><br><strong>Finding:</strong> Switching to Google Maps or TripView was necessity, not preference.<br><strong>Decision:</strong> Integrated journey planner as a primary destination, removing the structural reason to leave the app.`,
+            body: `Three structural decisions defined the redesign. Each traces directly to a research or audit finding.<br><br><strong>Finding:</strong> Participants framed Opal as a card they managed, not an account they administered.<br><strong>Decision:</strong> Card-first home screen, aligned with an existing mental model and reducing interpretive navigation work.<br><br><strong>Finding:</strong> Top-up friction caused avoidance behaviour. Participants abandoned the in-app flow for station machines under time pressure.<br><strong>Decision:</strong> Persistent one-tap top-up from home, addressing both step count and avoidance.<br><br><strong>Finding:</strong> Switching to Google Maps or TripView was necessity, not preference.<br><strong>Decision:</strong> Integrated journey planner as a primary destination, removing the structural reason to leave the app.`,
           },
         ],
       },
       {
         id: 'design',
         label: '04 / Design',
-        title: '04 / Design — Prototype',
+        title: '04 / Design: Prototype',
         overview: ['Prototype Scope', 'How this fits into the Opal app', 'Key screens within the flow', 'High fidelity prototype within Opal'],
         content: [
           {
             heading: 'Prototype Scope',
-            body: `The prototype tested two hypotheses: that a card-first home screen with persistent top-up access would reduce friction in the most frequent task, and that saved routes with real-time alerts would resolve the pre-departure anxiety participants described consistently.<br><br>Five decisions were carried into the build:<br><br>• Persistent balance on home (buried in account settings in the existing app)<br>• One-tap top-up from home (two participants abandoned the in-app flow for a station machine)<br>• Per-journey fare breakdowns (participants were manually calculating costs through a flat list)<br>• Unified multi-card management (informed by Oyster and Suica benchmarking)<br>• <strong>Saved routes with real-time disruption alerts — the most direct line from finding to interface.</strong> Participants repeated the same journey daily; the app had no awareness of this. They used TripView for pre-departure alerts because Opal offered nothing equivalent.`,
+            body: `The prototype tested two hypotheses: that a card-first home screen with persistent top-up access would reduce friction in the most frequent task, and that saved routes with real-time alerts would resolve the pre-departure anxiety participants described consistently.<br><br>Five decisions were carried into the build:`,
+            list: [
+              'Persistent balance on home (buried in account settings in the existing app)',
+              'One-tap top-up from home (two participants abandoned the in-app flow for a station machine)',
+              'Per-journey fare breakdowns (participants were manually calculating costs through a flat list)',
+              'Unified multi-card management (informed by Oyster and Suica benchmarking)',
+              'Saved routes with real-time disruption alerts. The most direct line from finding to interface.<br><br>Participants repeated the same journey daily; the app had no awareness of this. They used TripView for pre-departure alerts because Opal offered nothing equivalent.',
+            ],
             placeholder: '<img src="assets/opal/opal_8.gif" alt="Figma prototype with interactive flows" style="width:100%;border-radius:8px;display:block;">',
             placeholderAfter: '<img src="assets/opal/opal_9.png" alt="Saved route home screen and real-time alert notification screens" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'How this fits into the Opal app',
-            body: `This redesign sits inside Opal, not alongside it. The entry point is the home screen where commuters already begin. The three primary paths — one-tap top-up, saved route with real-time alerts, and integrated journey planner — each replace a step that previously required multi-step navigation or sent users out to a third-party app.<br><br>Every flow returns to the home screen on completion. No interaction terminates at a confirmation page or leaves the user inside a sub-menu, reflecting how transit tools are actually used: briefly, repeatedly, and under time pressure.`,
+            body: `This redesign sits inside Opal, not alongside it. The entry point is the home screen where commuters already begin. The three primary paths (one-tap top-up, saved route with real-time alerts, and integrated journey planner) each replace a step that previously required multi-step navigation or sent users out to a third-party app.<br><br>Every flow returns to the home screen on completion. No interaction terminates at a confirmation page or leaves the user inside a sub-menu, reflecting how transit tools are actually used: briefly, repeatedly, and under time pressure.`,
           },
           {
             heading: 'Key screens within the flow',
@@ -92,7 +99,7 @@ const caseStudies = [
           },
           {
             heading: 'High fidelity prototype within Opal',
-            body: `Mid-fidelity validated structure. High fidelity answered whether these features could credibly exist inside the real Opal app — built to the same constraints the product team works within.<br><br>Opal is a government product with an established visual system. Colour tokens, iconography, and interaction patterns all reference the existing Opal design language. The goal was not to redesign Opal's visual identity. It was to demonstrate that these features belong inside it and could ship without requiring a full rebuild.`,
+            body: `Mid-fidelity validated structure. High fidelity answered whether these features could credibly exist inside the real Opal app, built to the same constraints the product team works within.<br><br>Opal is a government product with an established visual system. Colour tokens, iconography, and interaction patterns all reference the existing Opal design language. The goal was not to redesign Opal's visual identity. It was to demonstrate that these features belong inside it and could ship without requiring a full rebuild.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/pKtWgdPJyzKpnD8a5ZZtn3/opal_mid_fi?t=2IdijnlOUEr40Rhc-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a></div>`,
           },
         ],
@@ -100,27 +107,27 @@ const caseStudies = [
       {
         id: 'outcomes',
         label: '05 / Outcomes',
-        title: '05 / Outcomes — What Changes for Commuters',
+        title: '05 / Outcomes: What Changes for Commuters',
         overview: ['What Changes', 'What This Demonstrates', 'Next Steps'],
         content: [
           {
             heading: 'What Changes',
-            body: `The redesign addresses the workflow commuters had actually built — not the one the app assumed they were running.`,
+            body: `The redesign addresses the workflow commuters had actually built, not the one the app assumed they were running.`,
             list: [
-              'No need to open TripView before leaving home — real-time disruption alerts surface on saved routes, on opening',
-              'No need to navigate into settings to see balance — persistent display on the home screen',
-              'No reason to leave the app to plan a route — journey planner embedded as a primary destination',
-              'No repeat of the same decisions for the same daily journey — the app recognises routine for the first time',
-              'No abandoning top-up mid-commute — one tap from home replaces a multi-step flow',
+              'No need to open TripView before leaving home. Real-time disruption alerts surface on saved routes on opening.',
+              'No need to navigate into settings to see balance. Persistent display on the home screen.',
+              'No reason to leave the app to plan a route. Journey planner embedded as a primary destination.',
+              'No repeat of the same decisions for the same daily journey. The app recognises routine for the first time.',
+              'No abandoning top-up mid-commute. One tap from home replaces a multi-step flow.',
             ],
           },
           {
             heading: 'What This Demonstrates',
             body: ``,
             list: [
-              'Identify structural problems beyond feature gaps — a service-level fragmentation pattern no feature audit would surface',
-              'Design around real behaviour, not stated preferences — every decision traces to a specific finding',
-              'Translate research into interaction patterns — pre-departure anxiety became saved routes with alerts; abandonment behaviour became one-tap top-up',
+              'Identify structural problems beyond feature gaps: a service-level fragmentation pattern no feature audit would surface.',
+              'Design around real behaviour, not stated preferences. Every decision traces to a specific finding.',
+              'Translate research into interaction patterns: pre-departure anxiety became saved routes with alerts; abandonment behaviour became one-tap top-up.',
               'Work within an established government design system without requiring a rebuild',
               'Think at a service level across tools, not just within a single product surface',
             ],
@@ -209,13 +216,29 @@ const caseStudies = [
         content: [
           {
             heading: 'Lo-fi Prototype',
-            body: `The interaction model could not be validated in static form. Whether replacing task selection with assistant-initiated turns actually removed the experience of deciding had to be tested in a navigable state.<br><br>The prototype was built against five criteria — each tracing directly to a research finding, none exploratory:<br><br>• Does removing task selection create relief or reorientation?<br>• Does a single assistant-initiated action communicate without instruction?<br>• Can a progress indicator carry elapsed time without requiring the user to monitor it?<br>• Does limiting each conversational state to one response option reduce cognitive load?<br>• Does a fully linear, non-branching sequence feel like structure or constraint?<br><br>The validated model reduced to a single repeating sequence: <strong>Open app → Assistant offers a task → User confirms → Focus state begins → Task complete → Assistant offers next step.</strong> The user makes no choices. They respond. The assistant leads the entire sequence.`,
+            body: `The interaction model could not be validated in static form. Whether replacing task selection with assistant-initiated turns actually removed the experience of deciding had to be tested in a navigable state.<br><br>The prototype was built against five criteria — each tracing directly to a research finding, none exploratory:`,
+            list: [
+              'Does removing task selection create relief or reorientation?',
+              'Does a single assistant-initiated action communicate without instruction?',
+              'Can a progress indicator carry elapsed time without requiring the user to monitor it?',
+              'Does limiting each conversational state to one response option reduce cognitive load?',
+              'Does a fully linear, non-branching sequence feel like structure or constraint?',
+            ],
+            afterList: `<p><br>The validated model reduced to a single repeating sequence: <strong>Open app → Assistant offers a task → User confirms → Focus state begins → Task complete → Assistant offers next step.</strong> The user makes no choices. They respond. The assistant leads the entire sequence.</p>`,
             placeholderAfter: '<img src="assets/focus/ff_lofi.png" alt="Lo-fi screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
           },
           {
             heading: 'Mid-fidelity Build',
             placeholder: '<img src="assets/focus/ff_midfi.png" alt="Mid-fidelity screens showing the conversational flow" style="width:100%;border-radius:8px;display:block;">',
-            body: `With the interaction model validated, the mid-fidelity build had one job: make the conversation legible as a product experience. Not cleaner states. Not a more resolved palette. The question was whether a user could understand the turn-taking model without instruction.<br><br>Every decision served that:<br><br>• One response option per state: always clear what the assistant was asking<br>• Minimal content per state: the response required no evaluation before giving it<br>• Large tap targets: confirmation required no precision in a low-focus moment<br>• Active task and next step simultaneously visible: working memory had nothing to carry between turns<br>• Calm palette of light green and white: participants had described visual stimulation as a trigger for closing the tools they already used<br><br>Nothing was added that did not directly support the conversation.`,
+            body: `With the interaction model validated, the mid-fidelity build had one job: make the conversation legible as a product experience. Not cleaner states. Not a more resolved palette. The question was whether a user could understand the turn-taking model without instruction.<br><br>Every decision served that:`,
+            list: [
+              'One response option per state: always clear what the assistant was asking',
+              'Minimal content per state: the response required no evaluation before giving it',
+              'Large tap targets: confirmation required no precision in a low-focus moment',
+              'Active task and next step simultaneously visible: working memory had nothing to carry between turns',
+              'Calm palette of light green and white: participants had described visual stimulation as a trigger for closing the tools they already used',
+            ],
+            afterList: `<p><br>Nothing was added that did not directly support the conversation.</p>`,
           },
           {
             heading: 'What changed after testing',

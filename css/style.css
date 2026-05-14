@@ -802,7 +802,8 @@ h2.section-title {
   position: absolute;
   left: 0;
   color: var(--clay);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  top: 0.1em;
 }
 
 .cs-placeholder-note {
@@ -897,7 +898,7 @@ h2.section-title {
   left: 0;
   color: var(--clay);
   font-size: 0.78rem;
-  top: 0.08em;
+  top: 0.1em;
 }
 
 /* ──────────────────────────────────────────────────────
