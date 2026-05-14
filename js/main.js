@@ -519,7 +519,7 @@ function buildCSDetail(cs) {
           </div>
           <div class="footer-col">
             <p class="footer-col-heading">SOCIAL</p>
-            <a href="https://www.linkedin.com/in/joanne-nghiem/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/joannenghiem/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </footer>
