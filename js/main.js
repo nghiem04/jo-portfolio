@@ -15,7 +15,6 @@ const caseStudies = [
     overview: `Opal had been designed for ticketing administration, not commuting. Research with 15 participants surfaced a structural fragmentation pattern: every commuter was running a three-app workflow: TripView for real-time status, Google Maps for routing, Opal only to top up. None of those switches were preferences; each was an adaptation to a gap the app did not fill. A second structural problem compounded this: the app had no awareness of routine. Most participants made the same journey every day, but the app presented the same blank state every session. The redesign consolidated the workflow into a single surface, rebuilt around how Sydney commuters actually begin their day.`,
     overviewLink: `<a class="cs-proto-btn" href="https://www.figma.com/make/pKtWgdPJyzKpnD8a5ZZtn3/opal_mid_fi?t=2IdijnlOUEr40Rhc-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a>`,
     problem: `Participants described the same workflow every morning: open Opal to check balance, switch to TripView for real-time status, check Google Maps for the route, return to Opal to top up. Every commuting need beyond payment required leaving the app entirely. The question was not which features were missing. It was whether a standalone ticketing tool was the right model at all.`,
-    atAGlance: `<table class="cs-decision-table"><thead><tr><th>At a Glance</th><th></th></tr></thead><tbody><tr><td>Role</td><td>UX Designer · Research, Synthesis, Interaction Design</td></tr><tr><td>Users interviewed</td><td>15 participants · 8 rail commuters, 4 bus, 3 multi-modal · Ages 17–45</td></tr><tr><td>Core insight</td><td>Opal was designed for ticketing, not commuting. Structural three-app fragmentation and zero habit awareness.</td></tr><tr><td>Key design move</td><td>Card-first home; persistent balance display; one-tap top-up; saved routes with real-time alerts; integrated journey planner</td></tr><tr><td>Outcome</td><td>High-fidelity prototype demonstrating workflow consolidation within Opal's existing design system</td></tr></tbody></table>`,
     tools: ['Figma', 'Miro', 'User interviews', 'Competitive benchmarking', 'UX audit', 'Lo-fi sketching', 'Mid-fi prototyping'],
     stages: [
       {
@@ -302,83 +301,77 @@ const caseStudies = [
     heroBannerSub: 'Designing Conversational AI Under Real-World Constraint',
     tags: ['Conversational AI', 'WCAG 2.2', 'Frontend Delivery'],
     overview: `A federal Australian government department needed a public-facing AI assistant to help citizens and operational staff navigate a body of complex regulatory information. The product was built on an enterprise chatbot platform with a custom retrieval pipeline ingesting departmental documents, and governance tooling moderating responses.<br><br>I owned the frontend end-to-end as part of the delivery team. This covered design, implementation, accessibility, and responsive behaviour across desktop, tablet, and mobile.`,
-    problem: `I joined the project as the only frontend designer-developer on a team that included backend engineers and business analysts. The expectation going in was that the work would be primarily implementation against an existing brief.<br><br>That's not what happened. The client had no UI direction. The backend team was focused on the retrieval and moderation systems. The business analysts were translating regulatory requirements but weren't doing visual or interaction design. The initial brand input from the client was a slide deck containing exactly two font specifications, one for headings and one for body, with no defined visual identity for the product itself.<br><br>I had three options. Wait for direction that wasn't coming. Escalate the lack of inputs through formal channels. Or start designing and use prototypes to extract the missing brief from the client. I chose the third.`,
-    atAGlance: `<table class="cs-decision-table"><thead><tr><th>At a Glance</th><th></th></tr></thead><tbody><tr><td>Role</td><td>Frontend Designer-Developer · Design, Implementation, Accessibility</td></tr><tr><td>Team</td><td>Backend engineers, business analysts</td></tr><tr><td>Type</td><td>Client engagement · Federal government</td></tr><tr><td>Year</td><td>2025</td></tr><tr><td>Core constraint</td><td>No UI brief; sole designer on a non-design-led delivery team</td></tr><tr><td>Outcome</td><td>Shipped to production on a public government domain</td></tr></tbody></table>`,
+    problemHeading: 'Overview',
+    problem: `<em>This case study covers a live federal government client engagement. Visual assets, UI screens, and departmental branding are intentionally limited or anonymised due to NDA and governance restrictions. The focus is decision-making, interaction design, accessibility implementation, and delivery.</em><br><br>A federal Australian government department needed a public-facing AI assistant to help citizens and operational staff navigate complex regulatory information. Built on an enterprise chatbot platform with a custom retrieval pipeline and governance-moderated responses.<br><br>I joined as the only frontend designer-developer on a delivery team of backend engineers and business analysts. The expectation was implementation against an existing brief.<br><br>The client had no UI direction. The backend team was focused on retrieval and moderation systems. Brand input was a slide deck with two font specifications. I had three options: wait, escalate, or start designing and use prototypes to extract the brief from the client. I chose the third.`,
     tools: ['Figma', 'Browser DevTools', 'AI-assisted coding tools', 'WCAG 2.2', 'Competitive benchmarking'],
+    confidentiality: 'Client and product details anonymised per engagement terms',
     stages: [
       {
-        id: 'discovery',
-        label: '01 / Discovery',
-        title: '01 / Discovery: Prototypes as the Brief',
-        overview: ['Prototypes as the Brief'],
+        id: 'design-decisions',
+        label: '01 / Design Decisions',
+        title: '01 / Design Decisions',
+        overview: ['Prototypes as the Requirements Engine', 'Benchmarking Modern AI Patterns', 'Solving the Cold-Start Problem', 'The Mobile Compromise'],
         content: [
           {
-            heading: 'Prototypes as the Brief',
-            body: `The working pattern that emerged was this: the client couldn't articulate what they wanted, but they could react to what they saw. So I built prototypes designed to provoke reactions.<br><br>The first version used approximate brand colours pulled from the client's slide deck. I presented it with the explicit framing of "this is a starting point, what would you change?" Each round of feedback gave me one more piece of information the client hadn't been able to volunteer upfront. Across roughly 18 rounds of revision, the prototypes evolved from best guess to approved for build.<br><br>The prototyping process wasn't separate from the requirements-gathering process. It was the requirements-gathering process.`,
-            placeholderAfter: `<img src="assets/gov/gov_2.png" alt="Early prototype iteration of the government AI assistant interface" style="width:100%;border-radius:8px;display:block;">`,
+            heading: 'Prototypes as the Requirements Engine',
+            body: `The client couldn't articulate requirements upfront, but they could react. I ran more than a dozen rounds of iterative prototyping, each version surfacing one more specification the client hadn't been able to volunteer. The first build used approximate brand colours from their slide deck, framed explicitly as a starting point. The process worked. What started as a best-guess layout became an approved-for-build spec.<br><br>This wasn't a refinement process. It was requirements gathering. Design as extraction.`,
+            placeholderAfter: `<figure style="margin:0"><img src="assets/gov/gov_2.png" alt="Early prototype iteration of the government AI assistant interface" style="width:100%;border-radius:8px;display:block;"><figcaption style="font-size:0.8rem;color:var(--ink-3);margin-top:0.5rem;font-style:italic;">An early prototype built from approximate brand colours in the client's slide deck, used as a reactions surface to extract requirements that couldn't be articulated upfront.</figcaption></figure>`,
           },
-        ],
-      },
-      {
-        id: 'design',
-        label: '02 / Design Decisions',
-        title: '02 / Design Decisions: Benchmarking, Cold-Start, and Mobile',
-        overview: ['Benchmarking Against Consumer AI Products', 'Solving the Cold-Start Problem', 'The Mobile Compromise'],
-        content: [
           {
-            heading: 'Benchmarking Against Consumer AI Products',
-            body: `One of the first design conflicts on the project was over visual style. The client's initial preference leaned toward patterns that felt dated for a 2025 AI product. The stakeholder group skewed older and less familiar with modern AI tools, which I came to see as the actual constraint to design around.<br><br>I benchmarked against the major consumer AI products users had been exposed to. These are the products the public has been trained on. If the tool was going to be intuitive to first-time users, it needed to use the conventions those products had already established: input field at the bottom, suggested prompts as discoverability scaffolds, conversational thread layouts, clear AI/user message distinctions.<br><br>This wasn't about copying. It was about recognising that the user population had already learned a vocabulary of interactions from products they used daily, and that fighting that vocabulary would create friction with no upside. I used the benchmarking work as the evidence base when pushing back on client preferences that conflicted with established patterns.`,
+            heading: 'Benchmarking Modern AI Patterns',
+            body: `The client's initial visual preferences skewed dated for a 2025 AI product. The stakeholder group was less familiar with modern AI tools, which I came to see as the actual constraint to design around.<br><br>I benchmarked against the major consumer AI products the target users had already been exposed to. The conventions were clear: input at the bottom, suggested prompts for discoverability, conversational thread layout, distinct AI/user message treatment. These aren't aesthetic preferences; they're the interaction vocabulary users already hold. I used the benchmarking work directly in stakeholder conversations to shift design disputes from taste to evidence.`,
           },
           {
             heading: 'Solving the Cold-Start Problem',
-            body: `The landing experience needed to solve the cold-start problem common to AI products. Users arriving at a blank input field don't know what they can ask.<br><br>I designed three suggested prompt cards on the landing page, each surfacing one of the most common categories of inquiry the tool was equipped to handle. The cards served two functions simultaneously. They showed users what to ask, and they showed users what the system was actually equipped to handle.`,
+            body: `An empty input field with no context is a dead end. I designed three suggested prompt cards surfacing the most common inquiry categories. Two jobs simultaneously: show users what to ask, and signal what the system is actually equipped to handle.`,
           },
           {
             heading: 'The Mobile Compromise',
-            body: `The most substantive design negotiation on the project happened over the mobile layout.<br><br>The client originally requested that the three prompt cards stack vertically on mobile. This is a pattern that doesn't appear in any major consumer AI product, and which I knew would crowd out higher-priority content. On closer inspection, even the conventional horizontal-scroll pattern wouldn't fit alongside the mandatory government branding, a legally required disclaimer, and the persistent input field on a small viewport.<br><br>We worked through the trade-off together and made a deliberate call: remove the prompt cards from mobile entirely and use the recovered vertical space to preserve the higher-priority elements (branding, the input field, and the disclaimer).<br><br>The reasoning: on a government tool, credibility and primary action outrank secondary discoverability affordances. Users who land on the mobile experience without prompt cards lose the cold-start scaffold, but they retain a usable, dignified interface. On desktop and tablet, where the viewport allowed, the prompt cards stayed.<br><br>I'd make the same call again under the same constraints. The lever I'd push hardest on if I could revisit the project is the disclaimer length, which is the content cost driving most of the mobile composition's weight.`,
-            placeholderAfter: `<img src="assets/gov/gov_1.png" alt="Wireframe comparison: client-requested stacked prompt cards on mobile (left) versus the final compromise removing prompt cards in favour of branding, input field, and disclaimer (right)">`,
+            body: `The most substantive design negotiation on the project.<br><br>The client requested vertical card stacking on mobile, a pattern absent from major consumer AI products that would crowd out higher-priority content. Horizontal scroll also failed: mandatory government branding, a legally required disclaimer, and a persistent input field left no room on a small viewport.<br><br>Decision: remove prompt cards from mobile entirely. Recovered space preserved branding, input, and disclaimer: the elements that establish credibility and enable primary action. Mobile users lose the cold-start scaffold; they keep a usable, dignified interface. On desktop and tablet, the cards stayed.<br><br>I'd make the same call again. The lever I'd push hardest on if revisiting is the disclaimer length: the content cost driving most of the mobile layout's weight.`,
+            placeholderAfter: `<figure style="margin:0"><img src="assets/gov/gov_1.png" alt="Wireframe comparison showing client-requested mobile layout versus final decision" style="width:100%;border-radius:8px;display:block;"><figcaption style="font-size:0.8rem;color:var(--ink-3);margin-top:0.5rem;font-style:italic;">Left: client-requested approach, three prompt cards stacked vertically on mobile. Right: final decision, cards removed, branding, input field, and legally required disclaimer preserved.</figcaption></figure>`,
           },
         ],
       },
       {
-        id: 'edge-cases',
-        label: '03 / Edge Cases',
-        title: '03 / Edge Cases: Failure States and Accessibility',
-        overview: ['Designing for Failure', 'Accessibility on a Government Scale'],
+        id: 'craft',
+        label: '02 / Craft and Delivery',
+        title: '02 / Craft and Delivery',
+        overview: ['Designing for Failure', 'Accessibility in Conversational UI', 'Engineering and Delivery'],
         content: [
           {
             heading: 'Designing for Failure',
-            body: `Conversational AI fails in ways traditional interfaces don't. Model timeouts, content filtering, retrieval failures, character limits, ambiguous responses. Each requires a different user-facing treatment. Generic "something went wrong" messaging would have undermined trust in a tool whose entire value proposition is providing reliable information about regulated activity.<br><br>I designed differentiated error states for each failure mode across every component. A backend-imposed character limit on input became a visible character counter rather than a silent rejection. Streaming response failures got distinct treatment from retrieval failures. Each error state was designed to leave the user with a clear next action.`,
+            body: `Conversational AI fails in ways static interfaces don't: model timeouts, content filtering, retrieval failures, character limits, ambiguous responses. Each requires a different user-facing treatment. Generic error messaging would have undermined a tool whose core value proposition is reliable regulatory information.<br><br>I designed differentiated error states across every failure mode. A backend-imposed character limit became a visible counter rather than a silent rejection. Streaming failures got distinct treatment from retrieval failures. Every error state ends with a clear next action.`,
           },
           {
-            heading: 'Accessibility on a Government Scale',
-            body: `The interface was designed and implemented to WCAG 2.2, the current ratified standard at the time of build. WCAG 2.3 was in beta and not appropriate for production deployment on a federal government domain.<br><br>WCAG compliance on a conversational AI product is meaningfully harder than on a static page. Streaming response text needs to be announced to screen readers without overwhelming users with repeated re-readings as text appends. Focus management has to handle conversation updates without disorienting keyboard users. The character counter needs to communicate state through assistive technology, not just visually. Each of these required deliberate decisions, not default-library handling.`,
+            heading: 'Accessibility in Conversational UI',
+            body: `WCAG 2.2 compliance on conversational AI is harder than on static pages. Three challenges required deliberate decisions rather than default-library handling:<br><br><strong>Streaming response text:</strong> announced to screen readers without re-reading accumulated content as text appends.<br><strong>Focus management:</strong> conversation updates handled without disorienting keyboard users.<br><strong>Character counter:</strong> state communicated through assistive technology, not visually only.<br><br>WCAG 2.2 became an ISO/IEC international standard in October 2025, during the project. WCAG 3.0 was in working draft and not appropriate for production deployment on a federal domain.`,
+          },
+          {
+            heading: 'Engineering and Delivery',
+            body: `I implemented the frontend end-to-end, using AI-assisted coding tools as an acceleration layer, keeping focus on design decisions, accessibility behaviour, and stakeholder iteration while delegating routine implementation to tooling.<br><br>Implementation included: building a component system for conversational states (empty, loading, streaming, error, complete), handling streaming response rendering without layout thrash, correctly consuming the backend's response shapes and edge-case payloads, and managing focus across a dynamically updating thread.<br><br>Testing ran in browser DevTools at real device dimensions throughout — not against Figma mockups at the end. This caught mobile composition issues that static design review had missed.`,
           },
         ],
       },
       {
-        id: 'delivery',
-        label: '04 / Delivery',
-        title: '04 / Delivery: Engineering and Outcome',
-        overview: ['Engineering and Delivery', 'Outcome', 'What I Took From It'],
+        id: 'outcomes',
+        label: '03 / Outcome',
+        title: '03 / Outcome',
+        overview: ['Outcome', 'Key Takeaways'],
         content: [
           {
-            heading: 'Engineering and Delivery',
-            body: `I implemented the frontend myself, using AI-assisted coding tools as an acceleration layer. This let me focus on design decisions, accessibility behaviour, and stakeholder iteration while delegating routine implementation patterns to the tooling. I worked alongside the backend team responsible for the retrieval and moderation systems, ensuring the frontend correctly handled the response shapes and edge cases their system produced.<br><br>I tested the responsive implementation directly in browser DevTools at real device dimensions, rather than relying on Figma mockups alone. This caught composition issues that don't surface in static design files.`,
-          },
-          {
             heading: 'Outcome',
-            body: `The product shipped to production on a public government domain and is now the department's AI assistant for the regulatory area it serves.`,
+            body: `The product shipped to production on a public government domain and is now the department's live AI assistant for the regulatory area it serves — accessible to citizens navigating compliance for the first time and operational staff using it day-to-day.<br><br>Specific usage metrics are not available for disclosure under engagement terms. The product is live, in production, and serving its intended function in a public government context.`,
           },
           {
-            heading: 'What I Took From It',
-            body: `The biggest lesson was about how design happens when the inputs aren't there. I came in expecting a clean brief and got a slide deck with two fonts. What I learned is that "no brief" isn't the absence of work. It is the work. Prototyping became a way of asking questions the client couldn't otherwise answer, and the design improved each time their reactions revealed something they hadn't been able to articulate.<br><br>The second lesson was about pushing back on client preferences without making it a taste argument. By grounding the conversation in competitive benchmarking and viewport constraints, design disagreements stayed about evidence and trade-offs rather than personal aesthetics. The compromises we landed on were better than either of our initial positions.<br><br>The third lesson was about working as the sole designer on a multi-discipline team. That kind of solo design ownership inside a non-design-led team is uncomfortable in the moment, but it forced a clarity of decision-making that I'd want to bring to any future role.`,
+            heading: 'Key Takeaways',
+            body: `<strong>No brief is a brief.</strong> When requirements can't be articulated upfront, prototyping is the extraction mechanism. The iteration wasn't refinement. It was discovery.<br><br><strong>Ground design disagreements in evidence.</strong> Benchmarking data made stakeholder pushback productive. Every compromise landed better than either starting position.<br><br><strong>Solo design in a non-design-led team requires decisiveness.</strong> No design review, no peer critique, no design leadership above me. The clarity it forces is something I'd carry into any team.`,
           },
         ],
       },
     ],
   },
 ];
+
 
 /* ── Page routing ── */
 function showPage(page) {
@@ -499,11 +492,12 @@ function buildCSDetail(cs) {
                 <span class="cs-meta-label">Tools</span>
                 <span class="cs-meta-val">${cs.tools.join(', ')}</span>
               </div>
+              ${cs.confidentiality ? `<div class="cs-meta-row"><span class="cs-meta-label">Confidentiality</span><span class="cs-meta-val">${cs.confidentiality}</span></div>` : ''}
             </div>
           </div>
           <div class="cs-stage-main">
             <div class="cs-content-block">
-              <h3 class="cs-content-heading">The Problem</h3>
+              <h3 class="cs-content-heading">${cs.problemHeading || 'The Problem'}</h3>
               ${cs.problemPart1 ? `<p>${cs.problemPart1}</p>${cs.problemPlaceholder ? `<div class="cs-problem-image">${cs.problemPlaceholder}</div>` : ''}<p>${cs.problemPart2}</p>` : `<p>${cs.problem}</p>`}
             </div>
           </div>
