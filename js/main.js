@@ -286,6 +286,97 @@ const caseStudies = [
       },
     ],
   },
+  {
+    num: '03',
+    title: 'Government AI Assistant: End-to-End Design Under Real Constraint',
+    role: 'Frontend Designer-Developer · Design, Implementation, Accessibility',
+    client: 'Client Engagement · Federal Government',
+    year: '2025',
+    context: 'Conversational AI · Accessibility · Design Under Constraint',
+    thumbClass: 'thumb-c',
+    heroImage: '',
+    heroImageAlt: 'Government AI assistant interface',
+    heroBanner: true,
+    heroBannerLabel: '03 / Case Study',
+    heroBannerHeading: 'Government Chatbot',
+    heroBannerSub: 'Designing Conversational AI Under Real-World Constraint',
+    tags: ['Conversational AI', 'WCAG 2.2', 'Frontend Delivery'],
+    overview: `A federal Australian government department needed a public-facing AI assistant to help citizens and operational staff navigate a body of complex regulatory information. The product was built on an enterprise chatbot platform with a custom retrieval pipeline ingesting departmental documents, and governance tooling moderating responses.<br><br>I owned the frontend end-to-end as part of the delivery team. This covered design, implementation, accessibility, and responsive behaviour across desktop, tablet, and mobile.`,
+    problem: `I joined the project as the only frontend designer-developer on a team that included backend engineers and business analysts. The expectation going in was that the work would be primarily implementation against an existing brief.<br><br>That's not what happened. The client had no UI direction. The backend team was focused on the retrieval and moderation systems. The business analysts were translating regulatory requirements but weren't doing visual or interaction design. The initial brand input from the client was a slide deck containing exactly two font specifications, one for headings and one for body, with no defined visual identity for the product itself.<br><br>I had three options. Wait for direction that wasn't coming. Escalate the lack of inputs through formal channels. Or start designing and use prototypes to extract the missing brief from the client. I chose the third.`,
+    atAGlance: `<table class="cs-decision-table"><thead><tr><th>At a Glance</th><th></th></tr></thead><tbody><tr><td>Role</td><td>Frontend Designer-Developer · Design, Implementation, Accessibility</td></tr><tr><td>Team</td><td>Backend engineers, business analysts</td></tr><tr><td>Type</td><td>Client engagement · Federal government</td></tr><tr><td>Year</td><td>2025</td></tr><tr><td>Core constraint</td><td>No UI brief; sole designer on a non-design-led delivery team</td></tr><tr><td>Outcome</td><td>Shipped to production on a public government domain</td></tr></tbody></table>`,
+    tools: ['Figma', 'Browser DevTools', 'AI-assisted coding tools', 'WCAG 2.2', 'Competitive benchmarking'],
+    stages: [
+      {
+        id: 'discovery',
+        label: '01 / Discovery',
+        title: '01 / Discovery: Prototypes as the Brief',
+        overview: ['Prototypes as the Brief'],
+        content: [
+          {
+            heading: 'Prototypes as the Brief',
+            body: `The working pattern that emerged was this: the client couldn't articulate what they wanted, but they could react to what they saw. So I built prototypes designed to provoke reactions.<br><br>The first version used approximate brand colours pulled from the client's slide deck. I presented it with the explicit framing of "this is a starting point, what would you change?" Each round of feedback gave me one more piece of information the client hadn't been able to volunteer upfront. Across roughly 18 rounds of revision, the prototypes evolved from best guess to approved for build.<br><br>The prototyping process wasn't separate from the requirements-gathering process. It was the requirements-gathering process.`,
+          },
+        ],
+      },
+      {
+        id: 'design',
+        label: '02 / Design Decisions',
+        title: '02 / Design Decisions: Benchmarking, Cold-Start, and Mobile',
+        overview: ['Benchmarking Against Consumer AI Products', 'Solving the Cold-Start Problem', 'The Mobile Compromise'],
+        content: [
+          {
+            heading: 'Benchmarking Against Consumer AI Products',
+            body: `One of the first design conflicts on the project was over visual style. The client's initial preference leaned toward patterns that felt dated for a 2025 AI product. The stakeholder group skewed older and less familiar with modern AI tools, which I came to see as the actual constraint to design around.<br><br>I benchmarked against the major consumer AI products users had been exposed to. These are the products the public has been trained on. If the tool was going to be intuitive to first-time users, it needed to use the conventions those products had already established: input field at the bottom, suggested prompts as discoverability scaffolds, conversational thread layouts, clear AI/user message distinctions.<br><br>This wasn't about copying. It was about recognising that the user population had already learned a vocabulary of interactions from products they used daily, and that fighting that vocabulary would create friction with no upside. I used the benchmarking work as the evidence base when pushing back on client preferences that conflicted with established patterns.`,
+          },
+          {
+            heading: 'Solving the Cold-Start Problem',
+            body: `The landing experience needed to solve the cold-start problem common to AI products. Users arriving at a blank input field don't know what they can ask.<br><br>I designed three suggested prompt cards on the landing page, each surfacing one of the most common categories of inquiry the tool was equipped to handle. The cards served two functions simultaneously. They showed users what to ask, and they showed users what the system was actually equipped to handle.`,
+          },
+          {
+            heading: 'The Mobile Compromise',
+            body: `The most substantive design negotiation on the project happened over the mobile layout.<br><br>The client originally requested that the three prompt cards stack vertically on mobile. This is a pattern that doesn't appear in any major consumer AI product, and which I knew would crowd out higher-priority content. On closer inspection, even the conventional horizontal-scroll pattern wouldn't fit alongside the mandatory government branding, a legally required disclaimer, and the persistent input field on a small viewport.<br><br>We worked through the trade-off together and made a deliberate call: remove the prompt cards from mobile entirely and use the recovered vertical space to preserve the higher-priority elements (branding, the input field, and the disclaimer).<br><br>The reasoning: on a government tool, credibility and primary action outrank secondary discoverability affordances. Users who land on the mobile experience without prompt cards lose the cold-start scaffold, but they retain a usable, dignified interface. On desktop and tablet, where the viewport allowed, the prompt cards stayed.<br><br>I'd make the same call again under the same constraints. The lever I'd push hardest on if I could revisit the project is the disclaimer length, which is the content cost driving most of the mobile composition's weight.`,
+            placeholderAfter: `<img src="assets/gov/gov_1.png" alt="Wireframe comparison: client-requested stacked prompt cards on mobile (left) versus the final compromise removing prompt cards in favour of branding, input field, and disclaimer (right)">`,
+          },
+        ],
+      },
+      {
+        id: 'edge-cases',
+        label: '03 / Edge Cases',
+        title: '03 / Edge Cases: Failure States and Accessibility',
+        overview: ['Designing for Failure', 'Accessibility on a Government Scale'],
+        content: [
+          {
+            heading: 'Designing for Failure',
+            body: `Conversational AI fails in ways traditional interfaces don't. Model timeouts, content filtering, retrieval failures, character limits, ambiguous responses. Each requires a different user-facing treatment. Generic "something went wrong" messaging would have undermined trust in a tool whose entire value proposition is providing reliable information about regulated activity.<br><br>I designed differentiated error states for each failure mode across every component. A backend-imposed character limit on input became a visible character counter rather than a silent rejection. Streaming response failures got distinct treatment from retrieval failures. Each error state was designed to leave the user with a clear next action.`,
+          },
+          {
+            heading: 'Accessibility on a Government Scale',
+            body: `The interface was designed and implemented to WCAG 2.2, the current ratified standard at the time of build. WCAG 2.3 was in beta and not appropriate for production deployment on a federal government domain.<br><br>WCAG compliance on a conversational AI product is meaningfully harder than on a static page. Streaming response text needs to be announced to screen readers without overwhelming users with repeated re-readings as text appends. Focus management has to handle conversation updates without disorienting keyboard users. The character counter needs to communicate state through assistive technology, not just visually. Each of these required deliberate decisions, not default-library handling.`,
+          },
+        ],
+      },
+      {
+        id: 'delivery',
+        label: '04 / Delivery',
+        title: '04 / Delivery: Engineering and Outcome',
+        overview: ['Engineering and Delivery', 'Outcome', 'What I Took From It'],
+        content: [
+          {
+            heading: 'Engineering and Delivery',
+            body: `I implemented the frontend myself, using AI-assisted coding tools as an acceleration layer. This let me focus on design decisions, accessibility behaviour, and stakeholder iteration while delegating routine implementation patterns to the tooling. I worked alongside the backend team responsible for the retrieval and moderation systems, ensuring the frontend correctly handled the response shapes and edge cases their system produced.<br><br>I tested the responsive implementation directly in browser DevTools at real device dimensions, rather than relying on Figma mockups alone. This caught composition issues that don't surface in static design files.`,
+          },
+          {
+            heading: 'Outcome',
+            body: `The product shipped to production on a public government domain and is now the department's AI assistant for the regulatory area it serves.`,
+          },
+          {
+            heading: 'What I Took From It',
+            body: `The biggest lesson was about how design happens when the inputs aren't there. I came in expecting a clean brief and got a slide deck with two fonts. What I learned is that "no brief" isn't the absence of work. It is the work. Prototyping became a way of asking questions the client couldn't otherwise answer, and the design improved each time their reactions revealed something they hadn't been able to articulate.<br><br>The second lesson was about pushing back on client preferences without making it a taste argument. By grounding the conversation in competitive benchmarking and viewport constraints, design disagreements stayed about evidence and trade-offs rather than personal aesthetics. The compromises we landed on were better than either of our initial positions.<br><br>The third lesson was about working as the sole designer on a multi-discipline team. That kind of solo design ownership inside a non-design-led team is uncomfortable in the moment, but it forced a clarity of decision-making that I'd want to bring to any future role.`,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 /* ── Page routing ── */
@@ -364,6 +455,15 @@ function buildCSDetail(cs) {
       </div>
 
       <section class="cs-v2-section" id="cs-s0" data-section="0">
+        ${cs.heroBanner ? `
+        <div class="cs-hero-banner">
+          <div class="cs-hero-banner-inner">
+            <div class="cs-hero-banner-label">${cs.heroBannerLabel}</div>
+            <h1 class="cs-hero-banner-title">${cs.heroBannerHeading}</h1>
+            <p class="cs-hero-banner-sub">${cs.heroBannerSub}</p>
+          </div>
+        </div>
+        ` : `
         <div class="cs-overview-hero">
           <div class="cs-overview-visual ${cs.thumbClass}">
             <img src="${cs.heroImage}" alt="${cs.heroImageAlt}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
@@ -377,6 +477,7 @@ function buildCSDetail(cs) {
             ${cs.overviewLink ? `<div class="cs-proto-btn-wrap">${cs.overviewLink}</div>` : ''}
           </div>
         </div>
+        `}
         <div class="cs-overview-body">
           <div class="cs-stage-sidebar">
             <div class="cs-meta-stack">

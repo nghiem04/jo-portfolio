@@ -697,6 +697,7 @@ h2.section-title {
 /* Thumbnail colour classes */
 .thumb-a { background: #C5D3F5; }
 .thumb-b { background: #B5C8F8; }
+.thumb-c { background: #C8D8E8; }
 .thumb-c { background: #8FAFF5; }
 
 /* Detail page */
@@ -986,6 +987,109 @@ footer {
 .cs-v2-section:first-of-type {
   border-top: none;
   padding-top: 2rem;
+}
+
+/* Banner hero (Case Study 03) */
+.cs-hero-banner {
+  border-radius: 20px;
+  background: #1b2336;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+.cs-hero-banner-inner {
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cs-hero-banner-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.cs-hero-banner-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  color: #ffffff;
+}
+
+.cs-hero-banner-sub {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+/* Banner visual for home card and work list card */
+.hcs-card-banner {
+  background: #1b2336 !important;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hcs-card-banner-inner {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hcs-card-banner-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.hcs-card-banner-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.hcs-card-banner-sub {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+.cs-full-banner {
+  background: #1b2336;
+  display: flex;
+  align-items: flex-end;
+  border-radius: inherit;
+}
+
+.cs-full-banner-inner {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cs-full-banner-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #ffffff;
 }
 
 /* Overview hero */
