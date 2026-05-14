@@ -315,6 +315,7 @@ const caseStudies = [
           {
             heading: 'Prototypes as the Brief',
             body: `The working pattern that emerged was this: the client couldn't articulate what they wanted, but they could react to what they saw. So I built prototypes designed to provoke reactions.<br><br>The first version used approximate brand colours pulled from the client's slide deck. I presented it with the explicit framing of "this is a starting point, what would you change?" Each round of feedback gave me one more piece of information the client hadn't been able to volunteer upfront. Across roughly 18 rounds of revision, the prototypes evolved from best guess to approved for build.<br><br>The prototyping process wasn't separate from the requirements-gathering process. It was the requirements-gathering process.`,
+            placeholderAfter: `<img src="assets/gov/gov_2.png" alt="Early prototype iteration of the government AI assistant interface" style="width:100%;border-radius:8px;display:block;">`,
           },
         ],
       },
