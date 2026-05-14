@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C /Users/phoinghiem/Desktop/jo-portfolio log --oneline)"
+      "Bash(git -C /Users/joannenghiem/Desktop/jo-portfolio log --oneline)"
     ]
   }
 }
