@@ -1,9 +1,21 @@
+/* ── Dark mode ── */
+function toggleDarkMode() {
+  const isDark = document.body.classList.toggle('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+(function () {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+  }
+})();
+
 /* ── Case study data ── */
 const caseStudies = [
   {
     num: '01',
     title: 'Opal: Designing Around How People Actually Travel',
-    role: 'UX Designer · Research, Synthesis, Interaction Design',
+    role: 'Product Designer · Research, Synthesis, Interaction Design',
     team: 'UX Design Team',
     client: 'Independent UX Project',
     year: '2024',
@@ -285,91 +297,6 @@ const caseStudies = [
       },
     ],
   },
-  {
-    num: '03',
-    title: 'Government AI Assistant: End-to-End Design Under Real Constraint',
-    role: 'Frontend Designer-Developer · Design, Implementation, Accessibility',
-    client: 'Client Engagement · Federal Government',
-    year: '2025',
-    context: 'Conversational AI · Accessibility · Design Under Constraint',
-    thumbClass: 'thumb-c',
-    heroImage: '',
-    heroImageAlt: 'Government AI assistant interface',
-    heroBanner: true,
-    heroBannerLabel: '03 / Case Study',
-    heroBannerHeading: 'Government Chatbot',
-    heroBannerSub: 'Designing Conversational AI Under Real-World Constraint',
-    tags: ['Conversational AI', 'WCAG 2.2', 'Frontend Delivery'],
-    overview: `A federal Australian government department needed a public-facing AI assistant to help citizens and operational staff navigate a body of complex regulatory information. The product was built on an enterprise chatbot platform with a custom retrieval pipeline ingesting departmental documents, and governance tooling moderating responses.<br><br>I owned the frontend end-to-end as part of the delivery team. This covered design, implementation, accessibility, and responsive behaviour across desktop, tablet, and mobile.`,
-    problemHeading: 'Overview',
-    problem: `<em>This case study covers a live federal government client engagement. Visual assets, UI screens, and departmental branding are intentionally limited or anonymised due to NDA and governance restrictions. The focus is decision-making, interaction design, accessibility implementation, and delivery.</em><br><br>A federal Australian government department needed a public-facing AI assistant to help citizens and operational staff navigate complex regulatory information. Built on an enterprise chatbot platform with a custom retrieval pipeline and governance-moderated responses.<br><br>I joined as the only frontend designer-developer on a delivery team of backend engineers and business analysts. The expectation was implementation against an existing brief.<br><br>The client had no UI direction. The backend team was focused on retrieval and moderation systems. Brand input was a slide deck with two font specifications. I had three options: wait, escalate, or start designing and use prototypes to extract the brief from the client. I chose the third.`,
-    tools: ['Figma', 'Browser DevTools', 'AI-assisted coding tools', 'WCAG 2.2', 'Competitive benchmarking'],
-    confidentiality: 'Client and product details anonymised per engagement terms',
-    stages: [
-      {
-        id: 'design-decisions',
-        label: '01 / Design Decisions',
-        title: '01 / Design Decisions',
-        overview: ['Prototypes as the Requirements Engine', 'Benchmarking Modern AI Patterns', 'Solving the Cold-Start Problem', 'The Mobile Compromise'],
-        content: [
-          {
-            heading: 'Prototypes as the Requirements Engine',
-            body: `The client couldn't articulate requirements upfront, but they could react. I ran more than a dozen rounds of iterative prototyping, each version surfacing one more specification the client hadn't been able to volunteer. The first build used approximate brand colours from their slide deck, framed explicitly as a starting point. The process worked. What started as a best-guess layout became an approved-for-build spec.<br><br>This wasn't a refinement process. It was requirements gathering. Design as extraction.`,
-            placeholderAfter: `<figure style="margin:0"><img src="assets/gov/gov_2.png" alt="Early prototype iteration of the government AI assistant interface" style="width:100%;border-radius:8px;display:block;"><figcaption style="font-size:0.8rem;color:var(--ink-3);margin-top:0.5rem;font-style:italic;">An early prototype built from approximate brand colours in the client's slide deck, used as a reactions surface to extract requirements that couldn't be articulated upfront.</figcaption></figure>`,
-          },
-          {
-            heading: 'Benchmarking Modern AI Patterns',
-            body: `The client's initial visual preferences skewed dated for a 2025 AI product. The stakeholder group was less familiar with modern AI tools, which I came to see as the actual constraint to design around.<br><br>I benchmarked against the major consumer AI products the target users had already been exposed to. The conventions were clear: input at the bottom, suggested prompts for discoverability, conversational thread layout, distinct AI/user message treatment. These aren't aesthetic preferences; they're the interaction vocabulary users already hold. I used the benchmarking work directly in stakeholder conversations to shift design disputes from taste to evidence.`,
-          },
-          {
-            heading: 'Solving the Cold-Start Problem',
-            body: `An empty input field with no context is a dead end. I designed three suggested prompt cards surfacing the most common inquiry categories. Two jobs simultaneously: show users what to ask, and signal what the system is actually equipped to handle.`,
-          },
-          {
-            heading: 'The Mobile Compromise',
-            body: `The most substantive design negotiation on the project.<br><br>The client requested vertical card stacking on mobile, a pattern absent from major consumer AI products that would crowd out higher-priority content. Horizontal scroll also failed: mandatory government branding, a legally required disclaimer, and a persistent input field left no room on a small viewport.<br><br>Decision: remove prompt cards from mobile entirely. Recovered space preserved branding, input, and disclaimer: the elements that establish credibility and enable primary action. Mobile users lose the cold-start scaffold; they keep a usable, dignified interface. On desktop and tablet, the cards stayed.<br><br>I'd make the same call again. The lever I'd push hardest on if revisiting is the disclaimer length: the content cost driving most of the mobile layout's weight.`,
-            placeholderAfter: `<figure style="margin:0"><img src="assets/gov/gov_1.png" alt="Wireframe comparison showing client-requested mobile layout versus final decision" style="width:100%;border-radius:8px;display:block;"><figcaption style="font-size:0.8rem;color:var(--ink-3);margin-top:0.5rem;font-style:italic;">Left: client-requested approach, three prompt cards stacked vertically on mobile. Right: final decision, cards removed, branding, input field, and legally required disclaimer preserved.</figcaption></figure>`,
-          },
-        ],
-      },
-      {
-        id: 'craft',
-        label: '02 / Craft and Delivery',
-        title: '02 / Craft and Delivery',
-        overview: ['Designing for Failure', 'Accessibility in Conversational UI', 'Engineering and Delivery'],
-        content: [
-          {
-            heading: 'Designing for Failure',
-            body: `Conversational AI fails in ways static interfaces don't: model timeouts, content filtering, retrieval failures, character limits, ambiguous responses. Each requires a different user-facing treatment. Generic error messaging would have undermined a tool whose core value proposition is reliable regulatory information.<br><br>I designed differentiated error states across every failure mode. A backend-imposed character limit became a visible counter rather than a silent rejection. Streaming failures got distinct treatment from retrieval failures. Every error state ends with a clear next action.`,
-          },
-          {
-            heading: 'Accessibility in Conversational UI',
-            body: `WCAG 2.2 compliance on conversational AI is harder than on static pages. Three challenges required deliberate decisions rather than default-library handling:<br><br><strong>Streaming response text:</strong> announced to screen readers without re-reading accumulated content as text appends.<br><strong>Focus management:</strong> conversation updates handled without disorienting keyboard users.<br><strong>Character counter:</strong> state communicated through assistive technology, not visually only.<br><br>WCAG 2.2 became an ISO/IEC international standard in October 2025, during the project. WCAG 3.0 was in working draft and not appropriate for production deployment on a federal domain.`,
-          },
-          {
-            heading: 'Engineering and Delivery',
-            body: `I implemented the frontend end-to-end, using AI-assisted coding tools as an acceleration layer, keeping focus on design decisions, accessibility behaviour, and stakeholder iteration while delegating routine implementation to tooling.<br><br>Implementation included: building a component system for conversational states (empty, loading, streaming, error, complete), handling streaming response rendering without layout thrash, correctly consuming the backend's response shapes and edge-case payloads, and managing focus across a dynamically updating thread.<br><br>Testing ran in browser DevTools at real device dimensions throughout — not against Figma mockups at the end. This caught mobile composition issues that static design review had missed.`,
-          },
-        ],
-      },
-      {
-        id: 'outcomes',
-        label: '03 / Outcome',
-        title: '03 / Outcome',
-        overview: ['Outcome', 'Key Takeaways'],
-        content: [
-          {
-            heading: 'Outcome',
-            body: `The product shipped to production on a public government domain and is now the department's live AI assistant for the regulatory area it serves — accessible to citizens navigating compliance for the first time and operational staff using it day-to-day.<br><br>Specific usage metrics are not available for disclosure under engagement terms. The product is live, in production, and serving its intended function in a public government context.`,
-          },
-          {
-            heading: 'Key Takeaways',
-            body: `<strong>No brief is a brief.</strong> When requirements can't be articulated upfront, prototyping is the extraction mechanism. The iteration wasn't refinement. It was discovery.<br><br><strong>Ground design disagreements in evidence.</strong> Benchmarking data made stakeholder pushback productive. Every compromise landed better than either starting position.<br><br><strong>Solo design in a non-design-led team requires decisiveness.</strong> No design review, no peer critique, no design leadership above me. The clarity it forces is something I'd carry into any team.`,
-          },
-        ],
-      },
-    ],
-  },
 ];
 
 
@@ -505,24 +432,6 @@ function buildCSDetail(cs) {
       </section>
 
       ${stagesHTML}
-
-      <footer>
-        <div class="footer-logo">
-          <img src="assets/logo.gif" alt="Joanne Nghiem">
-        </div>
-        <div class="footer-cols">
-          <div class="footer-col">
-            <p class="footer-col-heading">NAVIGATION</p>
-            <a onclick="showPage('home')" class="footer-link" style="cursor:pointer">Home</a>
-            <a onclick="showPage('about')" class="footer-link" style="cursor:pointer">About Me</a>
-            <a href="assets/joanne-nghiem-resume.pdf" download class="footer-link">Resume</a>
-          </div>
-          <div class="footer-col">
-            <p class="footer-col-heading">SOCIAL</p>
-            <a href="https://www.linkedin.com/in/joannenghiem/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-      </footer>
 
       <div class="cs-progress" id="cs-progress">
         <div class="cs-progress-track"><div class="cs-progress-fill" id="cs-progress-fill"></div></div>

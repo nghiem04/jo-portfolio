@@ -580,6 +580,15 @@ h2.section-title {
   margin: 0 auto;
 }
 
+.cs-disclaimer {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 3rem;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
 .cs-page-grid {
   padding: 1rem 3rem 5rem;
   max-width: 1200px;
@@ -838,28 +847,65 @@ h2.section-title {
 /* ──────────────────────────────────────────────────────
    ABOUT PAGE
 ────────────────────────────────────────────────────── */
-.about-text-title {
+.about-split {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  align-items: start;
+}
+
+.about-split + .about-split { padding-top: 0; }
+
+.about-split-heading {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--ink);
-  margin-bottom: 1.5rem;
+  line-height: 1.05;
+  color: var(--clay);
 }
 
-.about-text-title em { font-style: italic; color: var(--clay); }
-
-.about-body {
+.about-split-body {
   font-size: 1rem;
   color: var(--ink-2);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.85;
-  margin-bottom: 2rem;
+  padding-top: 0.5rem;
 }
 
-.about-body p + p { margin-top: 1rem; }
-.about-body strong { font-weight: 500; color: var(--ink); }
+.about-split-body p + p { margin-top: 1.25rem; }
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding-top: 0.5rem;
+}
+
+.exp-year {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clay);
+  margin-bottom: 0.75rem;
+}
+
+.exp-company {
+  font-size: 0.97rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.exp-role {
+  font-size: 0.9rem;
+  color: var(--clay);
+  font-weight: 400;
+  line-height: 1.4;
+}
 
 /* ──────────────────────────────────────────────────────
    TIMELINE (experience)
@@ -1393,6 +1439,9 @@ footer {
   .cs-detail-meta { grid-template-columns: 1fr 1fr; }
   .cs-page-hero,
   .cs-page-grid { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .about-split { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem; }
+  .about-split + .about-split { padding-top: 0; }
+  .exp-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   /* CS v2 responsive */
   .cs-v2 { padding: 0 1.5rem; }
   .cs-overview-hero { grid-template-columns: 1fr; gap: 2rem; }
@@ -1409,4 +1458,165 @@ footer {
   .hero-headline { font-size: 3rem; }
   footer { gap: 2rem; }
   .footer-logo { flex: none; }
+  .exp-grid { grid-template-columns: 1fr; }
 }
+
+/* ── DARK MODE TOGGLE BUTTON ─────────────────────────── */
+.dark-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--ink-3);
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+
+.dark-toggle:hover { color: var(--ink); background: var(--sand); }
+.dark-toggle svg { display: block; }
+.dark-toggle .icon-moon { display: block; }
+.dark-toggle .icon-sun  { display: none; }
+
+/* ── DARK MODE ───────────────────────────────────────── */
+body.dark {
+  --cream:   #0E0E12;
+  --paper:   #161620;
+  --sand:    #252535;
+  --ink:     #F0F0F5;
+  --ink-2:   #C0C0CC;
+  --ink-3:   #70708A;
+  --clay-lt: rgba(91,127,232,0.18);
+  --clay-dk: #93AAEF;
+}
+
+body.dark { background: var(--cream); color: var(--ink); }
+
+body.dark nav {
+  background: rgba(14,14,18,0.94);
+  border-bottom-color: rgba(91,127,232,0.15);
+}
+
+body.dark .dark-toggle { color: var(--ink-3); }
+body.dark .dark-toggle:hover { background: var(--sand); color: var(--ink); }
+body.dark .dark-toggle .icon-moon { display: none; }
+body.dark .dark-toggle .icon-sun  { display: block; }
+
+body.dark .hcs-card,
+body.dark .cs-full-card {
+  background: var(--paper);
+  border-color: var(--sand);
+}
+
+body.dark .cs-full-card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+body.dark .hcs-card:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+body.dark .cs-pill-badge {
+  border-color: var(--sand);
+  color: var(--ink-2);
+}
+
+body.dark .btn-outline {
+  border-color: var(--sand);
+  color: var(--ink-2);
+}
+
+body.dark .btn-outline:hover {
+  border-color: var(--clay);
+  color: var(--clay);
+}
+
+body.dark .cs-placeholder {
+  border-color: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+}
+
+body.dark .cs-table-wrap {
+  border-color: var(--sand);
+}
+
+body.dark .cs-decision-table th,
+body.dark .cs-decision-table td {
+  border-bottom-color: var(--sand);
+}
+
+body.dark .cs-decision-table th {
+  background: var(--paper);
+  border-bottom-color: var(--sand);
+}
+
+body.dark .cs-decision-table tbody tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+body.dark .meta-pill {
+  background: var(--paper);
+  border-color: var(--sand);
+}
+
+body.dark .cs-v2-section {
+  border-top-color: var(--sand);
+}
+
+body.dark .cs-content-heading {
+  border-bottom-color: var(--ink-2);
+}
+
+body.dark .cs-progress {
+  background: rgba(14,14,18,0.96);
+  border-top-color: rgba(91,127,232,0.15);
+}
+
+body.dark .cs-progress-track {
+  background: var(--sand);
+}
+
+body.dark .cs-prog-item { color: var(--ink-3); }
+body.dark .cs-prog-item:hover { color: var(--ink); }
+body.dark .cs-prog-toggle { color: var(--ink-3); }
+body.dark .cs-prog-toggle:hover { background: var(--sand); color: var(--ink); }
+
+body.dark .hcs-btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+body.dark .hcs-btn-primary:hover {
+  background: var(--clay);
+  color: #fff;
+}
+
+body.dark .cs-tag { color: var(--clay); }
+body.dark .cs-tag.sage { color: #85C9B4; background: rgba(133,201,180,0.15); }
+body.dark .t-tag { color: var(--clay); }
+body.dark .t-tag.s  { color: #85C9B4; background: rgba(133,201,180,0.15); }
+
+body.dark .cs-role-tag {
+  background: var(--clay-lt);
+  color: var(--clay);
+}
+
+body.dark .cs-placeholder-note {
+  background: var(--clay-lt);
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+body.dark footer {
+  background: var(--paper);
+  border-top: 1px solid var(--sand);
+}
+
+body.dark .footer-col-heading { color: var(--ink-2); }
+body.dark .footer-link { color: var(--ink-3); }
+body.dark .footer-link:hover { color: var(--ink); }
