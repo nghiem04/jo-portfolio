@@ -45,7 +45,7 @@ export default function Work() {
             const m = listMeta[cs.slug];
             const flip = i % 2 === 1;
             return (
-              <Link className={`cs-full-card${flip ? ' flip' : ''}`} to={`/work/${cs.slug}`} key={cs.slug}>
+              <div className={`cs-full-card${flip ? ' flip' : ''}`} key={cs.slug}>
                 <div className={`cs-full-thumb ${cs.thumbClass}`}>
                   <img src={asset(cs.heroImage)} alt={cs.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
                 </div>
@@ -61,9 +61,9 @@ export default function Work() {
                       </div>
                     ))}
                   </div>
-                  <span className="cs-arrow">Read case study →</span>
+                  <Link className="cs-arrow" to={`/work/${cs.slug}`}>Read case study →</Link>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

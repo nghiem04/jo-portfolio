@@ -51,7 +51,7 @@ export default function Home() {
         <div className="hero-kicker anim d1">Welcome! I'm Joanne <span className="kicker-spark">✦</span></div>
         <HeroCycle />
         <div className="hero-bottom anim d3">
-          <p className="hero-desc">Designing accessible, user-centred products across government and enterprise, simplifying complexity into experiences people can navigate with confidence.</p>
+          <p className="hero-desc">Designing accessible, user-centred products that simplify complexity into intuitive experiences people trust and navigate with confidence.</p>
         </div>
       </div>
 
@@ -66,34 +66,34 @@ export default function Home() {
         </div>
 
         {/* Card 1: Opal */}
-        <Link className="hcs-card" to={`/work/${opal.slug}`}>
+        <div className="hcs-card">
           <div className="hcs-card-body">
             <div className="hcs-card-label">Independent UX Project · Behavioural Insights</div>
             <h3 className="hcs-card-title">{opal.title}</h3>
             <p className="hcs-card-desc">Interviews revealed a consistent fragmentation pattern: TripView for live status, Google Maps for routing, Opal for payment only. The redesign consolidated the workflow into a single surface, prioritising saved-route access and real-time disruption alerts at the highest-friction moment of the commuting day.</p>
             <div className="hcs-card-actions">
-              <button className="hcs-btn-primary">View case study</button>
+              <Link className="hcs-btn-primary" to={`/work/${opal.slug}`}>View case study</Link>
             </div>
           </div>
           <div className="hcs-card-visual thumb-a">
             <img src={asset(opal.heroImage)} alt={opal.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
           </div>
-        </Link>
+        </div>
 
         {/* Card 2: Focus */}
-        <Link className="hcs-card" to={`/work/${focus.slug}`}>
+        <div className="hcs-card">
           <div className="hcs-card-visual thumb-b">
             <img src={asset(focus.heroImage)} alt={focus.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
           </div>
           <div className="hcs-card-body">
             <div className="hcs-card-label">Hackathon · Cognitive Accessibility</div>
-            <h3 className="hcs-card-title">Focus: Maximising Task Initiation by Removing the Decision</h3>
+            <h3 className="hcs-card-title">Focus: Maximising Task Initiation for ADHD by Removing the Decision</h3>
             <p className="hcs-card-desc">Research identified a consistent failure point: the task list requires self-direction before any work can begin, and that decision is exactly where initiation breaks down. Focus replaces it with a conversational assistant that selects the next task and presents it, eliminating the planning step that was driving avoidance. Validated through moderated testing within a 3-day sprint.</p>
             <div className="hcs-card-actions">
-              <button className="hcs-btn-primary">View case study</button>
+              <Link className="hcs-btn-primary" to={`/work/${focus.slug}`}>View case study</Link>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
 
       <Footer />
