@@ -9,7 +9,7 @@ const listMeta = {
   opal: {
     desc: 'Interviews revealed a consistent fragmentation pattern: TripView for live status, Google Maps for routing, Opal for payment only. The redesign consolidated the workflow into a single surface, prioritising saved-route access and real-time disruption alerts at the highest-friction moment of the commuting day.',
     meta: [
-      { label: 'Type', val: 'Independent UX Case Study' },
+      { label: 'Type', val: 'UX Case Study' },
       { label: 'Year', val: '2024' },
       { label: 'Role', val: 'Research + Design' },
     ],
@@ -17,9 +17,9 @@ const listMeta = {
   focus: {
     desc: 'Research identified a consistent failure point: the task list requires self-direction before any work can begin, and that decision is exactly where initiation breaks down. Focus replaces it with a conversational assistant that selects the next task and presents it, eliminating the planning step that was driving avoidance. Validated through moderated testing within a 3-day sprint.',
     meta: [
-      { label: 'Type', val: 'Rapid Concept Validation' },
+      { label: 'Type', val: 'Hackathon' },
       { label: 'Year', val: '2022' },
-      { label: 'Award', val: '🏆 Fan Favourite' },
+      { label: 'Role', val: 'UX/UI Design' },
     ],
   },
 };
