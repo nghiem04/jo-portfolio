@@ -2,21 +2,30 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream:      #ffffff;
-  --paper:      #f8f9ff;
-  --clay:       #5B7FE8;
-  --clay-lt:    #E0E8FF;
-  --clay-dk:    #2C4DB8;
-  --terracotta: #7B9EF0;
-  --sage:       #5B7FE8;
-  --sage-lt:    #E0E8FF;
-  --ink:        #0D0D0D;
-  --ink-2:      #2A2A2A;
-  --ink-3:      #888888;
-  --sand:       #E8ECFF;
-  --dark-bg:    #0D0D0D;
-  --dark-2:     #1A1A1A;
-  --dark-3:     #252525;
+  /* LIGHT THEME — same charcoal/sage/lime family, tuned for contrast on a
+     warm-white background. Sage is deepened here so links/accents stay legible;
+     the brighter #B6C5AF sage is used in dark mode (see body.dark). */
+  --cream:      #F5F3EF;   /* warm white background */
+  --paper:      #FCFBF8;   /* lifted surface (cards, footer) */
+  --clay:       #5E7257;   /* primary accent — sage */
+  --clay-lt:    #E4EADF;   /* soft accent fill (pills, tags) */
+  --clay-dk:    #4A5C44;   /* accent hover */
+  --terracotta: #5E7257;
+  --sage:       #5E7257;
+  --sage-lt:    #E4EADF;
+  --ink:        #121212;   /* rich charcoal text */
+  --ink-2:      #3C3B38;
+  --ink-3:      #7C7A73;
+  --sand:       #E5E2DA;   /* borders / hover backgrounds */
+
+  /* Edge / CTA accent — lime. Same value in both themes for brand consistency. */
+  --lime:       #D8FF6B;
+  --lime-dk:    #C5F04D;   /* lime hover */
+  --on-lime:    #121212;   /* text on lime buttons (always dark) */
+
+  --dark-bg:    #121212;
+  --dark-2:     #1C1C1C;
+  --dark-3:     #2E2E2C;
   --radius-sm:  4px;
   --radius-md:  8px;
   --radius-lg:  12px;
@@ -61,6 +70,14 @@ nav {
 }
 
 .nav-logo span { color: var(--clay); }
+
+.nav-logo-img {
+  display: block;
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .nav-links { display: flex; gap: 0.25rem; align-items: center; }
 
@@ -272,8 +289,8 @@ h2.section-title {
   align-items: center;
   gap: 0.4rem;
   padding: 0.85rem 1.75rem;
-  background: var(--clay);
-  color: #fff;
+  background: var(--lime);
+  color: var(--on-lime);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -285,7 +302,7 @@ h2.section-title {
   letter-spacing: 0.01em;
 }
 
-.btn-filled:hover { background: var(--clay-dk); transform: translateY(-1px); }
+.btn-filled:hover { background: var(--lime-dk); transform: translateY(-1px); }
 
 .cs-proto-btn-wrap {
   margin: 1.25rem 0;
@@ -296,8 +313,8 @@ h2.section-title {
   align-items: center;
   gap: 0.4rem;
   padding: 0.75rem 1.5rem;
-  background: var(--clay);
-  color: #fff;
+  background: var(--lime);
+  color: var(--on-lime);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: var(--radius-sm);
@@ -307,7 +324,7 @@ h2.section-title {
   letter-spacing: 0.01em;
 }
 
-.cs-proto-btn:hover { background: var(--clay-dk); transform: translateY(-1px); }
+.cs-proto-btn:hover { background: var(--lime-dk); transform: translateY(-1px); }
 
 /* ── Placeholder blocks ── */
 .cs-placeholder {
@@ -556,8 +573,8 @@ h2.section-title {
   display: inline-flex;
   align-items: center;
   padding: 0.8rem 1.75rem;
-  background: var(--ink);
-  color: #fff;
+  background: var(--lime);
+  color: var(--on-lime);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -569,7 +586,7 @@ h2.section-title {
   transition: background 0.2s, transform 0.15s;
 }
 
-.hcs-btn-primary:hover { background: var(--clay); transform: translateY(-1px); }
+.hcs-btn-primary:hover { background: var(--lime-dk); transform: translateY(-1px); }
 
 /* ──────────────────────────────────────────────────────
    CASE STUDIES PAGE
@@ -1351,7 +1368,7 @@ footer {
 
 .cs-progress-fill {
   height: 100%;
-  background: var(--clay);
+  background: var(--lime);
   width: 0%;
   transition: width 0.1s linear;
 }
@@ -1485,14 +1502,20 @@ footer {
 
 /* ── DARK MODE ───────────────────────────────────────── */
 body.dark {
-  --cream:   #0E0E12;
-  --paper:   #161620;
-  --sand:    #252535;
-  --ink:     #F0F0F5;
-  --ink-2:   #C0C0CC;
-  --ink-3:   #70708A;
-  --clay-lt: rgba(91,127,232,0.18);
-  --clay-dk: #93AAEF;
+  /* DARK THEME (default) — the palette as specified:
+     charcoal bg, warm-white text, brighter sage accent, lime CTAs/edges. */
+  --cream:      #121212;   /* rich charcoal background */
+  --paper:      #1C1C1C;   /* lifted surface (cards, footer) */
+  --sand:       #2E2E2C;   /* borders / hover backgrounds */
+  --ink:        #F5F3EF;   /* warm white text */
+  --ink-2:      #C9C6BD;
+  --ink-3:      #8C897F;
+  --clay:       #B6C5AF;   /* primary accent — brighter sage */
+  --clay-lt:    rgba(182,197,175,0.16);
+  --clay-dk:    #C8D6C1;
+  --terracotta: #B6C5AF;
+  --sage:       #B6C5AF;
+  --sage-lt:    rgba(182,197,175,0.16);
 }
 
 body.dark { background: var(--cream); color: var(--ink); }
@@ -1587,13 +1610,13 @@ body.dark .cs-prog-toggle { color: var(--ink-3); }
 body.dark .cs-prog-toggle:hover { background: var(--sand); color: var(--ink); }
 
 body.dark .hcs-btn-primary {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--lime);
+  color: var(--on-lime);
 }
 
 body.dark .hcs-btn-primary:hover {
-  background: var(--clay);
-  color: #fff;
+  background: var(--lime-dk);
+  color: var(--on-lime);
 }
 
 body.dark .cs-tag { color: var(--clay); }

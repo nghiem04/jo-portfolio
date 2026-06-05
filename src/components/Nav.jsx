@@ -6,7 +6,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <Link className="nav-logo" to="/">Joanne <span>Nghiem</span></Link>
+      <Link className="nav-logo" to="/"><img src="/assets/nghiem.png" alt="logo" className="nav-logo-img" /></Link>
       <div className="nav-links">
         <NavLink to="/" end className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Home</NavLink>
         <NavLink to="/work" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Case Studies</NavLink>

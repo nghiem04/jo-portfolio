@@ -3,8 +3,6 @@
 ## 🚀 Overview
 
 My digital home — case studies, design explorations, and my professional journey.
-Built with **React + Vite** and **React Router**, with each case study living at its
-own URL (`/work/opal`, `/work/focus`).
 
 ## Tech
 
