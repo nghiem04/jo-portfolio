@@ -1,4 +1,4 @@
-# Joanne Nghiem — UX Design Portfolio
+# Joanne Nghiem — Design Portfolio
 
 ## 🚀 Overview
 
