@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git -C /Users/joannenghiem/Desktop/jo-portfolio log --oneline)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git -C /Users/phoinghiem/Desktop/jo-portfolio remote -v)"
     ]
   }
 }
