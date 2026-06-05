@@ -51,7 +51,7 @@ export default function Home() {
         <div className="hero-kicker anim d1">Welcome! I'm Joanne <span className="kicker-spark">✦</span></div>
         <HeroCycle />
         <div className="hero-bottom anim d3">
-          <p className="hero-desc">Designing accessible, user-centred products that simplify complexity into intuitive experiences people trust and navigate with confidence.</p>
+          <p className="hero-desc">Designing thoughtful digital experiences that reduce complexity, support informed decisions, and help people move forward with confidence.</p>
         </div>
       </div>
 
@@ -87,11 +87,35 @@ export default function Home() {
           </div>
           <div className="hcs-card-body">
             <div className="hcs-card-label">Hackathon · Cognitive Accessibility</div>
-            <h3 className="hcs-card-title">Focus: Maximising Task Initiation for ADHD by Removing the Decision</h3>
+            <h3 className="hcs-card-title">Focus</h3>
             <p className="hcs-card-desc">Research identified a consistent failure point: the task list requires self-direction before any work can begin, and that decision is exactly where initiation breaks down. Focus replaces it with a conversational assistant that selects the next task and presents it, eliminating the planning step that was driving avoidance. Validated through moderated testing within a 3-day sprint.</p>
             <div className="hcs-card-actions">
               <Link className="hcs-btn-primary" to={`/work/${focus.slug}`}>View case study</Link>
             </div>
+          </div>
+        </div>
+
+        {/* Card 3: Carer Companion — in progress, no detail page yet */}
+        <div className="hcs-card hcs-card-wip" aria-label="Carer Companion — case study in progress">
+          <div className="hcs-card-body">
+            <div className="hcs-card-label">Self-initiated · Service Design</div>
+            <h3 className="hcs-card-title">Carer Companion</h3>
+            <p className="hcs-card-desc">As Australia's population ages, more adult children are becoming informal carers for their parents. The hard part isn't a lack of tools — it's the fragmentation of information across family members, healthcare providers, and communication channels. A shared care platform exploring how to reduce the mental load of coordinating care.</p>
+            <div className="hcs-card-actions">
+              <span className="cs-arrow cs-arrow-wip">Case study in progress — check back soon</span>
+            </div>
+          </div>
+          <div className="hcs-card-visual cs-wip-thumb">
+            <span className="cs-wip-badge"><span className="cs-wip-dot" aria-hidden="true" />In progress</span>
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="2.6" />
+              <circle cx="4" cy="5" r="1.7" />
+              <circle cx="20" cy="5" r="1.7" />
+              <circle cx="4" cy="19" r="1.7" />
+              <circle cx="20" cy="19" r="1.7" />
+              <path d="M10.1 10.4 5.4 6.3M13.9 10.4 18.6 6.3M10.1 13.6 5.4 17.7M13.9 13.6 18.6 17.7" />
+            </svg>
+            <span className="cs-wip-caption">Care ecosystem · Service design</span>
           </div>
         </div>
       </div>

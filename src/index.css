@@ -391,6 +391,13 @@ h2.section-title {
   color: var(--ink-2);
   width: 28%;
 }
+/* 4-column threads table (Opal outcomes): narrow, accented first column */
+.cs-decision-table.cs-table-threads tbody tr td:first-child {
+  width: auto;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--clay);
+}
 .cs-decision-table tbody tr:hover td {
   background: var(--paper);
 }
@@ -722,6 +729,81 @@ h2.section-title {
 .cs-arrow:hover { gap: 0.6rem; }
 
 .cs-full-card:hover .cs-arrow { gap: 0.6rem; }
+
+/* ── In-progress preview card ── */
+.cs-full-card.cs-card-wip {
+  border-style: dashed;
+  cursor: default;
+}
+.cs-full-card.cs-card-wip:hover {
+  transform: none;
+  box-shadow: none;
+}
+.cs-wip-thumb {
+  position: relative;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: var(--clay);
+  background: var(--clay-lt);
+}
+.cs-wip-badge {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  background: var(--paper);
+  border: 1px solid var(--sand);
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+}
+.cs-wip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  position: relative;
+  flex-shrink: 0;
+}
+.cs-wip-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid var(--lime);
+  opacity: 0.5;
+  animation: ping 2.4s var(--ease-out, cubic-bezier(0.16,1,0.3,1)) infinite;
+}
+.cs-wip-caption {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+.cs-arrow.cs-arrow-wip {
+  color: var(--ink-3);
+  cursor: default;
+}
+.cs-full-card.cs-card-wip:hover .cs-arrow-wip { gap: 0.35rem; }
+/* in-progress home card */
+.hcs-card.hcs-card-wip {
+  border: 1.5px dashed var(--sand);
+  cursor: default;
+}
+.hcs-card.hcs-card-wip:hover {
+  transform: none;
+  box-shadow: none;
+}
+@keyframes ping {
+  0%        { transform: scale(0.6); opacity: 0.6; }
+  70%, 100% { transform: scale(1.7); opacity: 0; }
+}
 
 /* Thumbnail colour classes */
 .thumb-a { background: #C5D3F5; }

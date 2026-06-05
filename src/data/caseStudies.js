@@ -7,7 +7,7 @@ export const caseStudies = [
   {
     num: '01',
     slug: 'opal',
-    title: 'Opal: Designing Around How People Actually Travel',
+    title: 'Opal Redesign',
     role: 'Product Designer · Research, Synthesis, Interaction Design',
     team: 'UX Design Team',
     client: 'Independent UX Project',
@@ -115,8 +115,13 @@ export const caseStudies = [
         id: 'outcomes',
         label: '05 / Outcomes',
         title: '05 / Outcomes: Intended Outcomes and How to Verify Them',
-        overview: ['Intended Outcomes', 'What This Demonstrates', 'Next Steps'],
+        overview: ['From Findings to Decisions', 'Intended Outcomes', 'What This Demonstrates', 'Next Steps'],
         content: [
+          {
+            heading: 'From Findings to Decisions',
+            body: `One view of the project across its three threads: how each research finding became a design decision, and the signal that would confirm it worked. The mechanism-level detail follows below.`,
+            placeholderAfter: `<table class="cs-decision-table cs-table-threads"><thead><tr><th>Thread</th><th>What we found</th><th>What we built</th><th>How we'd verify</th></tr></thead><tbody><tr><td>Fragmentation</td><td><strong>Workflow lived across apps.</strong> Opal was opened only to top up; TripView and Maps handled status and routing. Top-up itself took too many steps, so two participants abandoned it mid-commute.</td><td>Integrated journey planner as a primary destination; one-tap top-up from home.</td><td>In-app planning replaces external maps; mid-commute top-up abandonment falls.</td></tr><tr><td>Trust</td><td><strong>Asked for faith it had not earned.</strong> Balance buried in settings; fares unverifiable; students defaulted to adult fares; lost-card balance unrecoverable in practice.</td><td>Persistent balance on home; per-journey fare breakdowns; digital concession card; account-held balance.</td><td>Fare distrust and manual cost-checking fall; concession adoption rises; recovery rates improve.</td></tr><tr><td>Habit</td><td><strong>Blind to routine.</strong> Same journey daily, yet every session opened to a blank state with no shortcut and no disruption alert.</td><td>Card-first home screen; saved routes with real-time disruption alerts surfaced on opening.</td><td>Pre-departure app-switching drops; saved-route adoption high among daily commuters.</td></tr></tbody></table>`,
+          },
           {
             heading: 'Intended Outcomes',
             body: `This project produced a high-fidelity prototype but was not usability-tested. The items below are the outcomes the design is built to produce, each paired with its mechanism and the signal that would confirm it. They are hypotheses, not measured results.`,
@@ -146,7 +151,7 @@ export const caseStudies = [
   {
     num: '02',
     slug: 'focus',
-    title: 'Focus — Maximising Task Initiation for ADHD by Removing the Decision',
+    title: 'Focus',
     role: 'Sole Product Designer (UX and UI) in a cross-functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
     year: '2022',
@@ -268,8 +273,13 @@ export const caseStudies = [
         id: 'outcomes',
         label: '05 / Outcomes',
         title: '05 / Outcomes — What the Design Does, and What Testing Showed',
-        overview: ['What the Design Does', 'What Testing Showed', 'Key Design Decisions', 'Next Steps'],
+        overview: ['The single test every decision answered to', 'What the Design Does', 'What Testing Showed', 'Key Design Decisions', 'Next Steps'],
         content: [
+          {
+            heading: 'The single test every decision answered to',
+            body: `<strong>Does the user ever have to choose a task?</strong> Every design decision in the project answered to this one question. The table maps what research found, what that led us to decide, and what day-three testing showed.`,
+            placeholderAfter: `<table class="cs-decision-table"><thead><tr><th>What research found</th><th>What we decided</th><th>What testing showed</th></tr></thead><tbody><tr><td>Task lists triggered avoidance, not action<br>Initiation was the barrier, not organisation<br>Decision fatigue compounded the cost of starting</td><td><strong>Three findings, one decision.</strong> Remove the task list. Replace it with a conversational assistant that initiates, so the user's first interaction is a response, not a selection.</td><td>No participant looked for a list, navigated, or asked what to do. Three described it as calmer; two said "simple" unprompted.</td></tr><tr><td>Time was hard to track inside a task</td><td><strong>One finding, one feature.</strong> A passive progress indicator carries elapsed time without asking the user to monitor it.</td><td>Carried elapsed time without drawing attention; not yet tested for whether it improves stopping behaviour over time.</td></tr></tbody></table>`,
+          },
           {
             heading: 'What the Design Does',
             body: `The redesign targets the failure state that conventional task lists create for people with ADHD at the moment of initiation. Each change below is a property of the design, and each closes the initiation criterion the project was built around.`,
@@ -291,7 +301,7 @@ export const caseStudies = [
           },
           {
             heading: 'Next Steps',
-            body: `Two gaps define the honest limits of this work.<br><br><strong>The first is durability.</strong> Three sessions validated that the interface was understood and felt less demanding in the moment. They did not test whether the effect holds with repeated use, whether novelty accounts for some of the calm participants described, or whether the model supports sustained task completion over days and weeks. For an ADHD tool this matters especially, since novelty itself can drive early engagement that fades. Longitudinal use data is the primary gap, and it is the evidence the concept most needs next.<br><br><strong>The second is the agency tradeoff</strong> at the heart of the design. Removing choice is what makes initiation effortless, but it is also a cost. An assistant that decides for the user is only as good as the task it offers, and a user who needs to do the urgent thing rather than the next thing is relying on the override to correct a decision the system made for them. The skip option was a first answer to this tension, but it does not resolve the deeper question of how far guidance should go before it becomes over-direction, or how the system should learn which tasks to offer. If taken further, the product would need a clearly defined scope distinguishing task facilitation from guided support, and a model of when the assistant should lead and when it should defer.`,
+            body: `Two gaps define the honest limits of this work.<br><br><strong>The first is durability:</strong> Three sessions validated that the interface was understood and felt less demanding in the moment. They did not test whether the effect holds with repeated use, whether novelty accounts for some of the calm participants described, or whether the model supports sustained task completion over days and weeks. For an ADHD tool this matters especially, since novelty itself can drive early engagement that fades. Longitudinal use data is the primary gap, and it is the evidence the concept most needs next.<br><br><strong>The second is the agency tradeoff</strong> at the heart of the design. Removing choice is what makes initiation effortless, but it is also a cost. An assistant that decides for the user is only as good as the task it offers, and a user who needs to do the urgent thing rather than the next thing is relying on the override to correct a decision the system made for them. The skip option was a first answer to this tension, but it does not resolve the deeper question of how far guidance should go before it becomes over-direction, or how the system should learn which tasks to offer. If taken further, the product would need a clearly defined scope distinguishing task facilitation from guided support, and a model of when the assistant should lead and when it should defer.`,
           },
         ],
       },
