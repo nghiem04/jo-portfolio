@@ -68,7 +68,7 @@ export default function Home() {
         {/* Card 1: Opal */}
         <Link className="hcs-card" to={`/work/${opal.slug}`}>
           <div className="hcs-card-body">
-            <div className="hcs-card-label">Independent UX Project · Behaviourial Insights</div>
+            <div className="hcs-card-label">Independent UX Project · Behavioural Insights</div>
             <h3 className="hcs-card-title">{opal.title}</h3>
             <p className="hcs-card-desc">Interviews revealed a consistent fragmentation pattern: TripView for live status, Google Maps for routing, Opal for payment only. The redesign consolidated the workflow into a single surface, prioritising saved-route access and real-time disruption alerts at the highest-friction moment of the commuting day.</p>
             <div className="hcs-card-actions">

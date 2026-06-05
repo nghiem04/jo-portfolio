@@ -1,12 +1,13 @@
 import { NavLink, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import { asset } from '../utils/assets';
 
 export default function Nav() {
   const { toggle } = useTheme();
 
   return (
     <nav>
-      <Link className="nav-logo" to="/"><img src="/assets/nghiem.png" alt="logo" className="nav-logo-img" /></Link>
+      <Link className="nav-logo" to="/"><img src={asset('assets/nghiem.png')} alt="Joanne Nghiem" className="nav-logo-img" /></Link>
       <div className="nav-links">
         <NavLink to="/" end className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Home</NavLink>
         <NavLink to="/work" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Case Studies</NavLink>

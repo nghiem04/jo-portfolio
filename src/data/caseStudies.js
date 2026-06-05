@@ -216,7 +216,7 @@ export const caseStudies = [
         id: 'design',
         label: '04 / Design',
         title: '04 / Design — Lo-fi to Mid-fidelity',
-        overview: ['Lo-fi Prototype', 'Mid-fidelity Build', 'Testing and Iterations', 'High fidelity prototype after interaction validation'],
+        overview: ['Lo-fi Prototype', 'Mid-fidelity Build', 'What changed after testing', 'High fidelity prototype after interaction validation'],
         content: [
           {
             heading: 'Lo-fi Prototype',
