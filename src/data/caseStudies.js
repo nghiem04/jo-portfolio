@@ -1,19 +1,12 @@
-/* ── Dark mode ── */
-function toggleDarkMode() {
-  const isDark = document.body.classList.toggle('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-}
-
-(function () {
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-  }
-})();
-
-/* ── Case study data ── */
-const caseStudies = [
+/* ── Case study data ──
+   Each entry has a `slug` used for its route: /work/:slug
+   HTML strings (body, placeholder, etc.) are rendered via dangerouslySetInnerHTML.
+   Asset paths are written relative (e.g. "assets/opal/opal_1.png") and prefixed
+   with the Vite base path at render time — see src/utils/assets.js. */
+export const caseStudies = [
   {
     num: '01',
+    slug: 'opal',
     title: 'Opal: Designing Around How People Actually Travel',
     role: 'Product Designer · Research, Synthesis, Interaction Design',
     team: 'UX Design Team',
@@ -152,6 +145,7 @@ const caseStudies = [
   },
   {
     num: '02',
+    slug: 'focus',
     title: 'Focus — Maximising Task Initiation by Removing the Decision',
     role: 'Sole Product Designer (UX and UI) in a cross functional team of engineers',
     client: 'Hackathon Project · Fan Favourite',
@@ -262,7 +256,7 @@ const caseStudies = [
           {
             heading: 'High fidelity prototype after interaction validation',
             body: `High fidelity was the final test of the hypothesis. The goal was to prove that this conversational model could exist as a resilient, shippable product rather than just a prototype.<br><br><strong>Design for Precision</strong><br>Type hierarchy communicates conversational state, not decoration. Clear typographic rules ensure the user always knows where they are in the flow — reducing cognitive effort at the moment it matters most.<br><br><strong>Systems Thinking and Accessibility</strong><br>The colour system meets the same cognitive accessibility criteria that governed earlier phases: high contrast, calm palette, no sensory overwhelm. <strong>Inconsistency in a turn-based interaction creates hesitation.</strong> Every component was designed to eliminate it.<br><br><strong>The Result</strong><br>The high-fidelity build demonstrates that conversational task initiation is a viable architectural pattern for a real-world product. It moves the concept from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
-            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">\u2192 View high fidelity prototype (Figma)</a></div>`,
+            afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">→ View high fidelity prototype (Figma)</a></div>`,
           },
         ],
       },
@@ -298,226 +292,4 @@ const caseStudies = [
   },
 ];
 
-
-/* ── Page routing ── */
-function showPage(page) {
-  cleanupCSProgress();
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-  document.getElementById('page-' + page).classList.add('active');
-  const navEl = document.getElementById('nav-' + page);
-  if (navEl) navEl.classList.add('active');
-  if (page === 'work') {
-    document.getElementById('cs-list').style.display = '';
-    document.getElementById('cs-detail').style.display = 'none';
-  }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-/* ── Case study detail ── */
-let csScrollHandler = null;
-
-function showCS(idx) {
-  const cs = caseStudies[idx];
-  showPage('work');
-  document.getElementById('cs-list').style.display = 'none';
-  document.getElementById('cs-detail').style.display = '';
-  document.getElementById('cs-detail-content').innerHTML = buildCSDetail(cs);
-  window.scrollTo({ top: 0, behavior: 'instant' });
-  initCSProgress();
-}
-
-function buildCSDetail(cs) {
-  const stagesHTML = cs.stages.map((stage, i) => {
-    const sidebarItems = stage.overview.map(item => {
-      const id = `${stage.id}-${item.toLowerCase().replace(/[\s/&·]/g, '-')}`;
-      return `<li><a class="cs-sidebar-link" href="#${id}">${item}</a></li>`;
-    }).join('');
-
-    const contentHTML = stage.content.map(block => {
-      const id = block.heading
-        ? `${stage.id}-${block.heading.toLowerCase().replace(/[\s/&·]/g, '-')}`
-        : '';
-      return `
-        <div class="cs-content-block"${id ? ` id="${id}"` : ''}>
-          ${block.heading ? `<h3 class="cs-content-heading">${block.heading}</h3>` : ''}
-          ${block.placeholder ? (block.placeholder.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholder}</div>` : block.placeholder.trimStart().startsWith('<table') ? `<div class="cs-table-wrap">${block.placeholder}</div>` : `<div class="cs-placeholder"><span>${block.placeholder}</span></div>`) : ''}
-          ${block.body ? `<p>${block.body}</p>` : ''}
-          ${block.list ? `<ul class="cs-v2-list">${block.list.map(li => `<li>${li}</li>`).join('')}</ul>` : ''}
-          ${block.afterList ? block.afterList : ''}
-          ${block.placeholderAfter ? (block.placeholderAfter.trimStart().startsWith('<img') ? `<div class="cs-problem-image">${block.placeholderAfter}</div>` : `<div class="cs-placeholder"><span>${block.placeholderAfter}</span></div>`) : ''}
-          ${block.tags ? `<div class="cs-v2-tags">${block.tags.map(t => `<span class="t-tag">${t}</span>`).join('')}</div>` : ''}
-        </div>`;
-    }).join('');
-
-    return `
-      <section class="cs-v2-section" id="cs-s${i + 1}" data-section="${i + 1}">
-        <div class="cs-stage-header"><h2>${stage.title}</h2></div>
-        <div class="cs-stage-body">
-          <div class="cs-stage-sidebar">
-            <h3 class="cs-sidebar-heading">Overview</h3>
-            <ul class="cs-sidebar-list">${sidebarItems}</ul>
-          </div>
-          <div class="cs-stage-main">${contentHTML}</div>
-        </div>
-      </section>`;
-  }).join('');
-
-  const navItems = [
-    `<button class="cs-prog-item active" data-target="cs-s0">Overview</button>`,
-    ...cs.stages.map((s, i) => `<button class="cs-prog-item" data-target="cs-s${i + 1}">${s.label}</button>`),
-  ].join('');
-
-  return `
-    <div class="cs-v2">
-      <div class="cs-v2-back">
-        <button class="back-link" onclick="backToList()">← All case studies</button>
-      </div>
-
-      <section class="cs-v2-section" id="cs-s0" data-section="0">
-        ${cs.heroBanner ? `
-        <div class="cs-hero-banner">
-          <div class="cs-hero-banner-inner">
-            <div class="cs-hero-banner-label">${cs.heroBannerLabel}</div>
-            <h1 class="cs-hero-banner-title">${cs.heroBannerHeading}</h1>
-            <p class="cs-hero-banner-sub">${cs.heroBannerSub}</p>
-          </div>
-        </div>
-        ` : `
-        <div class="cs-overview-hero">
-          <div class="cs-overview-visual ${cs.thumbClass}">
-            <img src="${cs.heroImage}" alt="${cs.heroImageAlt}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
-          </div>
-          <div class="cs-overview-intro">
-            <div class="section-label">${cs.context}</div>
-            <h1 class="cs-v2-title">${cs.title}</h1>
-            ${cs.heroPlaceholder ? `<div class="cs-placeholder"><span>${cs.heroPlaceholder}</span></div>` : ''}
-            <p class="cs-v2-sub">${cs.overview}</p>
-            ${cs.atAGlance ? `<div class="cs-table-wrap" style="margin-top:1.5rem;">${cs.atAGlance}</div>` : ''}
-            ${cs.overviewLink ? `<div class="cs-proto-btn-wrap">${cs.overviewLink}</div>` : ''}
-          </div>
-        </div>
-        `}
-        <div class="cs-overview-body">
-          <div class="cs-stage-sidebar">
-            <div class="cs-meta-stack">
-              <div class="cs-meta-row">
-                <span class="cs-meta-label">Role</span>
-                <span class="cs-meta-val">${cs.role}</span>
-              </div>
-              ${cs.team ? `<div class="cs-meta-row"><span class="cs-meta-label">Team</span><span class="cs-meta-val">${cs.team}</span></div>` : ''}
-              <div class="cs-meta-row">
-                <span class="cs-meta-label">Type</span>
-                <span class="cs-meta-val">${cs.client}</span>
-              </div>
-              <div class="cs-meta-row">
-                <span class="cs-meta-label">Year</span>
-                <span class="cs-meta-val">${cs.year}</span>
-              </div>
-              <div class="cs-meta-row">
-                <span class="cs-meta-label">Tools</span>
-                <span class="cs-meta-val">${cs.tools.join(', ')}</span>
-              </div>
-              ${cs.confidentiality ? `<div class="cs-meta-row"><span class="cs-meta-label">Confidentiality</span><span class="cs-meta-val">${cs.confidentiality}</span></div>` : ''}
-            </div>
-          </div>
-          <div class="cs-stage-main">
-            <div class="cs-content-block">
-              <h3 class="cs-content-heading">${cs.problemHeading || 'The Problem'}</h3>
-              ${cs.problemPart1 ? `<p>${cs.problemPart1}</p>${cs.problemPlaceholder ? `<div class="cs-problem-image">${cs.problemPlaceholder}</div>` : ''}<p>${cs.problemPart2}</p>` : `<p>${cs.problem}</p>`}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      ${stagesHTML}
-
-      <div class="cs-progress" id="cs-progress">
-        <div class="cs-progress-track"><div class="cs-progress-fill" id="cs-progress-fill"></div></div>
-        <div class="cs-progress-nav">
-          <div class="cs-prog-items">${navItems}</div>
-          <button class="cs-prog-toggle" id="cs-prog-toggle" onclick="toggleCSProgress()" title="Back to top">↑</button>
-        </div>
-      </div>
-    </div>`;
-}
-
-function initCSProgress() {
-  const fill    = document.getElementById('cs-progress-fill');
-  const items   = document.querySelectorAll('.cs-prog-item[data-target]');
-  const sections = document.querySelectorAll('.cs-v2-section');
-  if (!fill) return;
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const target = document.getElementById(item.dataset.target);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  csScrollHandler = function () {
-    const scrollTop  = window.scrollY;
-    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
-    fill.style.width = docHeight > 0 ? (scrollTop / docHeight * 100) + '%' : '0%';
-
-    let activeIdx = 0;
-    sections.forEach((sec, i) => {
-      if (sec.getBoundingClientRect().top <= window.innerHeight * 0.45) activeIdx = i;
-    });
-    items.forEach((item, i) => item.classList.toggle('active', i === activeIdx));
-  };
-
-  window.addEventListener('scroll', csScrollHandler, { passive: true });
-  csScrollHandler();
-}
-
-function cleanupCSProgress() {
-  if (csScrollHandler) {
-    window.removeEventListener('scroll', csScrollHandler);
-    csScrollHandler = null;
-  }
-}
-
-function toggleCSProgress() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function backToList() {
-  cleanupCSProgress();
-  document.getElementById('cs-list').style.display = '';
-  document.getElementById('cs-detail').style.display = 'none';
-  window.scrollTo({ top: 0, behavior: 'instant' });
-}
-
-/* ── Hero text cycle ── */
-(function () {
-  const statements = document.querySelectorAll('.hero-statement');
-  if (!statements.length) return;
-  let current = 0;
-  statements[0].classList.add('is-active');
-  setInterval(() => {
-    const prev = current;
-    current = (current + 1) % statements.length;
-    statements[prev].classList.remove('is-active');
-    statements[prev].classList.add('is-exit');
-    statements[current].classList.add('is-active');
-    setTimeout(() => statements[prev].classList.remove('is-exit'), 750);
-  }, 3500);
-})();
-
-/* ── Scroll fade-in for cards ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.cs-full-card, .hcs-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  obs.observe(el);
-});
+export const getCaseStudy = (slug) => caseStudies.find((cs) => cs.slug === slug);

@@ -9,9 +9,12 @@
 *.swp
 *.swo
 
-# Node (if you ever add tooling)
+# Node
 node_modules/
 npm-debug.log*
+
+# Build output
+dist/
 
 # Env files
 .env
