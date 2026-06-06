@@ -1672,6 +1672,10 @@ body.dark .meta-pill {
   border-color: var(--sand);
 }
 
+body.dark .hero-statement em {
+  color: var(--lime);
+}
+
 body.dark .cs-v2-section {
   border-top-color: var(--sand);
 }
