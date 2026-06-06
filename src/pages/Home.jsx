@@ -68,7 +68,7 @@ export default function Home() {
         {/* Card 1: Opal */}
         <div className="hcs-card">
           <div className="hcs-card-body">
-            <div className="hcs-card-label">UX Project · Behavioural Insights</div>
+            <div className="hcs-card-label">Conceptual Project · Behavioural Insights</div>
             <h3 className="hcs-card-title">{opal.title}</h3>
             <p className="hcs-card-desc">Interviews revealed a consistent fragmentation pattern: TripView for live status, Google Maps for routing, Opal for payment only. The redesign consolidated the workflow into a single surface, prioritising saved-route access and real-time disruption alerts at the highest-friction moment of the commuting day.</p>
             <div className="hcs-card-actions">
@@ -86,9 +86,9 @@ export default function Home() {
             <img src={asset(focus.heroImage)} alt={focus.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
           </div>
           <div className="hcs-card-body">
-            <div className="hcs-card-label">Hackathon · Cognitive Accessibility</div>
+            <div className="hcs-card-label">Hackathon · AI Assisted Productivity</div>
             <h3 className="hcs-card-title">Focus</h3>
-            <p className="hcs-card-desc">Research revealed that task initiation often failed at the point of prioritisation. Before any work could begin, users were required to decide what to do next, creating friction that frequently led to avoidance. Focus addresses this by replacing the traditional task list with a conversational assistant that guides users towards a single recommended next step, reducing decision fatigue and lowering the barrier to getting started. The solution was rapidly prototyped and validated through moderated user testing during a three-day design sprint.</p>
+            <p className="hcs-card-desc">Research revealed that task initiation often broke down at the point of prioritisation. Focus replaces traditional task lists with a conversational assistant that recommends the next best step, reducing decision fatigue and helping users get started faster. Validated through moderated testing during a three-day design sprint.</p>
             <div className="hcs-card-actions">
               <Link className="hcs-btn-primary" to={`/work/${focus.slug}`}>View case study</Link>
             </div>

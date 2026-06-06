@@ -10,12 +10,12 @@ const listMeta = {
     desc: 'Interviews revealed a consistent fragmentation pattern: TripView for live status, Google Maps for routing, Opal for payment only. The redesign consolidated the workflow into a single surface, prioritising saved-route access and real-time disruption alerts at the highest-friction moment of the commuting day.',
     meta: [
       { label: 'Type', val: 'UX Case Study' },
-      { label: 'Year', val: '2024' },
+      { label: 'Year', val: '2023' },
       { label: 'Role', val: 'Research + Design' },
     ],
   },
   focus: {
-    desc: 'Research revealed that task initiation often failed at the point of prioritisation. Before any work could begin, users were required to decide what to do next, creating friction that frequently led to avoidance. Focus addresses this by replacing the traditional task list with a conversational assistant that guides users towards a single recommended next step, reducing decision fatigue and lowering the barrier to getting started. The solution was rapidly prototyped and validated through moderated user testing during a three-day design sprint.',
+    desc: 'Research revealed that task initiation often broke down at the point of prioritisation. Focus replaces traditional task lists with a conversational assistant that recommends the next best step, reducing decision fatigue and helping users get started faster. Validated through moderated testing during a three-day design sprint.',
     meta: [
       { label: 'Type', val: 'Hackathon' },
       { label: 'Year', val: '2022' },
