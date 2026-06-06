@@ -15,7 +15,7 @@ const listMeta = {
     ],
   },
   focus: {
-    desc: 'Research identified a consistent failure point: the task list requires self-direction before any work can begin, and that decision is exactly where initiation breaks down. Focus replaces it with a conversational assistant that selects the next task and presents it, eliminating the planning step that was driving avoidance. Validated through moderated testing within a 3-day sprint.',
+    desc: 'Research revealed that task initiation often failed at the point of prioritisation. Before any work could begin, users were required to decide what to do next, creating friction that frequently led to avoidance. Focus addresses this by replacing the traditional task list with a conversational assistant that guides users towards a single recommended next step, reducing decision fatigue and lowering the barrier to getting started. The solution was rapidly prototyped and validated through moderated user testing during a three-day design sprint.',
     meta: [
       { label: 'Type', val: 'Hackathon' },
       { label: 'Year', val: '2022' },

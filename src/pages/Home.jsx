@@ -88,7 +88,7 @@ export default function Home() {
           <div className="hcs-card-body">
             <div className="hcs-card-label">Hackathon · Cognitive Accessibility</div>
             <h3 className="hcs-card-title">Focus</h3>
-            <p className="hcs-card-desc">Research identified a consistent failure point: the task list requires self-direction before any work can begin, and that decision is exactly where initiation breaks down. Focus replaces it with a conversational assistant that selects the next task and presents it, eliminating the planning step that was driving avoidance. Validated through moderated testing within a 3-day sprint.</p>
+            <p className="hcs-card-desc">Research revealed that task initiation often failed at the point of prioritisation. Before any work could begin, users were required to decide what to do next, creating friction that frequently led to avoidance. Focus addresses this by replacing the traditional task list with a conversational assistant that guides users towards a single recommended next step, reducing decision fatigue and lowering the barrier to getting started. The solution was rapidly prototyped and validated through moderated user testing during a three-day design sprint.</p>
             <div className="hcs-card-actions">
               <Link className="hcs-btn-primary" to={`/work/${focus.slug}`}>View case study</Link>
             </div>
