@@ -125,7 +125,7 @@ export const caseStudies = [
           {
             heading: 'From Findings to Decisions',
             body: `One view of the project across its three threads: how each research finding became a design decision, and the signal that would confirm it worked. The mechanism-level detail follows below.`,
-            placeholderAfter: `<table class="cs-decision-table cs-table-threads"><thead><tr><th>Thread</th><th>What we found</th><th>What we built</th><th>How we'd verify</th></tr></thead><tbody><tr><td>Fragmentation</td><td><strong>Workflow lived across apps:</strong> Opal was opened only to top up; TripView and Maps handled status and routing. Top-up itself took too many steps, so two participants abandoned it mid-commute.</td><td>Integrated journey planner as a primary destination; one-tap top-up from home.</td><td>In-app planning replaces external maps; mid-commute top-up abandonment falls.</td></tr><tr><td>Trust</td><td><strong>Asked for faith it had not earned:</strong> Balance buried in settings; fares unverifiable; students defaulted to adult fares; lost-card balance unrecoverable in practice.</td><td>Persistent balance on home; per-journey fare breakdowns; digital concession card; account-held balance.</td><td>Fare distrust and manual cost-checking fall; concession adoption rises; recovery rates improve.</td></tr><tr><td>Habit</td><td><strong>Blind to routine:</strong> Same journey daily, yet every session opened to a blank state with no shortcut and no disruption alert.</td><td>Card-first home screen; saved routes with real-time disruption alerts surfaced on opening.</td><td>Pre-departure app-switching drops; saved-route adoption high among daily commuters.</td></tr></tbody></table>`,
+            placeholderAfter: `<table class="cs-decision-table cs-table-threads"><thead><tr><th>Thread</th><th>What we found</th><th>What we built</th><th>How we'd verify</th></tr></thead><tbody><tr><td>Fragmentation</td><td><strong>Workflow lived across apps:</strong><ul><li>Opal was opened only to top up</li><li>TripView and Maps handled status and routing</li><li>Top-up took too many steps, so two participants abandoned it mid-commute</li></ul></td><td><ul><li>Integrated journey planner as a primary destination</li><li>One-tap top-up from home</li></ul></td><td><ul><li>In-app planning replaces external maps</li><li>Mid-commute top-up abandonment falls</li></ul></td></tr><tr><td>Trust</td><td><strong>Asked for faith it had not earned:</strong><ul><li>Balance buried in settings</li><li>Fares unverifiable</li><li>Students defaulted to adult fares</li><li>Lost-card balance unrecoverable in practice</li></ul></td><td><ul><li>Persistent balance on home</li><li>Per-journey fare breakdowns</li><li>Digital concession card</li><li>Account-held balance</li></ul></td><td><ul><li>Fare distrust and manual cost-checking fall</li><li>Concession adoption rises</li><li>Recovery rates improve</li></ul></td></tr><tr><td>Habit</td><td><strong>Blind to routine:</strong><ul><li>Same journey daily, yet every session opened to a blank state</li><li>No shortcut and no disruption alert</li></ul></td><td><ul><li>Card-first home screen</li><li>Saved routes with real-time disruption alerts surfaced on opening</li></ul></td><td><ul><li>Pre-departure app-switching drops</li><li>Saved-route adoption high among daily commuters</li></ul></td></tr></tbody></table>`,
           },
           {
             heading: 'Intended Outcomes',
@@ -160,24 +160,29 @@ export const caseStudies = [
     role: 'Sole Product Designer (UX and UI) in a cross-functional team of engineers',
     client: 'Hackathon',
     year: '2022',
-    context: 'Cognitive Accessibility · Rapid Prototyping Sprint',
+    context: 'Hackathon · AI Assisted Productivity',
     thumbClass: 'thumb-b',
     heroImage: 'assets/focus/ff_1.png',
     heroImageAlt: 'Focus app redesign mockup',
     tags: ['Cognitive Accessibility', 'Behaviour Design', 'Rapid Prototyping'],
+    snapshot: [
+      { label: 'Product', val: `<strong>Focus</strong>, a productivity app for people with ADHD, built in a three-day hackathon.` },
+      { label: 'Problem', val: `Task lists ask people to plan and choose before they start. For people with ADHD, that first decision is exactly where initiation breaks down.` },
+      { label: 'Outcome', val: `An <strong>AI conversational assistant</strong> that removes the list and offers one task at a time, so the user's first move is a response, not a choice. Validated in moderated testing on day three.` },
+    ],
 
     overview: `Focus was built in three days to address a problem most productivity tools are not designed for: helping people with ADHD start tasks, not organise them.<br><br>As the sole designer in a cross-functional team of engineers, I led research, synthesis, and end-to-end interface design within the sprint. The constraint forced discipline. Every decision had to be grounded in a finding or cut.<br><br>One question ran through the entire project and became the test every design decision had to pass: <em>does the user ever have to choose a task?</em> Research showed that the moment of choosing was where initiation broke down for people with ADHD, so any model that still required it had already failed. That criterion led to the central decision, which was structural: remove the task list entirely and replace it with a conversational assistant that guides users into a single task at a time. The list was not an imperfect solution. It was the source of the problem.<br><br>This is a design response to barriers observed in research, not a clinical intervention. The work was done with and for people with ADHD, but it makes no diagnostic or therapeutic claims.`,
     overviewLink: `<a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">→ View High fidelity prototype (Figma)</a>`,
     problemPart1: `Most productivity tools are built on one assumption: that users can plan, prioritise, and execute in a structured, linear way. For many people with ADHD, that assumption fails at the very first step. The screen below contrasts a standard task list view with Focus's single-focus screen.`,
     problemPlaceholder: '<img src="assets/focus/ff_2.png" alt="Comparison of a traditional task list app versus Focus single-focus screen" style="width:100%;border-radius:8px;display:block;">',
     problemPart2: `In interviews, participants with ADHD described opening these tools and disengaging before starting anything. The barrier was not knowing what to do. It was the decision required before beginning. An interface that opens to a full task list adds cognitive load at exactly the moment it needs to be removed.<br><br>The barriers the design targets are well documented in ADHD: difficulty initiating tasks, decision fatigue, and difficulty tracking elapsed time. Throughout the project, ADHD framed who the design was for, and these mechanisms framed what it had to change. As a hackathon build, the work was deliberately bounded: a small participant pool, a single core flow, and no room for longitudinal testing, all of which shape how its results should be read.`,
-    problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear, self-directed way. For many people with ADHD, that assumption fails at the very first step — the challenge is not knowing what needs to be done, it is starting. Existing tools add cognitive demand at precisely the moment it needs to be reduced, by requiring users to survey a list, make decisions about priority, and self-direct before they have begun.`,
+    problem: `Most productivity tools assume users can plan, prioritise, and execute tasks in a linear, self-directed way. For many people with ADHD, that assumption fails at the very first step. The challenge is not knowing what needs to be done, it is starting. Existing tools add cognitive demand at precisely the moment it needs to be reduced, by requiring users to survey a list, make decisions about priority, and self-direct before they have begun.`,
     tools: ['Figma', 'Miro', 'Lo-fi Interactive Prototype', 'Mid-Fidelity Prototype'],
     stages: [
       {
         id: 'research',
         label: '01 / Research',
-        title: '01 / Research — Understanding Task Initiation Behaviour',
+        title: 'People open the app, see everything, and close it before starting',
         overview: ['Research Approach', 'Key Insights'],
         content: [
           {
@@ -200,7 +205,7 @@ export const caseStudies = [
       {
         id: 'define',
         label: '02 / Define',
-        title: '02 / Define — Framing the Right Problem',
+        title: `The problem wasn't a worse list. It was needing a list at all`,
         overview: ['Problem Statement'],
         content: [
           {
@@ -209,14 +214,14 @@ export const caseStudies = [
           },
           {
             heading: 'Problem Statement',
-            body: `Synthesis identified the issue: productivity tools assume users arrive ready to self-direct. For the participants in this research, that assumption was consistently where the process broke down. The cost of deciding what to do first was often enough to prevent doing anything at all.<br><br>This reframed the task. The list was not a neutral container that happened to be poorly designed. It was an instrument of self-direction, and self-direction was the exact capacity these users could not reliably summon at the moment of starting. A better list would still be a list, and would still open with the same demand. The problem was not the quality of the organisation tool. It was the requirement to organise at all before beginning.<br><br>The challenge, then, was not to build a better list. It was to remove the need to self-direct.<br><br><strong>How might we design a task experience that removes the burden of initiation and guides users into beginning, without requiring them to plan?</strong>`,
+            body: `Synthesis identified the issue: productivity tools assume users arrive ready to self-direct. For these participants, that assumption was consistently where the process broke down, and the cost of deciding what to do first was often enough to prevent doing anything at all.<br><br>So the list wasn't a neutral container that happened to be poorly designed. It was an instrument of self-direction, the exact capacity these users couldn't reliably summon at the moment of starting. A better list would still be a list, and would still open with the same demand.<br><br>The challenge wasn't to build a better list. It was to remove the need to self-direct.<br><br><strong>How might we design a task experience that removes the burden of initiation and guides users into beginning, without requiring them to plan?</strong>`,
           },
         ],
       },
       {
         id: 'ideate',
         label: '03 / Ideate',
-        title: '03 / Ideate — Why the Chatbot Became the MVP',
+        title: 'Why a chatbot, not a better list, became the MVP',
         overview: ['Chatbot as Core Concept'],
         content: [
           {
@@ -229,7 +234,7 @@ export const caseStudies = [
       {
         id: 'design',
         label: '04 / Design',
-        title: '04 / Design — Lo-fi to Mid-fidelity',
+        title: 'Designing a conversation a low-focus user can follow without instruction',
         overview: ['Lo-fi Prototype', 'Mid-fidelity Build', 'What Changed After Testing', 'High Fidelity Prototype After Interaction Validation'],
         content: [
           {
@@ -269,7 +274,7 @@ export const caseStudies = [
           },
           {
             heading: 'High Fidelity Prototype After Interaction Validation',
-            body: `High fidelity was the final test of the hypothesis. The goal was to show that this conversational model could exist as a resilient, shippable product rather than only a prototype.<br><br>Type hierarchy was used to communicate conversational state, not as decoration. Clear typographic rules keep the user oriented in the flow, reducing cognitive effort at the moment it matters most. The colour system meets the same cognitive accessibility criteria that governed earlier phases: high contrast, calm palette, no sensory overwhelm. In a turn-based interaction, inconsistency creates hesitation, so every component was designed to remove it.<br><br>The high-fidelity build demonstrates that conversational task initiation is a viable architectural pattern for a real product. It moves the concept from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
+            body: `High fidelity was the final test of the hypothesis: could this conversational model exist as a resilient, shippable product, not just a prototype?<br><br>Type hierarchy communicates conversational state rather than decorating it, keeping the user oriented in the flow and reducing cognitive effort at the moment it matters most. The colour system meets the same accessibility criteria that governed earlier phases: high contrast, calm palette, no sensory overwhelm. In a turn-based interaction, inconsistency creates hesitation, so every component was built to remove it.<br><br>The result moves conversational task initiation from a validated interaction model into a polished, accessible interface ready for technical implementation.`,
             afterList: `<div class="cs-proto-btn-wrap"><a class="cs-proto-btn" href="https://www.figma.com/make/msY8oDslYcx6RhBGTpxsxh/AI-Chat-Assistant-Prototype?t=DcJRutSglPAmbPe6-20&fullscreen=1" target="_blank" rel="noopener">→ View High fidelity prototype (Figma)</a></div>`,
           },
         ],
@@ -277,13 +282,13 @@ export const caseStudies = [
       {
         id: 'outcomes',
         label: '05 / Outcomes',
-        title: '05 / Outcomes — What the Design Does, and What Testing Showed',
+        title: 'What the design does, and what three days of testing showed',
         overview: ['The single test every decision answered to', 'What the Design Does', 'What Testing Showed', 'Key Design Decisions', 'Next Steps'],
         content: [
           {
             heading: 'The single test every decision answered to',
             body: `<strong>Does the user ever have to choose a task?</strong> Every design decision in the project answered to this one question. The table maps what research found, what that led us to decide, and what day-three testing showed.`,
-            placeholderAfter: `<table class="cs-decision-table"><thead><tr><th>What research found</th><th>What we decided</th><th>What testing showed</th></tr></thead><tbody><tr><td>Task lists triggered avoidance, not action<br>Initiation was the barrier, not organisation<br>Decision fatigue compounded the cost of starting</td><td><strong>Three findings, one decision.</strong> Remove the task list. Replace it with a conversational assistant that initiates, so the user's first interaction is a response, not a selection.</td><td>No participant looked for a list, navigated, or asked what to do. Three described it as calmer; two said "simple" unprompted.</td></tr><tr><td>Time was hard to track inside a task</td><td><strong>One finding, one feature.</strong> A passive progress indicator carries elapsed time without asking the user to monitor it.</td><td>Carried elapsed time without drawing attention; not yet tested for whether it improves stopping behaviour over time.</td></tr></tbody></table>`,
+            placeholderAfter: `<table class="cs-decision-table"><thead><tr><th>What research found</th><th>What we decided</th><th>What testing showed</th></tr></thead><tbody><tr><td><ul><li>Task lists triggered avoidance, not action</li><li>Initiation was the barrier, not organisation</li><li>Decision fatigue compounded the cost of starting</li></ul></td><td><strong>Three findings, one decision.</strong><ul><li>Remove the task list</li><li>Replace it with a conversational assistant that initiates, so the user's first interaction is a response, not a selection</li></ul></td><td><ul><li>No participant looked for a list, navigated, or asked what to do</li><li>Three described it as calmer; two said "simple" unprompted</li></ul></td></tr><tr><td><ul><li>Time was hard to track inside a task</li></ul></td><td><strong>One finding, one feature.</strong><ul><li>A passive progress indicator carries elapsed time without asking the user to monitor it</li></ul></td><td><ul><li>Carried elapsed time without drawing attention</li><li>Not yet tested for whether it improves stopping behaviour over time</li></ul></td></tr></tbody></table>`,
           },
           {
             heading: 'What the Design Does',

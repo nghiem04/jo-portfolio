@@ -398,6 +398,44 @@ h2.section-title {
   font-weight: 600;
   color: var(--clay);
 }
+/* Threads table readability: roomier cells, label-then-description in each cell */
+.cs-decision-table.cs-table-threads {
+  font-size: 0.9rem;
+}
+.cs-decision-table.cs-table-threads th,
+.cs-decision-table.cs-table-threads td {
+  padding: 1.15rem 1.2rem;
+  line-height: 1.7;
+}
+/* Bulleted cells (shared by Opal threads table and Focus outcome table) */
+.cs-decision-table td strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+.cs-decision-table td ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.cs-decision-table td li {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.cs-decision-table td li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0.04em;
+  color: var(--clay);
+  font-size: 0.72rem;
+}
 .cs-decision-table tbody tr:hover td {
   background: var(--paper);
 }
