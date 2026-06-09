@@ -1018,6 +1018,47 @@ h2.section-title {
 
 .about-split-body p + p { margin-top: 1.25rem; }
 
+.about-principles {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--clay-lt);
+}
+.about-principles-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 1.1rem;
+}
+.about-principles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.about-principles li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+.about-principles li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  color: var(--clay);
+  font-size: 0.8rem;
+}
+.about-principles li strong { color: var(--ink); font-weight: 500; }
+
+body.dark .about-split-heading,
+body.dark .about-principles-label { color: var(--lime); }
+
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
