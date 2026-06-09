@@ -112,6 +112,16 @@ export default function CaseStudyDetail() {
             <div className="cs-overview-intro">
               <div className="section-label">{cs.context}</div>
               <h1 className="cs-v2-title">{cs.title}</h1>
+              {cs.snapshot && (
+                <div className="cs-snapshot">
+                  {cs.snapshot.map((row) => (
+                    <div className="cs-snapshot-row" key={row.label}>
+                      <span className="cs-snapshot-label">{row.label}</span>
+                      <span className="cs-snapshot-val" dangerouslySetInnerHTML={{ __html: withBaseHtml(row.val) }} />
+                    </div>
+                  ))}
+                </div>
+              )}
               <p className="cs-v2-sub" dangerouslySetInnerHTML={{ __html: withBaseHtml(cs.overview) }} />
               {cs.overviewLink && (
                 <div className="cs-proto-btn-wrap" dangerouslySetInnerHTML={{ __html: cs.overviewLink }} />
@@ -151,7 +161,10 @@ export default function CaseStudyDetail() {
         {/* Stages */}
         {cs.stages.map((stage, i) => (
           <section className="cs-v2-section" id={`cs-s${i + 1}`} data-section={i + 1} key={stage.id}>
-            <div className="cs-stage-header"><h2>{stage.title}</h2></div>
+            <div className="cs-stage-header">
+              <span className="cs-stage-eyebrow">{stage.label}</span>
+              <h2>{stage.title}</h2>
+            </div>
             <div className="cs-stage-body">
               <div className="cs-stage-sidebar">
                 <h3 className="cs-sidebar-heading">Overview</h3>
