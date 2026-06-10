@@ -216,20 +216,22 @@ h2.section-title {
 .hero-cycle-wrap {
   position: relative;
   overflow: hidden;
-  min-height: clamp(10rem, 16vw, 16rem);
+  min-height: clamp(9.5rem, 15vw, 14rem);
   margin-bottom: 2.5rem;
 }
 
 .hero-statement {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.2rem, 7vw, 7rem);
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
   color: var(--ink);
   position: absolute;
   top: 0; left: 0;
   width: 100%;
+  max-width: 22ch;
+  text-wrap: balance;
   transform: translateY(105%);
   opacity: 0;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
@@ -489,6 +491,23 @@ h2.section-title {
 .marquee-inner span.accent { color: rgba(255,255,255,1); }
 
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Home: intro statement */
+.home-intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem 0;
+}
+
+.home-intro p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+  max-width: 760px;
+}
 
 /* Home: case study section */
 .home-cs-rows {
@@ -1658,6 +1677,7 @@ footer {
   nav { padding: 0 1.5rem; }
   .nav-link { padding: 0.4rem 0.6rem; font-size: 0.82rem; }
   .hero { padding: 3rem 1.5rem; }
+  .home-intro { padding: 1.5rem 1.5rem 0; }
   .home-cs-rows { padding: 2rem 1.5rem 3rem; }
   .hcs-card { grid-template-columns: 1fr; }
   .hcs-card-visual { min-height: 260px; order: -1; }
