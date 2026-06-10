@@ -62,43 +62,43 @@ export default function Home() {
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
             Case Studies
           </div>
-          <h2 className="section-title" style={{ marginBottom: 0 }}>What I've designed recently</h2>
+          <h2 className="section-title" style={{ marginBottom: 0 }}>Designing through complexity</h2>
           <p className="cs-disclaimer" style={{ margin: '0.75rem 0 0', padding: 0 }}>Due to client confidentiality, selected work includes self-initiated and conceptual projects that showcase my product thinking, design process, and approach to solving complex problems.</p>
         </div>
 
         {/* Card 1: Opal */}
         <div className="hcs-card">
           <div className="hcs-card-body">
-            <div className="hcs-card-label">Conceptual Project · Behavioural Insights</div>
+            <div className="hcs-card-label">{opal.card.label}</div>
             <h3 className="hcs-card-title">{opal.title}</h3>
-            <p className="hcs-card-desc">Commuters were relying on TripView, Google Maps, and Opal across one fragmented journey. I redesigned Opal around saved routes, live disruptions, and faster decision-making during high-friction commute moments.</p>
+            <p className="hcs-card-desc">{opal.card.desc}</p>
             <div className="hcs-card-tags">
-              <span className="hcs-pill-tag">User research</span>
-              <span className="hcs-pill-tag">Behavioural insights</span>
-              <span className="hcs-pill-tag">Mobile UX</span>
+              {opal.card.tags.map((tag) => (
+                <span className="hcs-pill-tag" key={tag}>{tag}</span>
+              ))}
             </div>
             <div className="hcs-card-actions">
               <Link className="hcs-btn-primary" to={`/work/${opal.slug}`}>View case study</Link>
             </div>
           </div>
-          <div className="hcs-card-visual thumb-a">
+          <div className={`hcs-card-visual ${opal.thumbClass}`}>
             <img src={asset(opal.heroImage)} alt={opal.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
           </div>
         </div>
 
         {/* Card 2: Focus */}
         <div className="hcs-card">
-          <div className="hcs-card-visual thumb-b">
+          <div className={`hcs-card-visual ${focus.thumbClass}`}>
             <img src={asset(focus.heroImage)} alt={focus.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
           </div>
           <div className="hcs-card-body">
-            <div className="hcs-card-label">Hackathon · AI Assisted Productivity</div>
-            <h3 className="hcs-card-title">Focus</h3>
-            <p className="hcs-card-desc">Research showed task initiation often failed at prioritisation. Focus uses a conversational assistant to recommend one next step, reducing decision fatigue and helping users start faster.</p>
+            <div className="hcs-card-label">{focus.card.label}</div>
+            <h3 className="hcs-card-title">{focus.title}</h3>
+            <p className="hcs-card-desc">{focus.card.desc}</p>
             <div className="hcs-card-tags">
-              <span className="hcs-pill-tag">Conversational AI</span>
-              <span className="hcs-pill-tag">Design sprint</span>
-              <span className="hcs-pill-tag">Moderated testing</span>
+              {focus.card.tags.map((tag) => (
+                <span className="hcs-pill-tag" key={tag}>{tag}</span>
+              ))}
             </div>
             <div className="hcs-card-actions">
               <Link className="hcs-btn-primary" to={`/work/${focus.slug}`}>View case study</Link>

@@ -17,6 +17,12 @@ export const caseStudies = [
     heroImage: 'assets/opal/opal_1.png',
     heroImageAlt: 'Opal app redesign mockup',
     tags: ['UX Research', 'Interaction Design', 'Figma'],
+    // Card metadata shared by the homepage and Work-page case-study cards.
+    card: {
+      label: 'Conceptual Project · Behavioural Insights',
+      desc: 'Commuters were relying on TripView, Google Maps, and Opal across one fragmented journey. I redesigned Opal around saved routes, live disruptions, and faster decision-making during high-friction commute moments.',
+      tags: ['User research', 'Behavioural insights', 'Mobile UX'],
+    },
     snapshot: [
       { label: 'Product', val: `<strong>Opal</strong>, Sydney's public-transport ticketing app, used by millions of daily commuters.` },
       { label: 'Problem', val: `It was built for ticketing admin, not commuting. People ran three apps to make one journey, and couldn't trust what Opal charged them.` },
@@ -165,6 +171,12 @@ export const caseStudies = [
     heroImage: 'assets/focus/ff_1.png',
     heroImageAlt: 'Focus app redesign mockup',
     tags: ['Cognitive Accessibility', 'Behaviour Design', 'Rapid Prototyping'],
+    // Card metadata shared by the homepage and Work-page case-study cards.
+    card: {
+      label: 'Hackathon · AI Assisted Productivity',
+      desc: 'Research showed task initiation often failed at prioritisation. Focus uses a conversational assistant to recommend one next step, reducing decision fatigue and helping users start faster.',
+      tags: ['Conversational AI', 'Design sprint', 'Moderated testing'],
+    },
     snapshot: [
       { label: 'Product', val: `<strong>Focus</strong>, a productivity app for people with ADHD, built in a three-day hackathon.` },
       { label: 'Problem', val: `Task lists ask people to plan and choose before they start. For people with ADHD, that first decision is exactly where initiation breaks down.` },

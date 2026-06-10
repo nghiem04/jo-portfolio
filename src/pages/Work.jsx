@@ -4,20 +4,6 @@ import { asset } from '../utils/assets';
 import { useFadeInCards } from '../hooks/useFadeInCards';
 import Footer from '../components/Footer';
 
-// Per-card metadata, mirroring the homepage case-study cards.
-const listMeta = {
-  opal: {
-    label: 'Conceptual Project · Behavioural Insights',
-    desc: 'Commuters were relying on TripView, Google Maps, and Opal across one fragmented journey. I redesigned Opal around saved routes, live disruptions, and faster decision-making during high-friction commute moments.',
-    tags: ['User research', 'Behavioural insights', 'Mobile UX'],
-  },
-  focus: {
-    label: 'Hackathon · AI Assisted Productivity',
-    desc: 'Research showed task initiation often failed at prioritisation. Focus uses a conversational assistant to recommend one next step, reducing decision fatigue and helping users start faster.',
-    tags: ['Conversational AI', 'Design sprint', 'Moderated testing'],
-  },
-};
-
 export default function Work() {
   useFadeInCards();
 
@@ -26,17 +12,17 @@ export default function Work() {
       <div id="cs-list">
         <div className="cs-page-hero">
           <div className="section-label">Case studies</div>
-          <h2 className="section-title">What I've designed recently</h2>
-          <p className="section-sub">User Design case studies spanning research, synthesis, and design. Each grounded in real user behaviour and carried through to a working prototype.</p>
+          <h2 className="section-title">Selected work</h2>
+          <p className="section-sub">Product design case studies exploring research, synthesis, systems thinking, and prototyping. Each one grounded in real user behaviour and shaped into practical product solutions.</p>
         </div>
 
         <div className="cs-disclaimer">
-          Due to client confidentiality, selected work includes self-initiated and conceptual projects that showcase my product thinking, design process, and approach to solving complex problems.
+          Much of my professional work is protected by confidentiality agreements. The projects featured here showcase my approach to simplifying complex problems through research, systems thinking, and product design.
         </div>
 
         <div className="cs-page-grid" style={{ display: 'block' }}>
           {caseStudies.map((cs, i) => {
-            const m = listMeta[cs.slug];
+            const m = cs.card ?? { label: 'Product Design', desc: cs.overview ?? '', tags: cs.tags ?? [] };
             const visual = (
               <div className={`hcs-card-visual ${cs.thumbClass}`}>
                 <img src={asset(cs.heroImage)} alt={cs.heroImageAlt} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
@@ -78,7 +64,7 @@ export default function Work() {
                 <span className="hcs-pill-tag">Systems thinking</span>
               </div>
               <div className="hcs-card-actions">
-                <span className="cs-arrow cs-arrow-wip">Case study in progress — check back soon</span>
+                <span className="cs-arrow cs-arrow-wip">Case study currently being developed</span>
               </div>
             </div>
             <div className="hcs-card-visual cs-wip-thumb">
