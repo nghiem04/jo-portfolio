@@ -31,7 +31,7 @@ export default function Work() {
         </div>
 
         <div className="cs-disclaimer">
-          Due to NDA and client confidentiality agreements, the work presented here consists of self-initiated or conceptual projects that reflect my process and capabilities.
+          Due to client confidentiality, selected work includes self-initiated and conceptual projects that showcase my product thinking, design process, and approach to solving complex problems.
         </div>
 
         <div className="cs-page-grid" style={{ display: 'block' }}>

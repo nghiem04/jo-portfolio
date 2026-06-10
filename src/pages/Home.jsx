@@ -63,7 +63,7 @@ export default function Home() {
             Case Studies
           </div>
           <h2 className="section-title" style={{ marginBottom: 0 }}>What I've designed recently</h2>
-          <p className="cs-disclaimer" style={{ margin: '0.75rem 0 0', padding: 0 }}>Due to NDA and client confidentiality agreements, the work presented here consists of self-initiated or conceptual projects that reflect my process and capabilities.</p>
+          <p className="cs-disclaimer" style={{ margin: '0.75rem 0 0', padding: 0 }}>Due to client confidentiality, selected work includes self-initiated and conceptual projects that showcase my product thinking, design process, and approach to solving complex problems.</p>
         </div>
 
         {/* Card 1: Opal */}
