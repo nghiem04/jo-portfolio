@@ -217,7 +217,7 @@ h2.section-title {
   position: relative;
   overflow: hidden;
   min-height: clamp(9.5rem, 15vw, 14rem);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-statement {
@@ -269,6 +269,7 @@ h2.section-title {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-top: 2.25rem;
 }
 
 .hero-desc {
@@ -276,7 +277,20 @@ h2.section-title {
   color: var(--ink-2);
   font-weight: 300;
   line-height: 1.8;
-  max-width: 420px;
+  max-width: 540px;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.hero-desc::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--clay);
 }
 
 .hero-actions {
